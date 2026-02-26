@@ -134,3 +134,18 @@ a:hover{ text-decoration: underline; }
   color: var(--muted);
   font-size: 13px;
 }
+/* Make footer stick to bottom without creating huge empty areas */
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex: 1;
+}
+
+/* Remove any accidental huge spacing */
+main, section { max-width: 100%; }
+.hero { padding-bottom: 6px; }
+.grid { padding-bottom: 28px; }

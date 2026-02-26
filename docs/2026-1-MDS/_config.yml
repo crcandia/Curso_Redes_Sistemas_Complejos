@@ -1,4 +1,2 @@
-cat > docs/_config.yml <<'YML'
 theme: minima
 title: Curso Redes y Sistemas Complejos
-YML

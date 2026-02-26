@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% Ajustes de página para una presentación cómoda
+\geometry{margin=2.5cm}
+
+\title{Centralidad, poder e desigualdad en redes complejas\\Módulo 3 del curso de ciencias de redes}
+\author{---}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+
+La teoría de redes proporciona un lenguaje unificado para modelar interacciones en sistemas complejos.  Una de las ideas clave es que no todos los nodos contribuyen por igual a la dinámica global: existen nodos \emph{centrales} que concentran conexiones o flujos y por ello ejercen influencia estructural.  La centralidad está estrechamente relacionada con conceptos de poder e inequidad: en redes sociales o corporativas, los \emph{hubs} acumulan acceso a recursos e información, mientras que en redes económicas la estructura por sí sola puede generar desigualdad salarial comparable a la de países enteros【41336789295796†L260-L276】.  El objetivo de este módulo es presentar rigurosamente las medidas de centralidad más utilizadas, discutir su interpretación y limitaciones, y conectar estos conceptos con fenómenos de poder e inequidad.
+
+\section{Definiciones generales y clasificación de centralidades}
+
+Sea $G=(V,E)$ un grafo no dirigido y simple con $|V|=N$ nodos.  Su estructura se describe mediante la matriz de adyacencia $A\in\{0,1\}^{N\times N}$, donde $A_{ij}=1$ si existe una arista entre $i$ y $j$ y $A_{ij}=0$ en caso contrario.  Una función de centralidad es un operador $c:V\to\mathbb{R}$ que asigna a cada nodo un valor real indicando su importancia relativa.  De forma general, las centralidades se clasifican en \emph{locales} (dependen sólo del vecindario inmediato) y \emph{globales} (toman en cuenta caminos o información de toda la red)【49212704995022†L552-L563】.  A continuación se presentan las medidas clásicas.
+
+\subsection{Centralidad de grado}
+
+La medida más sencilla es el \emph{grado} $k_i$ de un nodo $i$, definido como el número de vecinos que tiene.  Utilizando la matriz de adyacencia, el grado se calcula como la suma de la fila correspondiente【643362955205334†L131-L143】
+
+\begin{equation}
+ k_i = \sum_{j=1}^N A_{ij}.
+ \end{equation}
+
+El grado cuantifica conectividad local y en redes \emph{scale–free} presenta una distribución pesada: pocos nodos (\emph{hubs}) tienen grados muy grandes mientras la mayoría posee pocos enlaces.  Esta heterogeneidad facilita procesos como la propagación epidémica o la sincronización【643362955205334†L45-L54】, haciendo que los hubs se conviertan en nodos de poder estructural.
+
+\subsection{Centralidad de cercanía}
+
+La centralidad de cercanía ($c_v$) evalúa hasta qué punto un nodo está cerca del resto en términos de distancias geodésicas.  Para un nodo $v$, la distancia $d_{uv}$ es la longitud del camino más corto entre $u$ y $v$.  La cercanía se define como el inverso de la distancia promedio a todos los demás nodos【97628320561768†L274-L283】:
+
+\begin{equation}
+ \frac{1}{c_v} = \frac{1}{N-1} \sum_{u\neq v} d_{uv},
+ \end{equation}
+
+donde un mayor valor de $c_v$ indica que el nodo está, en promedio, más próximo al resto.  La cercanía es ampliamente utilizada para evaluar accesibilidad en redes de transporte, biológicas o sociales, y se ha correlacionado con indicadores socioeconómicos y regulatorios【97628320561768†L189-L203】.  Sin embargo, recientes trabajos han mostrado que la cercanía está fuertemente correlacionada con el grado: la \emph{farness} (recíproca de la cercanía) es lineal en el logaritmo del grado【97628320561768†L128-L140】.  Esto implica que, salvo que se elimine explícitamente la dependencia con el grado, la cercanía añade poca información nueva y su cómputo (costoso) puede ser redundante【97628320561768†L241-L245】.
+
+\subsection{Centralidad de intermediación}
+
+La centralidad de intermediación (\emph{betweenness}) caracteriza nodos que actúan como puentes entre pares de nodos.  Para cada par de nodos $s,t$, sea $\sigma_{st}$ el número de caminos más cortos entre $s$ y $t$ y $\sigma_{st}(i)$ los que pasan por $i$.  La intermediación de $i$ se define como【41336789295796†L232-L246】
+
+\begin{equation}
+ B_i = \sum_{s\neq i\neq t} \frac{\sigma_{st}(i)}{\sigma_{st}}.
+ \end{equation}
+
+Esta medida refleja la capacidad del nodo para controlar el flujo de información y ha sido usada para identificar brokers o cuellos de botella.  Sus desventajas son el alto coste computacional, $\mathcal{O}(N^3)$ en su forma exacta【643362955205334†L297-L310】, y el hecho de que sólo considera caminos más cortos, lo cual puede no reflejar rutas reales en redes donde la información viaja por caminos alternativos【643362955205334†L297-L314】.
+
+\subsection{Centralidad vector propia y variantes}
+
+Mientras que el grado sólo cuenta vecinos, la centralidad \emph{vector propia} incorpora la importancia de los vecinos: un nodo es central si se conecta a otros nodos centrales.  Esta definición conduce al problema de autovector para la matriz de adyacencia【643362955205334†L337-L349】:
+
+\begin{equation}
+ \lambda\,x = x A,
+ \end{equation}
+
+donde $x$ es el vector de centralidades.  La solución correspondiente al mayor autovalor $\lambda$ (teorema de Perron–Frobenius) produce valores positivos de centralidad.  El método de potencia muestra que $x$ coincide con el número de caminos de longitud grande que llegan a cada nodo【643362955205334†L349-L361】.  Esta centralidad tiende a concentrarse en hubs y puede sufrir fenómenos de \emph{localización} donde la mayor parte de los pesos se acumulan en unos pocos nodos【643362955205334†L448-L453】.
+
+Una variante es la centralidad de PageRank, utilizada por el motor de búsqueda Google.  Definida sobre grafos dirigidos, asigna a cada nodo una puntuación $c$ satisfaciendo【41336789295796†L237-L243】
+
+\begin{equation}
+ c = \alpha A^T D^{-1} c + \beta\,\mathbf{1},
+ \end{equation}
+
+donde $A^T$ es la matriz de adyacencias transpuesta, $D$ la matriz diagonal con los grados de salida, $0<\alpha<1$ un factor de amortiguamiento y $\beta$ controla el reinicio aleatorio.  Este método combina caminos de longitud arbitraria con un salto aleatorio que evita que la importancia se concentre sólo en hubs.
+
+El \emph{rank} de Katz es otra generalización que suma caminos de todas las longitudes con un parámetro de decaimiento $\mu$, resolviendo $(I-\mu A^T)k = \mathbf{1}$.  Estudios recientes muestran que la distribución de la centralidad de Katz en grafos aleatorios se decompone en picos asociados a nodos de distinto grado【51657292695878†L627-L633】, lo que evidencia su fuerte dependencia con el grado.
+
+\subsection{Medidas emergentes}
+
+La revisión de centralidades ha impulsado medidas que combinan información local y global.  Por ejemplo, \emph{centrality degree paths} (CDP) integra la conectividad inmediata con la longitud de los caminos que conectan el nodo con el resto.  Este método evalúa no sólo los vecinos directos sino también las trayectorias indirectas, capturando mejor la influencia estructural en redes sociales【49212704995022†L573-L588】.  Los autores de la propuesta muestran que las medidas clásicas pueden ser inestables en redes grandes y que los hubs no siempre coinciden con los nodos más influyentes; CDP ofrece un equilibrio entre coste computacional y fidelidad estructural【49212704995022†L552-L570】.
+
+\section{Correlaciones y redundancia entre centralidades}
+
+Aunque cada medida pretende capturar un aspecto diferente, diversos estudios han mostrado que las centralidades están fuertemente correlacionadas.  Evans y Chen demostraron que la inversa de la centralidad de cercanía (\emph{farness}) se relaciona linealmente con el logaritmo del grado en una amplia gama de redes aleatorias y reales【97628320561768†L128-L140】.  El mismo trabajo sugiere que medir la cercanía no aporta información adicional a menos que se elimine su dependencia con el grado【97628320561768†L241-L245】.  Análisis más amplios muestran que muchas parejas de centralidades (grado, intermediación, PageRank, eigenvector) presentan coeficientes de correlación de Pearson elevados【97628320561768†L213-L229】.  Por ello, la elección de la medida debe basarse en la interpretación sustantiva y en su relación con el fenómeno de interés.
+
+Además, el estudio de Bartolucci et al. analizó la distribución de la centralidad de Katz en redes aleatorias mediante el método de cavidad.  Encontraron que la distribución presenta picos asociados a clases de nodos con distinto grado y que, al aumentar la conectividad media, estos picos se fusionan【51657292695878†L627-L633】.  Este resultado refuerza la idea de que muchas centralidades son reflejo de la heterogeneidad de grados y que la estructura de la red condiciona la desigualdad en los valores de centralidad.
+
+\section{Centralidad, poder e inequidad}
+
+La relación entre centralidad y poder se manifiesta en múltiples contextos: en redes sociales, los individuos con mayor grado o intermediación controlan el flujo de información y actúan como líderes; en redes económicas, las empresas situadas en posiciones centrales pueden movilizar recursos y acceder a oportunidades privilegiadas.  Esta concentración de centralidad se traduce en desigualdad: las distribuciones de centralidad suelen seguir leyes de potencia, reflejando que una minoría de nodos acapara la mayor parte de la influencia.
+
+DeCanio y Watkins proponen un modelo organizacional donde la estructura de la red por sí sola genera desigualdad salarial\cite{decanio2025}.  Consideran que la compensación de cada empleado puede basarse en su coste de procesamiento (vertex cost) o en su centralidad (betweenness o PageRank).  Su estudio muestra que el índice de Gini asociado a la compensación basada únicamente en la posición en la red oscila entre 0.3 y 0.5, mientras que la compensación basada en el coste del nodo supera 0.6【41336789295796†L260-L276】.  Estos valores son comparables a los índices de desigualdad de países reales, demostrando que la desigualdad puede surgir endógenamente de la arquitectura de la red.  Además, la definición de intermediación y PageRank utilizados en su modelo se formaliza mediante las ecuaciones (3) y (4) anteriores【41336789295796†L232-L246】.
+
+En términos sociológicos, las medidas de centralidad se relacionan con capital social, prestigio y poder simbólico.  Wasserman y Faust discuten cómo el grado se asocia con popularidad, la intermediación con control de recursos y la cercanía con acceso rápido a información.  Sin embargo, las conexiones no son lineales y existen críticas al uso acrítico de estas métricas para justificar jerarquías.  Por ejemplo, la dependencia de la centralidad de eigenvector respecto a hubs puede invisibilizar a nodos periféricos con roles clave en cohesión.
+
+\section{Conclusiones y perspectivas}
+
+El estudio de la centralidad en redes complejas permite comprender cómo la posición estructural de los nodos influye en procesos dinámicos y en la distribución desigual de poder y recursos.  Hemos revisado definiciones formales y discutido su interpretación.  Las medidas clásicas como el grado, la cercanía, la intermediación, la centralidad de eigenvector y PageRank capturan distintos aspectos de conectividad, pero muestran correlaciones significativas y limitaciones.  La heterogeneidad inherente a las redes —especialmente las de tipo \emph{scale–free}— conduce a distribuciones de centralidad altamente sesgadas y facilita la aparición de desigualdad y poder concentrado.  Estudios recientes demuestran que la cercanía y el grado están no linealmente relacionados, que la distribución de centralidades puede descomponerse en clases de grado y que la estructura organizacional puede producir desigualdad salarial comparable a la observada en economías nacionales.  Nuevas métricas, como la centralidad degree paths, intentan capturar influencias combinando caminos directos e indirectos y buscan superar la inestabilidad de las medidas clásicas.
+
+Una comprensión crítica de las centralidades requiere, por tanto, no sólo conocimiento técnico de sus definiciones y algoritmos, sino también sensibilidad a sus implicancias sociales y económicas.  En módulos posteriores se profundizará en la inferencia estadística, la dinámica sobre redes y el aprendizaje automático sobre grafos, herramientas que permitirán extender el análisis de centralidad hacia la explicación causal y la predicción.
+
+% Las siguientes referencias se incluyen en la bibliografía aunque no todas estén citadas explícitamente
+\nocite{decanio2025,bendahman2024,evans2022,bartolucci2024,rodrigues2019,wasserman1994}
+\bibliographystyle{plain}
+\bibliography{monografia_modulo3}
+
+\end{document}

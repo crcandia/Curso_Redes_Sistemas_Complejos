@@ -1,0 +1,133 @@
+% Monografía para el Módulo 1 de un curso introductorio de Ciencia de Redes.
+% Este documento usa referencias en formato BibTeX incluidas en
+% ``monografia_modulo1.bib``.  Compile con pdflatex y biber
+% (o BibTeX) para obtener las referencias.
+\documentclass[11pt]{article}
+
+% Codificación y lengua
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+
+% Paquetes matemáticos y símbolos
+\usepackage{amsmath, amssymb}
+\usepackage{bm}
+
+% Paquete para citas con autor–año
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
+% Paquete para tablas y gráficos si se necesitan
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Ajustes de márgenes
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+\title{Módulo 1: Redes como representación de sistemas complejos}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+
+La ciencia de redes ha emergido en las últimas décadas como un lenguaje común para describir fenómenos tan diversos como redes sociales, sistemas biológicos, infraestructuras tecnológicas y procesos cognitivos.  Su éxito radica en que las redes proporcionan una representación general y poderosa de relaciones de distinto tipo: desde interacciones entre personas hasta vínculos químicos o flujos de información.  Según \citet{menczer2020}, las redes aparecen en ámbitos que van desde el marketing hasta la medicina y su estudio requiere combinar herramientas de física estadística, informática, sociología y biología.  Este módulo tiene por objetivo construir una base conceptual rigurosa para entender qué es una red, qué información captura y por qué es útil representarla de esa forma.
+
+\section{¿Qué es (y qué no es) una red?}
+
+Una red o \emph{grafo} es una estructura matemática definida como un par $G = (V,E)$, donde $V$ es el conjunto de \emph{nodos} o vértices y $E$ es el conjunto de \emph{enlaces} o aristas.  Cada enlace $e \in E$ conecta un par de nodos y puede ser \emph{dirigido} (si distingue una fuente y un destino) o \emph{no dirigido}.  El grafo puede representarse mediante su \emph{matriz de adyacencia} $A \in \mathbb{R}^{n\times n}$, donde $n = |V|$ es el número de nodos y
+\begin{equation}
+  A_{ij} =
+  \begin{cases}
+    1, & \text{si existe una arista de $i$ a $j$},\\
+    0, & \text{en caso contrario},
+  \end{cases}
+  \label{eq:adjacency}
+\end{equation}
+para un grafo no ponderado; si los enlaces llevan pesos $w_{ij}$, entonces $A_{ij} = w_{ij}$.  La \emph{red} se diferencia de un grafo puramente abstracto en que se utiliza para modelar un sistema real: los nodos representan entidades concretas (personas, moléculas, ciudades) y los enlaces representan interacciones, dependencias o flujos entre ellas.  Esta distinción es importante, pues el significado del enlace determina qué interpretaciones son válidas.
+
+El \emph{grado} $k_i$ de un nodo $i$ en un grafo no dirigido se define como el número de enlaces incidentes en $i$ y puede calcularse a partir de la matriz de adyacencia como
+\begin{equation}
+  k_i = \sum_{j=1}^n A_{ij} = \sum_{j=1}^n A_{ji},
+  \label{eq:degree}
+\end{equation}
+para grafos no dirigidos.  En grafos dirigidos se distingue entre \emph{grado de entrada} $k_i^{\mathrm{in}} = \sum_j A_{ji}$ y \emph{grado de salida} $k_i^{\mathrm{out}} = \sum_j A_{ij}$.  El vector $(k_1,\dots,k_n)$ captura la heterogeneidad estructural: en muchas redes reales aparecen nodos con grados muy altos (\emph{hubs}) y la distribución de grados presenta colas pesadas, lo que implica la presencia de nodos dominantes \citep{rodrigues2019,barabasi2016}.  Esta heterogeneidad tiene importantes consecuencias dinámicas, como veremos en secciones posteriores.
+
+\section{Redes como modelos de sistemas complejos}
+
+Los sistemas complejos son aquellos formados por muchos componentes interactuantes cuya dinámica colectiva no puede inferirse fácilmente a partir del comportamiento individual.  Ejemplos incluyen ecosistemas, mercados financieros y redes neuronales.  Una característica fundamental de estos sistemas es la \emph{no linealidad}: pequeñas perturbaciones pueden provocar efectos macroscópicos.  Modelar un sistema complejo como una red permite representar explícitamente sus patrones de interacción y estudiar cómo estos patrones influyen en procesos dinámicos como la difusión, la sincronización o la cooperación.
+
+En una red heterogénea, la distribución de grados $P(k)$ (probabilidad de que un nodo tenga grado $k$) puede aproximarse como una ley de potencias $P(k) \propto k^{-\gamma}$ para $k \ge k_0$ en muchas redes reales.  Esta propiedad, observada por primera vez en la estructura de la Web y conocida como \emph{escala libre}, implica que la varianza del grado puede ser divergente para $\gamma \leq 3$ y conlleva que el \emph{umbral epidémico} (la tasa crítica de transmisión por encima de la cual se produce una epidemia) tiende a cero en el límite de redes grandes \citep{rodrigues2019}.  Matemáticamente, si $\lambda$ es la tasa de transmisión y $\mu$ la tasa de recuperación, el umbral en un grafo aleatorio con distribución de grado general se puede aproximar como $\lambda_c = \mu/\langle k \rangle$ en el límite de redes homogéneas, pero en redes de escala libre la divergencia de $\langle k^2 \rangle$ hace que $\lambda_c \to 0$.
+
+Más allá de estas propiedades estadísticas, representar un sistema como red implica una decisión epistemológica: se asume que las relaciones binarias capturan la esencia del sistema.  Las notas de \citet{clauset2022} subrayan que medir una red implica convertir información local en información global: registrar interacciones entre individuos otorga a los investigadores un poder de observación y análisis, pero también genera riesgos de privacidad, ya que atributos sensibles pueden inferirse indirectamente a través de los vecinos \citep{clauset2022}.  Por tanto, la modelización en términos de redes exige considerar tanto los beneficios analíticos como las implicaciones éticas.
+
+\section{Escalas de análisis: micro, meso y macro}
+
+Representar un sistema como red permite estudiar fenómenos a distintas escalas:
+
+\begin{enumerate}
+  \item \textbf{Escala micro.} Se centra en propiedades locales de los nodos y los enlaces.  Aquí se analizan métricas como el grado, la fuerza (suma de pesos en redes ponderadas) o la \emph{centralidad de intermediación}, que mide la fracción de caminos mínimos que pasan por un nodo.  Para un nodo $i$, la centralidad de intermediación se define como
+  \begin{equation}
+    C_B(i) = \sum_{s \ne i \ne t} \frac{\sigma_{st}(i)}{\sigma_{st}},
+    \label{eq:betweenness}
+  \end{equation}
+  donde $\sigma_{st}$ es el número total de caminos geodésicos entre $s$ y $t$ y $\sigma_{st}(i)$ es el número de estos caminos que pasan por $i$.  Esta medida sirve para identificar nodos que actúan como \emph{puentes} entre comunidades distintas.
+
+  \item \textbf{Escala meso.} Analiza subestructuras emergentes, como \emph{comunidades} (grupos de nodos densamente conectados), \emph{motivos} (patrones recurrentes de pocas aristas) o \emph{núcleo–periferia}.  Las comunidades permiten inferir organización funcional y roles sociales; sin embargo, no toda partición comunitaria es significativa y su interpretación depende del contexto \citep{fortunato2010}.  En grafos bipartitos (p.ej., autores y artículos) es frecuente proyectar a un grafo unipartito; dicha proyección puede inducir sesgos al sobrerrepresentar nodos muy activos.
+
+  \item \textbf{Escala macro.} Considera propiedades globales, como la distribución de grados, la fracción de nodos conectados en el \emph{componente gigante}, el diámetro (la longitud máxima de un camino geodésico) o la \emph{longitud de camino medio}.  Otra medida global es el \emph{coeficiente de clustering} promedio, definido como
+  \begin{equation}
+    C = \frac{1}{n} \sum_{i=1}^n \frac{2 T_i}{k_i(k_i-1)},
+    \label{eq:clustering}
+  \end{equation}
+  donde $T_i$ es el número de triángulos que incluyen al nodo $i$.  El coeficiente $C$ mide la tendencia de los amigos de mis amigos a ser amigos entre sí y es elevado en redes sociales reales, a diferencia de grafos aleatorios en los que $C \sim \langle k \rangle/n$.
+\end{enumerate}
+
+El análisis a múltiples escalas proporciona una comprensión integral: identifica actores clave, patrones de organización y propiedades emergentes que no son evidentes al examinar los componentes por separado.
+
+\section{Tipos de redes y ejemplos}
+
+La diversidad de aplicaciones de la ciencia de redes implica que las estructuras pueden clasificarse en varios tipos según el dominio:
+
+\begin{itemize}
+  \item \textbf{Redes sociales.} Representan interacciones entre personas o grupos, como relaciones de amistad, colaboración académica o comunicación en redes sociales en línea.  Los nodos suelen ser individuos y las aristas, interacciones.  Estas redes presentan alto clustering y distribuciones de grado heterogéneas.
+
+  \item \textbf{Redes tecnológicas.} Incluyen redes de telecomunicaciones (Internet, telefonía), redes eléctricas, redes de transporte o infraestructuras logísticas.  Su análisis permite estudiar eficiencia, robustez frente a fallos y optimización de rutas.
+
+  \item \textbf{Redes biológicas.} Comprenden redes de interacción entre proteínas, redes metabólicas, sinapsis neuronales y redes de ecosistemas.  Estas redes sirven para entender procesos biológicos y desarrollar aplicaciones en bioinformática.
+
+  \item \textbf{Redes de información.} Conectan conceptos o documentos mediante relaciones semánticas o de citación: por ejemplo, la red de citas académicas es un grafo dirigido en el que cada artículo cita a otros trabajos.  Los nodos con alto grado entrante suelen actuar como hubs de conocimiento.
+\end{itemize}
+
+Cada categoría tiene sus propias particularidades (tipo de enlaces, peso, direccionalidad), pero comparten la idea de que el comportamiento del sistema emerge de la estructura de las interacciones.
+
+\section{Importancia de la representación en redes}
+
+Construir una red a partir de datos no es un paso trivial ni neutro.  Decidir qué constituye un nodo, qué constituye un enlace y qué atributos se asignan puede condicionar los resultados.  Como señala \citet{hamilton2020}, las redes introducen un \emph{sesgo inductivo relacional}: los modelos que aprenden sobre datos con estructura de grafo explotan la premisa de que entidades conectadas tienen propiedades relacionadas.  Esta idea es fundamental en el aprendizaje automático sobre grafos, donde técnicas como \emph{embeddings} de nodos y \emph{redes neuronales de grafos} (GNN) aprenden representaciones vectoriales de los nodos aprovechando la topología \citep{hamilton2020,sanchezlengeling2021}.  En particular, un modelo de mensajes en una GNN actualiza el vector de estado de un nodo $i$ mediante una agregación de los mensajes de sus vecinos $j \in \mathcal{N}(i)$:
+\begin{equation}
+  \bm{h}_i^{(\ell+1)} = \sigma\bigg(\bm{W}_0\,\bm{h}_i^{(\ell)} + \sum_{j \in \mathcal{N}(i)} \bm{W}_1\,\bm{h}_j^{(\ell)}\bigg),
+  \label{eq:gnn}
+\end{equation}
+  donde $\bm{h}_i^{(\ell)}$ es la representación del nodo $i$ en la capa $\ell$, $\mathcal{N}(i)$ es el conjunto de vecinos de $i$, $\bm{W}_0$ y $\bm{W}_1$ son matrices de pesos compartidas y $\sigma$ es una función de activación no lineal.  Esta fórmula encarna el sesgo relacional: la representación de cada nodo se actualiza combinando su estado actual con la información de sus vecinos.  Para que esta operación tenga sentido, es crucial que la red esté bien construida; un enlace mal definido puede inducir el modelo a aprender correlaciones espurias.
+
+Además de su valor analítico, la representación en redes plantea retos éticos.  El acto de registrar interacciones transforma información privada en pública: como recuerdan las notas de \citet{clauset2022}, los atributos personales pueden filtrarse a través de los vecinos por homofilia.  Por ejemplo, si las personas con cierta ideología tienden a conectarse entre sí, el simple hecho de observar sus conexiones puede revelar sus preferencias políticas aunque no se hayan declarado explícitamente.  De ahí la importancia de la anonimización y del consentimiento informado en estudios de redes humanas.
+
+\section{Conexión con el aprendizaje en redes}
+
+Aunque este módulo se centra en los fundamentos conceptuales de las redes, es importante esbozar la conexión con el aprendizaje automático.  Las técnicas modernas de \emph{graph representation learning} buscan mapear los nodos a vectores en espacios de dimensión reducida de manera que preserven la estructura.  Los métodos basados en paseos aleatorios, como \emph{DeepWalk} o \emph{node2vec}, generan secuencias de nodos mediante procesos de Markov sobre el grafo y entrenan modelos de tipo word2vec para obtener representaciones; las GNN generalizan las convoluciones a grafos mediante agregaciones de vecinos como en la ecuación~\eqref{eq:gnn}.  Estas herramientas permiten realizar tareas de clasificación de nodos, predicción de enlaces y detección de comunidades \citep{hamilton2020,sanchezlengeling2021}.
+
+Comprender la estructura y representación de las redes es, por tanto, el primer paso para aplicar con éxito estas técnicas.  Un modelo de aprendizaje sólo puede ser tan bueno como la red que se le suministre; una red mal construida o mal interpretada puede conducir a inferencias erróneas o a sesgos injustificados.
+
+\section{Conclusión}
+
+En este primer módulo hemos establecido una base rigurosa para el estudio de redes.  Definimos formalmente qué es una red, discutimos la importancia de distinguirla del grafo abstracto y presentamos conceptos matemáticos esenciales como la matriz de adyacencia, el grado y el coeficiente de clustering.  Vimos que las redes son modelos adecuados para sistemas complejos porque capturan la heterogeneidad y la interdependencia de sus elementos, y que su análisis debe considerar distintas escalas (micro, meso y macro) para revelar patrones de organización y actores clave.  También exploramos la variedad de tipos de redes y subrayamos la importancia, tanto analítica como ética, de la representación en redes.  Finalmente, apuntamos hacia el aprendizaje en redes, señalando que la construcción correcta de la red es un prerequisito para técnicas modernas como las GNN.  Con estos fundamentos, estamos preparados para abordar los módulos siguientes, donde estudiaremos modelos generativos, procesos dinámicos y técnicas de aprendizaje sobre grafos.
+
+% Fin del documento.  Las referencias se incluyen a través de BibTeX.
+\newpage
+\bibliography{monografia_modulo1}
+
+\end{document}

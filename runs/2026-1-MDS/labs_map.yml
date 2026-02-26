@@ -1,0 +1,8 @@
+track: MDS
+run: 2026-1-MDS
+
+labs:
+  python:
+    - core/labs_base/python/lab01.ipynb
+  r:
+    - core/labs_base/r/lab01.qmd

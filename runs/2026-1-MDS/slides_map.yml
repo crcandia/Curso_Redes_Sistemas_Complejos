@@ -1,0 +1,6 @@
+track: MDS
+run: 2026-1-MDS
+
+slides:
+  - core/slides_base/pdf/deck_01_intro.pdf
+  - core/slides_base/pdf/deck_02_metricas.pdf

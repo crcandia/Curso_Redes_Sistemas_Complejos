@@ -1,4 +1,3 @@
-cat > docs/2026-1-MDS/index.md <<'MD'
 # Redes y Sistemas Complejos — 2026-1 (MDS)
 
 ## Monografía
@@ -14,4 +13,3 @@ cat > docs/2026-1-MDS/index.md <<'MD'
 
 ## Labs
 - (Completar con links a `core/labs_base/` o Colab/Posit Cloud)
-MD

@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Clases · 2026-1 MDS
-description: Clases, PDFs y notebooks teóricos — Redes y Sistemas Complejos 2026-1
+description: 4 PDFs de clases y 4 notebooks teóricos — Redes y Sistemas Complejos 2026-1
 ---
 
 {% assign repo = "https://github.com/crcandia/Curso_Redes_Sistemas_Complejos" %}
+{% assign raw = "https://raw.githubusercontent.com/crcandia/Curso_Redes_Sistemas_Complejos/main" %}
 {% assign nbviewer = "https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main" %}
 {% assign colab = "https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main" %}
 
@@ -18,114 +19,127 @@ description: Clases, PDFs y notebooks teóricos — Redes y Sistemas Complejos 2
 
 <div class="hero">
   <p class="hero__eyebrow">2026-1 · MDS</p>
-  <h1 class="hero__title">Clases y material teórico</h1>
+  <h1 class="hero__title">Clases: 4 PDFs y 4 notebooks</h1>
   <p class="hero__subtitle">
-    Presentaciones oficiales en PDF y notebooks teóricos del curso. Los PDFs se abren en
-    el navegador y mantienen una opción separada de descarga.
+    Material teórico central del curso. Cada clase tiene un PDF oficial con vista embebida
+    y los notebooks teóricos quedan agrupados en esta misma sección.
   </p>
   <div class="badges">
     <span class="badge badge--violet">4 PDFs oficiales</span>
     <span class="badge badge--blue">4 notebooks teóricos</span>
-    <span class="badge badge--teal">Vista en navegador</span>
+    <span class="badge badge--teal">Preview embebido</span>
   </div>
 </div>
 
 <section class="resource-section">
   <div class="resource-section__header">
     <div>
-      <div class="resource-section__title">Presentaciones PDF</div>
-      <div class="resource-section__meta">Una presentación oficial por clase.</div>
+      <div class="resource-section__title">PDFs de clase</div>
+      <div class="resource-section__meta">Solo una presentación PDF por clase.</div>
     </div>
+    <span class="badge badge--muted">4 archivos versionados</span>
   </div>
 
-  <div class="slides-list">
-    <div class="slide-row">
-      <div class="slide-row__num">01</div>
-      <div class="slide-row__body">
-        <div class="slide-row__title">Fundamentos y Representación de Redes</div>
-        <div class="slide-row__desc">
-          Modelamiento relacional, tipos de grafos, matrices de adyacencia, listas de aristas y primeros pasos con NetworkX.
+  <div class="pdf-grid">
+    <article class="pdf-card">
+      <div class="pdf-card__header">
+        <div>
+          <div class="card__number">Clase 1</div>
+          <h2 class="pdf-card__title">Fundamentos y Representación de Redes</h2>
+          <p class="pdf-card__desc">Modelamiento relacional, tipos de grafos, matrices, listas de aristas y NetworkX.</p>
         </div>
-        <div class="card__tags">
-          <span class="tag tag--violet">Fundamentos</span>
-          <span class="tag tag--blue">NetworkX</span>
-        </div>
+        <span class="tag tag--violet">PDF</span>
       </div>
-      <div class="slide-row__actions">
+      <div class="pdf-frame">
+        <iframe
+          src="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%201%20-%20Fundamentos%20y%20Rpresentacion%20de%20Red/Clase1_Fundamentos%20y%20Representacion%20de%20Red.pdf#toolbar=1&amp;navpanes=0"
+          title="Clase 1 — Fundamentos y Representación de Redes"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-card__actions">
         <a class="btn btn--primary btn--sm"
            href="{{ repo }}/blob/main/runs/2026-1-MDS/overrides/slides/Clase%201%20-%20Fundamentos%20y%20Rpresentacion%20de%20Red/Clase1_Fundamentos%20y%20Representacion%20de%20Red.pdf"
-           target="_blank" rel="noopener">Ver PDF</a>
+           target="_blank" rel="noopener">Abrir PDF</a>
         <a class="btn btn--ghost btn--sm"
-           href="{{ repo }}/raw/main/runs/2026-1-MDS/overrides/slides/Clase%201%20-%20Fundamentos%20y%20Rpresentacion%20de%20Red/Clase1_Fundamentos%20y%20Representacion%20de%20Red.pdf"
+           href="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%201%20-%20Fundamentos%20y%20Rpresentacion%20de%20Red/Clase1_Fundamentos%20y%20Representacion%20de%20Red.pdf"
            target="_blank" rel="noopener">Descargar</a>
       </div>
-    </div>
+    </article>
 
-    <div class="slide-row">
-      <div class="slide-row__num">02</div>
-      <div class="slide-row__body">
-        <div class="slide-row__title">Redes Bipartitas y Proyecciones</div>
-        <div class="slide-row__desc">
-          Estructuras bipartitas, proyecciones unipartitas, ponderación de aristas y sesgos inducidos por nodos de alta actividad.
+    <article class="pdf-card">
+      <div class="pdf-card__header">
+        <div>
+          <div class="card__number">Clase 2</div>
+          <h2 class="pdf-card__title">Redes Bipartitas y Proyecciones</h2>
+          <p class="pdf-card__desc">Estructuras bipartitas, proyecciones, ponderación de aristas y sesgos de alta actividad.</p>
         </div>
-        <div class="card__tags">
-          <span class="tag tag--teal">Bipartitas</span>
-          <span class="tag tag--teal">Proyecciones</span>
-        </div>
+        <span class="tag tag--teal">PDF</span>
       </div>
-      <div class="slide-row__actions">
+      <div class="pdf-frame">
+        <iframe
+          src="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%202%20-%20Redes%20Bipartitas/Clase_2_Bipartitas_y_Proyecciones.pdf#toolbar=1&amp;navpanes=0"
+          title="Clase 2 — Redes Bipartitas y Proyecciones"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-card__actions">
         <a class="btn btn--primary btn--sm"
            href="{{ repo }}/blob/main/runs/2026-1-MDS/overrides/slides/Clase%202%20-%20Redes%20Bipartitas/Clase_2_Bipartitas_y_Proyecciones.pdf"
-           target="_blank" rel="noopener">Ver PDF</a>
+           target="_blank" rel="noopener">Abrir PDF</a>
         <a class="btn btn--ghost btn--sm"
-           href="{{ repo }}/raw/main/runs/2026-1-MDS/overrides/slides/Clase%202%20-%20Redes%20Bipartitas/Clase_2_Bipartitas_y_Proyecciones.pdf"
+           href="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%202%20-%20Redes%20Bipartitas/Clase_2_Bipartitas_y_Proyecciones.pdf"
            target="_blank" rel="noopener">Descargar</a>
       </div>
-    </div>
+    </article>
 
-    <div class="slide-row">
-      <div class="slide-row__num">03</div>
-      <div class="slide-row__body">
-        <div class="slide-row__title">Topología y Centralidades</div>
-        <div class="slide-row__desc">
-          Grado, betweenness, closeness, eigenvector, caminos mínimos, conectividad y construcción de features de red.
+    <article class="pdf-card">
+      <div class="pdf-card__header">
+        <div>
+          <div class="card__number">Clase 3</div>
+          <h2 class="pdf-card__title">Topología y Centralidades</h2>
+          <p class="pdf-card__desc">Centralidades, caminos mínimos, conectividad y construcción de features de red.</p>
         </div>
-        <div class="card__tags">
-          <span class="tag tag--blue">Centralidades</span>
-          <span class="tag tag--blue">Topología</span>
-        </div>
+        <span class="tag tag--blue">PDF</span>
       </div>
-      <div class="slide-row__actions">
+      <div class="pdf-frame">
+        <iframe
+          src="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%203%20-%20Topologia%20y%20Centralidades/Clase%203%20Topologia.pdf#toolbar=1&amp;navpanes=0"
+          title="Clase 3 — Topología y Centralidades"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-card__actions">
         <a class="btn btn--primary btn--sm"
            href="{{ repo }}/blob/main/runs/2026-1-MDS/overrides/slides/Clase%203%20-%20Topologia%20y%20Centralidades/Clase%203%20Topologia.pdf"
-           target="_blank" rel="noopener">Ver PDF</a>
+           target="_blank" rel="noopener">Abrir PDF</a>
         <a class="btn btn--ghost btn--sm"
-           href="{{ repo }}/raw/main/runs/2026-1-MDS/overrides/slides/Clase%203%20-%20Topologia%20y%20Centralidades/Clase%203%20Topologia.pdf"
+           href="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%203%20-%20Topologia%20y%20Centralidades/Clase%203%20Topologia.pdf"
            target="_blank" rel="noopener">Descargar</a>
       </div>
-    </div>
+    </article>
 
-    <div class="slide-row">
-      <div class="slide-row__num">04</div>
-      <div class="slide-row__body">
-        <div class="slide-row__title">Modelos Generativos, Nulos y Baselines</div>
-        <div class="slide-row__desc">
-          Erdős-Rényi, Watts-Strogatz, Barabási-Albert, modelos nulos y criterios para comparar redes reales con baselines.
+    <article class="pdf-card">
+      <div class="pdf-card__header">
+        <div>
+          <div class="card__number">Clase 4</div>
+          <h2 class="pdf-card__title">Modelos Generativos, Nulos y Baselines</h2>
+          <p class="pdf-card__desc">ER, WS, BA, modelos nulos y comparación de redes reales contra baselines.</p>
         </div>
-        <div class="card__tags">
-          <span class="tag tag--amber">Modelos</span>
-          <span class="tag tag--amber">Baselines</span>
-        </div>
+        <span class="tag tag--amber">PDF</span>
       </div>
-      <div class="slide-row__actions">
+      <div class="pdf-frame">
+        <iframe
+          src="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%204%20-%20Modelos%20Generativos%20Nulos%20y%20Baselines/Clase4_Modelos_Generativos_nulos_baselines.pdf#toolbar=1&amp;navpanes=0"
+          title="Clase 4 — Modelos Generativos, Nulos y Baselines"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-card__actions">
         <a class="btn btn--primary btn--sm"
            href="{{ repo }}/blob/main/runs/2026-1-MDS/overrides/slides/Clase%204%20-%20Modelos%20Generativos%20Nulos%20y%20Baselines/Clase4_Modelos_Generativos_nulos_baselines.pdf"
-           target="_blank" rel="noopener">Ver PDF</a>
+           target="_blank" rel="noopener">Abrir PDF</a>
         <a class="btn btn--ghost btn--sm"
-           href="{{ repo }}/raw/main/runs/2026-1-MDS/overrides/slides/Clase%204%20-%20Modelos%20Generativos%20Nulos%20y%20Baselines/Clase4_Modelos_Generativos_nulos_baselines.pdf"
+           href="{{ raw }}/runs/2026-1-MDS/overrides/slides/Clase%204%20-%20Modelos%20Generativos%20Nulos%20y%20Baselines/Clase4_Modelos_Generativos_nulos_baselines.pdf"
            target="_blank" rel="noopener">Descargar</a>
       </div>
-    </div>
+    </article>
   </div>
 </section>
 
@@ -133,18 +147,19 @@ description: Clases, PDFs y notebooks teóricos — Redes y Sistemas Complejos 2
   <div class="resource-section__header">
     <div>
       <div class="resource-section__title">Notebooks teóricos</div>
-      <div class="resource-section__meta">Cuadernos conceptuales agrupados con el material de clases.</div>
+      <div class="resource-section__meta">4 cuadernos conceptuales agrupados con el material de clases.</div>
     </div>
+    <span class="badge badge--blue">4 notebooks</span>
   </div>
 
   <div class="material-grid">
     <div class="material-card">
       <div class="material-card__top">
         <div>
-          <div class="card__number">U5</div>
+          <div class="card__number">Notebook 1</div>
           <div class="material-card__title">Mesoestructura</div>
         </div>
-        <span class="tag tag--blue">Teoría</span>
+        <span class="tag tag--blue">U5</span>
       </div>
       <div class="material-card__desc">
         Comunidades, modularidad, estabilidad, core-periphery y lectura estructural de roles.
@@ -162,10 +177,10 @@ description: Clases, PDFs y notebooks teóricos — Redes y Sistemas Complejos 2
     <div class="material-card">
       <div class="material-card__top">
         <div>
-          <div class="card__number">U6</div>
+          <div class="card__number">Notebook 2</div>
           <div class="material-card__title">Procesos en Redes</div>
         </div>
-        <span class="tag tag--teal">Teoría</span>
+        <span class="tag tag--teal">U6</span>
       </div>
       <div class="material-card__desc">
         Difusión, contagio, modelos SIR/SIS, umbrales y estrategias de intervención.
@@ -183,10 +198,10 @@ description: Clases, PDFs y notebooks teóricos — Redes y Sistemas Complejos 2
     <div class="material-card">
       <div class="material-card__top">
         <div>
-          <div class="card__number">U7</div>
+          <div class="card__number">Notebook 3</div>
           <div class="material-card__title">Inferencia, Evaluación y Ética</div>
         </div>
-        <span class="tag tag--amber">Teoría</span>
+        <span class="tag tag--amber">U7</span>
       </div>
       <div class="material-card__desc">
         Significancia, leakage, validación en grafos, privacidad y evaluación responsable.
@@ -204,10 +219,10 @@ description: Clases, PDFs y notebooks teóricos — Redes y Sistemas Complejos 2
     <div class="material-card">
       <div class="material-card__top">
         <div>
-          <div class="card__number">U8</div>
+          <div class="card__number">Notebook 4</div>
           <div class="material-card__title">Industria y Graph ML</div>
         </div>
-        <span class="tag tag--violet">Teoría</span>
+        <span class="tag tag--violet">U8</span>
       </div>
       <div class="material-card__desc">
         Casos industriales, embeddings, Graph Neural Networks y límites prácticos de los modelos sobre grafos.

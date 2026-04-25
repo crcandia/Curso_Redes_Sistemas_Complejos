@@ -1,20 +1,116 @@
 ---
 layout: default
-title: Curso Redes y Sistemas Complejos
+title: Inicio
+description: Sitio oficial del curso Redes y Sistemas Complejos — Universidad del Desarrollo
 ---
 
-<section class="hero">
-  <h1 class="hero__title">Curso Redes y Sistemas Complejos</h1>
+<div class="hero hero__bg">
+  <p class="hero__eyebrow">Universidad del Desarrollo · Posgrado</p>
+  <h1 class="hero__title">Redes y <em>Sistemas Complejos</em></h1>
   <p class="hero__subtitle">
-    Sitio del curso por corridas. Selecciona la versión correspondiente.
+    Un curso de posgrado sobre el análisis y modelamiento de redes complejas:
+    desde fundamentos de teoría de grafos hasta aprendizaje de máquina sobre grafos,
+    pasando por modelos generativos, mesoestructura y procesos dinámicos.
   </p>
-</section>
-
-<section class="grid">
-  <div class="card">
-    <h3>Corridas disponibles</h3>
-    <ul>
-      <li><a href="./2026-1-MDS/">2026-1 (MDS)</a></li>
-    </ul>
+  <div class="badges">
+    <span class="badge badge--violet">
+      <span class="dot dot--violet"></span>
+      Magíster en Data Science
+    </span>
+    <span class="badge badge--teal">
+      <span class="dot dot--teal"></span>
+      Python · NetworkX · igraph
+    </span>
+    <span class="badge badge--blue">Posgrado UDD</span>
   </div>
-</section>
+</div>
+
+<!-- Corridas disponibles -->
+<div class="section-header mt-40">
+  <h2>Corridas disponibles</h2>
+  <span class="section-count">1 activa</span>
+</div>
+
+<div class="grid grid--3">
+  <a class="run-card" href="{{ '/2026-1-MDS/' | relative_url }}">
+    <div class="run-card__meta">
+      <div class="badges">
+        <span class="badge badge--violet">MDS</span>
+        <span class="badge badge--teal">
+          <span class="dot dot--green"></span>
+          Activa
+        </span>
+      </div>
+      <span class="run-card__arrow">→</span>
+    </div>
+    <div class="run-card__title">2026 · Semestre 1</div>
+    <div class="run-card__desc">
+      Edición para el Magíster en Data Science. Incluye 8 laboratorios,
+      4 sesiones de clases, recursos interactivos y la monografía del curso.
+    </div>
+    <div class="run-card__footer">
+      <span>Mar – Jul 2026</span>
+      <span>8 Labs · 4 Clases</span>
+    </div>
+  </a>
+
+  <!-- Placeholder para corridas futuras -->
+  <div class="card" style="background: var(--surface-2); border-style: dashed; box-shadow: none; display: flex; align-items: center; justify-content: center; min-height: 160px; cursor: default;">
+    <div style="text-align: center; color: var(--muted);">
+      <div style="font-size: 28px; margin-bottom: 8px;">＋</div>
+      <div style="font-size: 13px; font-weight: 600;">Próxima corrida</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- Acerca del curso -->
+<div class="section-header">
+  <h2>Acerca del curso</h2>
+</div>
+
+<div class="about-grid">
+  <div class="about-item">
+    <div class="about-item__icon">🕸</div>
+    <div>
+      <div class="about-item__title">Fundamentos de redes</div>
+      <div class="about-item__desc">Grafos, representaciones matriciales, métricas de centralidad, topología y conectividad.</div>
+    </div>
+  </div>
+  <div class="about-item">
+    <div class="about-item__icon">🔬</div>
+    <div>
+      <div class="about-item__title">Modelos y análisis</div>
+      <div class="about-item__desc">Modelos generativos (Erdős-Rényi, Watts-Strogatz, Barabási-Albert), modelos nulos e inferencia estadística.</div>
+    </div>
+  </div>
+  <div class="about-item">
+    <div class="about-item__icon" style="background: var(--teal-pale);">🧩</div>
+    <div>
+      <div class="about-item__title">Mesoestructura</div>
+      <div class="about-item__desc">Detección de comunidades, clustering jerárquico, modularidad y algoritmos modernos.</div>
+    </div>
+  </div>
+  <div class="about-item">
+    <div class="about-item__icon" style="background: var(--teal-pale);">📡</div>
+    <div>
+      <div class="about-item__title">Procesos dinámicos</div>
+      <div class="about-item__desc">Difusión, contagio, epidemiología computacional y percolación sobre redes.</div>
+    </div>
+  </div>
+  <div class="about-item">
+    <div class="about-item__icon" style="background: var(--blue-pale);">🤖</div>
+    <div>
+      <div class="about-item__title">ML sobre grafos</div>
+      <div class="about-item__desc">Graph Neural Networks, node embeddings, aplicaciones industriales con GraphML.</div>
+    </div>
+  </div>
+  <div class="about-item">
+    <div class="about-item__icon" style="background: var(--amber-pale);">⚖️</div>
+    <div>
+      <div class="about-item__title">Inferencia y ética</div>
+      <div class="about-item__desc">Evaluación estadística, sesgos algorítmicos y consideraciones éticas en el análisis de redes sociales.</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Jekyll build output
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+
+# Ruby / Bundler
+Gemfile.lock
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Entregas de estudiantes (no se versionan)
+runs/*/overrides/assessments/
+runs/*/overrides/assessments/Entregas*/
+runs/*/overrides/assessments/Entrega*/
+runs/*/overrides/assessments/*/Entregas*/
+
+# Respaldos internos
+runs/*/overrides/labs/Respaldos/
+
+# Repositorios fuente de herramientas interactivas
+runs/*/overrides/resources/
+
+# Presentaciones fuente pesadas; se versionan solo las versiones PDF
+*.pptx
+
+# Archivos de Office temporales
+~$*
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Entornos
+.env
+*.env

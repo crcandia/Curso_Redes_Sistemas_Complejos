@@ -1,0 +1,293 @@
+---
+layout: default
+title: Laboratorios · 2026-1 MDS
+description: Laboratorios de programación — Redes y Sistemas Complejos 2026-1
+---
+
+<nav class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Inicio</a>
+  <span>›</span>
+  <a href="{{ '/2026-1-MDS/' | relative_url }}">2026-1 · MDS</a>
+  <span>›</span>
+  <span>Laboratorios</span>
+</nav>
+
+<div class="hero" style="padding-bottom: 28px;">
+  <p class="hero__eyebrow">2026-1 · MDS</p>
+  <h1 class="hero__title" style="font-size: clamp(22px, 3.5vw, 36px);">Laboratorios</h1>
+  <p class="hero__subtitle" style="font-size: 15px;">
+    8 laboratorios prácticos en Python. Cada uno combina teoría aplicada con ejercicios sobre datos reales.
+    Diseñados para ejecutarse en Google Colab sin instalación local.
+  </p>
+  <div class="badges">
+    <span class="badge badge--teal">8 labs</span>
+    <span class="badge badge--teal">Python · NetworkX</span>
+    <span class="badge badge--blue">Google Colab</span>
+  </div>
+</div>
+
+<!-- Instrucciones -->
+<div class="card mb-32" style="background: var(--teal-pale); border-color: var(--teal-tag); box-shadow: none;">
+  <div style="display: flex; gap: 12px; align-items: flex-start;">
+    <span style="font-size: 20px;">🚀</span>
+    <div>
+      <div style="font-weight: 700; color: var(--teal); margin-bottom: 4px;">Cómo usar los notebooks</div>
+      <div style="font-size: 13.5px; color: var(--text-2); line-height: 1.6;">
+        Haz clic en <strong>Colab</strong> para ejecutar el notebook en tu navegador, o en <strong>NBViewer</strong> para leerlo sin ejecutar.
+        Los labs marcados con 🌐 tienen un recurso interactivo complementario en la web.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Grid de labs -->
+<div class="grid grid--auto">
+
+  <!-- Lab 1 -->
+  <div class="lab-card" id="lab1">
+    <div class="lab-card__header">
+      <div class="lab-card__num">01</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">Redes Básicas</div>
+        <div class="lab-card__subtitle">U1 · Fundamentos</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      Creación y manipulación de grafos con NetworkX. Visualización básica,
+      carga desde archivos de texto y primeras métricas de red (grado, conectividad, self-loops).
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--teal">NetworkX</span>
+      <span class="tag tag--blue">Fundamentos</span>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%201%20-%20Basic/Taller%20redes%3A%20B%C3%A1sico.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%201%20-%20Basic/Taller%20redes%3A%20B%C3%A1sico.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+  <!-- Lab 2 -->
+  <div class="lab-card" id="lab2" style="border-top: 3px solid var(--teal);">
+    <div class="lab-card__header">
+      <div class="lab-card__num" style="background:var(--teal-pale); color:var(--teal);">02</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">Redes Bipartitas</div>
+        <div class="lab-card__subtitle">U2 · Bipartitas y proyecciones</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      Construcción de grafos bipartitos, proyecciones 1-mode y cuantificación de sesgos.
+      Aplicación en datos de compras públicas (empresa–organismo).
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--teal">Bipartitas</span>
+      <span class="tag tag--teal">Proyecciones</span>
+    </div>
+    <!-- Recurso asociado -->
+    <div style="margin-bottom:12px; padding: 8px 12px; background: var(--teal-pale); border-radius: var(--radius-sm); border: 1px solid var(--teal-tag); display:flex; align-items:center; justify-content:space-between; gap:8px;">
+      <span style="font-size:12px; font-weight:600; color:var(--teal);">🌐 Recurso interactivo disponible</span>
+      <a class="btn btn--teal btn--sm" href="https://bipartitas.criss-lab.com/" target="_blank" rel="noopener">Abrir</a>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%202%20-%20Redes%20Bipartitas/Taller%20redes%20Bipartitas.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%202%20-%20Redes%20Bipartitas/Taller%20redes%20Bipartitas.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+  <!-- Lab 3 -->
+  <div class="lab-card" id="lab3">
+    <div class="lab-card__header">
+      <div class="lab-card__num">03</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">Centralidades</div>
+        <div class="lab-card__subtitle">U3 · Features y segmentación</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      Grado, betweenness, closeness, eigenvector. Construcción de un feature store
+      de nodos para modelos downstream. Análisis de sensibilidad frente a pesos y umbrales.
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--blue">Centralidades</span>
+      <span class="tag tag--blue">Feature Store</span>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%203%20-%20Centralidades/Lab_Clase3_Centralidades_y_Features.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%203%20-%20Centralidades/Lab_Clase3_Centralidades_y_Features.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+  <!-- Lab 4 -->
+  <div class="lab-card" id="lab4">
+    <div class="lab-card__header">
+      <div class="lab-card__num" style="background:var(--amber-pale); color:var(--amber);">04</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">Modelos Nulos y Baselines</div>
+        <div class="lab-card__subtitle">U4 · Modelos generativos</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      Erdős-Rényi, Watts-Strogatz y Barabási-Albert como baselines estadísticos.
+      Comparación de clustering, distancias y distribuciones de grado contra la red real.
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--amber">Modelos Nulos</span>
+      <span class="tag tag--amber">Inferencia</span>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%204%20-%20Modelos%20nulos%20y%20baselines/Lab%204%20-%20Modelos%20nulos%20y%20baselines.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%204%20-%20Modelos%20nulos%20y%20baselines/Lab%204%20-%20Modelos%20nulos%20y%20baselines.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+  <!-- Lab 5 -->
+  <div class="lab-card" id="lab5" style="border-top: 3px solid var(--blue);">
+    <div class="lab-card__header">
+      <div class="lab-card__num" style="background:var(--blue-pale); color:var(--blue);">05</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">Mesoestructura</div>
+        <div class="lab-card__subtitle">U5 · Comunidades y core-periphery</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      Leiden, Louvain con análisis de estabilidad, k-core y core-periphery.
+      Aplicación en redes de compras públicas (segmentos de proveedores y dependencias).
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--blue">Comunidades</span>
+      <span class="tag tag--blue">Louvain · Leiden</span>
+    </div>
+    <!-- Recurso asociado -->
+    <div style="margin-bottom:12px; padding: 8px 12px; background: var(--blue-pale); border-radius: var(--radius-sm); border: 1px solid var(--blue-tag); display:flex; align-items:center; justify-content:space-between; gap:8px;">
+      <span style="font-size:12px; font-weight:600; color:var(--blue);">🌐 Recurso interactivo disponible</span>
+      <a class="btn btn--sm" style="background:var(--blue); color:#fff;" href="https://communities.criss-lab.com/" target="_blank" rel="noopener">Abrir</a>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%205%20-%20Mesoestructura/Lab_5_Practica_Compras_Publicas.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%205%20-%20Mesoestructura/Lab_5_Practica_Compras_Publicas.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+  <!-- Lab 6 -->
+  <div class="lab-card" id="lab6" style="border-top: 3px solid var(--violet-mid);">
+    <div class="lab-card__header">
+      <div class="lab-card__num">06</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">Procesos en Redes</div>
+        <div class="lab-card__subtitle">U6 · Difusión y contagio</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      SIR/SIS: simulación y comparación de intervenciones (random, por grado, por k-core).
+      Umbrales de percolación y rol de la estructura en la velocidad de propagación.
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--teal">Difusión</span>
+      <span class="tag tag--teal">SIR · SIS</span>
+    </div>
+    <!-- Recurso asociado -->
+    <div style="margin-bottom:12px; padding: 8px 12px; background: var(--violet-pale); border-radius: var(--radius-sm); border: 1px solid var(--violet-tag); display:flex; align-items:center; justify-content:space-between; gap:8px;">
+      <span style="font-size:12px; font-weight:600; color:var(--violet-mid);">🌐 Recurso interactivo disponible</span>
+      <a class="btn btn--primary btn--sm" href="https://spreading.criss-lab.com/" target="_blank" rel="noopener">Abrir</a>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%206%20-%20Procesos%20en%20Redes/Clase6_Procesos_en_Redes_Practica.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%206%20-%20Procesos%20en%20Redes/Clase6_Procesos_en_Redes_Practica.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+  <!-- Lab 7 -->
+  <div class="lab-card" id="lab7">
+    <div class="lab-card__header">
+      <div class="lab-card__num" style="background:var(--rose-pale); color:var(--rose);">07</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">Inferencia, Evaluación y Ética</div>
+        <div class="lab-card__subtitle">U7 · Significancia y sesgos</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      Rewiring y permutation tests sobre modularidad. Evaluación sin leakage en grafos.
+      Checklist ético para análisis de redes sociales y privacidad.
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--amber">Inferencia</span>
+      <span class="tag tag--amber">Ética</span>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%207%20-%20Inferencia%20Evaluacion%20y%20Etica/Clase_7_Practico_Inferencia_Evaluacion_Etica.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%207%20-%20Inferencia%20Evaluacion%20y%20Etica/Clase_7_Practico_Inferencia_Evaluacion_Etica.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+  <!-- Lab 8 -->
+  <div class="lab-card" id="lab8">
+    <div class="lab-card__header">
+      <div class="lab-card__num" style="background:var(--surface-3); color:var(--muted);">08</div>
+      <div class="lab-card__meta">
+        <div class="lab-card__title">ML sobre Grafos</div>
+        <div class="lab-card__subtitle">U8 · Cierre — Graph Neural Networks</div>
+      </div>
+    </div>
+    <div class="lab-card__desc">
+      Node embeddings vs. GNN. Casos industriales: fraude, recomendación y bioinformática.
+      Cuándo NO usar GNN y cómo evitar leakage en modelos de grafos.
+    </div>
+    <div class="card__tags mb-16">
+      <span class="tag tag--violet">GNN</span>
+      <span class="tag tag--violet">Embeddings</span>
+      <span class="tag tag--blue">ML</span>
+    </div>
+    <div class="lab-card__footer">
+      <a class="btn btn--outline btn--sm"
+         href="https://nbviewer.org/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%208%20-%20ML%20sobre%20grafos/Clase_8_Industria_GraphML.ipynb"
+         target="_blank" rel="noopener">👁 NBViewer</a>
+      <a class="btn btn--teal btn--sm"
+         href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%208%20-%20ML%20sobre%20grafos/Clase_8_Industria_GraphML.ipynb"
+         target="_blank" rel="noopener">▶ Colab</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-divider"></div>
+
+<div class="card" style="background: var(--blue-pale); border-color: var(--blue-tag); box-shadow: none;">
+  <div style="display: flex; gap: 12px; align-items: flex-start;">
+    <span style="font-size: 20px;">📓</span>
+    <div>
+      <div style="font-weight: 700; color: var(--blue); margin-bottom: 4px;">Notebooks teóricos adicionales</div>
+      <div style="font-size: 13.5px; color: var(--text-2); line-height: 1.6;">
+        Los labs 5, 6 y 7 incluyen un notebook teórico separado con derivaciones y explicaciones extendidas.
+        Los encontrarás en el repositorio junto al notebook principal de práctica, en la misma carpeta.
+      </div>
+    </div>
+  </div>
+</div>

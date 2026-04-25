@@ -1,47 +1,223 @@
 ---
 layout: default
-title: Redes y Sistemas Complejos — 2026-1 (MDS)
+title: 2026-1 · MDS
+description: Redes y Sistemas Complejos — Corrida 2026-1, Magíster en Data Science, UDD
 ---
 
-<section class="hero">
+<nav class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Inicio</a>
+  <span>›</span>
+  <span>2026-1 · MDS</span>
+</nav>
+
+<div class="hero hero--run">
   <div class="badges">
-    <span class="badge"><span class="dot"></span> Corrida: 2026-1</span>
-    <span class="badge"><span class="dot dot--green"></span> Programa: MDS</span>
+    <span class="badge badge--violet">Corrida: 2026-1</span>
+    <span class="badge badge--blue">Programa: MDS</span>
+    <span class="badge badge--teal">
+      <span class="dot dot--green"></span>
+      Activa
+    </span>
   </div>
-
-  <h1 class="hero__title">Redes y Sistemas Complejos</h1>
-  <p class="hero__subtitle">
-    Material oficial del curso (MDS). Aquí encontrarás la monografía, syllabus, calendario,
-    evaluación y recursos de clase (slides y labs).
+  <h1 class="hero__title" style="font-size: clamp(22px, 3.5vw, 38px);">Redes y Sistemas Complejos</h1>
+  <p class="hero__subtitle" style="font-size: 15px;">
+    Material oficial del curso para el Magíster en Data Science · Primer semestre 2026.
+    Accede a las clases, laboratorios, recursos interactivos y literatura desde esta página.
   </p>
-</section>
+</div>
 
-<section class="grid">
+<!-- Stats -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat__num">8</div>
+    <div class="stat__label">Unidades</div>
+  </div>
+  <div class="stat">
+    <div class="stat__num">8</div>
+    <div class="stat__label">Laboratorios</div>
+  </div>
+  <div class="stat">
+    <div class="stat__num">4</div>
+    <div class="stat__label">Decks PDF</div>
+  </div>
+  <div class="stat">
+    <div class="stat__num">3</div>
+    <div class="stat__label">Recursos web</div>
+  </div>
+</div>
+
+<!-- Navegación principal -->
+<div class="section-header">
+  <h2>Contenido del curso</h2>
+</div>
+
+<div class="grid grid--3" style="margin-bottom: 40px;">
+
+  <a href="{{ '/2026-1-MDS/calendario/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer; background: linear-gradient(135deg, var(--violet-pale), var(--surface)); border-color: var(--violet-tag);">
+      <div class="card__icon">🗓</div>
+      <div class="card__title">Plan del Curso</div>
+      <div class="card__desc">Timeline completo: 8 unidades temáticas con fechas, objetivos, contenidos y lecturas.</div>
+      <div class="card__tags"><span class="tag tag--violet">8 unidades</span><span class="tag tag--blue">Mar–Abr 2026</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver calendario →</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/2026-1-MDS/slides/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon">📊</div>
+      <div class="card__title">Clases & Slides</div>
+      <div class="card__desc">Presentaciones PDF de las 4 sesiones del curso. Fundamentos, bipartitas, topología y modelos.</div>
+      <div class="card__tags"><span class="tag tag--violet">4 decks</span><span class="tag tag--blue">PDF</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver clases →</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/2026-1-MDS/labs/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon card__icon--teal">🧪</div>
+      <div class="card__title">Laboratorios</div>
+      <div class="card__desc">8 labs en Python con NetworkX, igraph y PyTorch Geometric. Datos reales y aplicaciones.</div>
+      <div class="card__tags"><span class="tag tag--teal">8 labs</span><span class="tag tag--teal">Python</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver labs →</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/2026-1-MDS/recursos/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon card__icon--blue">🌐</div>
+      <div class="card__title">Recursos Interactivos</div>
+      <div class="card__desc">Herramientas web para bipartitas, comunidades y procesos de difusión. Sin instalación.</div>
+      <div class="card__tags"><span class="tag tag--blue">3 apps</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver recursos →</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/2026-1-MDS/literatura/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon card__icon--amber">📚</div>
+      <div class="card__title">Literatura</div>
+      <div class="card__desc">Lecturas obligatorias y complementarias con DOI y versiones de libre acceso (arXiv).</div>
+      <div class="card__tags"><span class="tag tag--amber">Papers</span><span class="tag tag--amber">Libros</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver literatura →</span></div>
+    </div>
+  </a>
+
   <div class="card">
-    <h3>Documentos</h3>
-    <ul>
-      <li><a href="../monografia/Monografia_Curso_Redes_2026.pdf">Monografía (PDF)</a></li>
-      <li><a href="../../runs/2026-1-MDS/syllabus.md">Syllabus</a></li>
-      <li><a href="../../runs/2026-1-MDS/calendario.md">Calendario</a></li>
-      <li><a href="../../runs/2026-1-MDS/evaluacion.md">Evaluación</a></li>
+    <div class="card__icon">📄</div>
+    <div class="card__title">Documentos</div>
+    <ul style="margin-top:4px;">
+      <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank">📘 Monografía (PDF)</a></li>
+      <li><a href="https://github.com/crcandia/Curso_Redes_Sistemas_Complejos/raw/main/runs/2026-1-MDS/Programa_Redes_y_Sistemas_Complejos.pdf" target="_blank" rel="noopener">📋 Programa (PDF)</a></li>
     </ul>
   </div>
 
-  <div class="card">
-    <h3>Slides</h3>
-    <ul>
-      <li><a href="../../core/slides_base/pdf/deck_01_intro.pdf">Deck 01 — Introducción (PDF)</a></li>
-      <li><a href="../../core/slides_base/pdf/deck_02_metricas.pdf">Deck 02 — Métricas (PDF)</a></li>
-      <li><em style="color: rgba(255,255,255,0.55)">Agrega decks cuando los subas</em></li>
-    </ul>
+</div>
+
+<!-- Unidades con recursos integrados -->
+<div class="section-header">
+  <h2>Unidades y recursos asociados</h2>
+</div>
+
+<div style="display:flex; flex-direction:column; gap:10px; margin-bottom:40px;">
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:10px;">
+    <div class="card" style="border-left:3px solid var(--violet-mid); padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U1</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Fundamentos y Modelamiento</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">02–08 mar · Lab 1 · Clase 1</div>
+        </div>
+        <span class="tag tag--violet">Lab 1</span>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--teal); padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U2</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Redes Bipartitas</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">09–15 mar · Lab 2 · Clase 2</div>
+        </div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+          <span class="tag tag--teal">Lab 2</span>
+          <a class="btn btn--teal btn--sm" href="https://bipartitas.criss-lab.com/" target="_blank" rel="noopener" style="padding:3px 8px;">🌐</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--violet-mid); padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U3</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Features y Segmentación</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">16–22 mar · Lab 3 · Clase 3</div>
+        </div>
+        <span class="tag tag--violet">Lab 3</span>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--amber); padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U4</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Modelos Generativos y Nulos</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">23–29 mar · Lab 4 · Clase 4</div>
+        </div>
+        <span class="tag tag--amber">Lab 4</span>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--blue); padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U5</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Mesoestructura</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">30 mar–05 abr · Lab 5</div>
+        </div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+          <span class="tag tag--blue">Lab 5</span>
+          <a class="btn btn--sm" style="background:var(--blue); color:#fff; padding:3px 8px;" href="https://communities.criss-lab.com/" target="_blank" rel="noopener">🌐</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--teal); padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U6</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Procesos en Redes</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">06–12 abr · Lab 6</div>
+        </div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+          <span class="tag tag--teal">Lab 6</span>
+          <a class="btn btn--teal btn--sm" href="https://spreading.criss-lab.com/" target="_blank" rel="noopener" style="padding:3px 8px;">🌐</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--rose); padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U7</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Inferencia, Evaluación y Ética</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">13–19 abr · Lab 7</div>
+        </div>
+        <span class="tag tag--amber">Lab 7</span>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid var(--muted); padding:14px 16px; background:var(--surface-2);">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">
+        <div>
+          <div class="card__number">U8</div>
+          <div style="font-size:14px; font-weight:700; color:var(--text);">Industria y Graph ML</div>
+          <div style="font-size:12.5px; color:var(--text-2); margin-top:3px;">20–26 abr · Lab 8 · Cierre</div>
+        </div>
+        <span class="badge badge--muted" style="font-size:11px; padding:2px 8px;">No evaluable</span>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <h3>Labs</h3>
-    <ul>
-      <li><a href="#">Python Lab 01 (Colab)</a></li>
-      <li><a href="#">R Lab 01 (Posit Cloud)</a></li>
-      <li><em style="color: rgba(255,255,255,0.55)">Reemplaza con links reales</em></li>
-    </ul>
-  </div>
-</section>
+</div>

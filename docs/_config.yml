@@ -1,0 +1,17 @@
+title: Redes y Sistemas Complejos
+description: Sitio oficial del curso — Universidad del Desarrollo
+url: "https://networks.criss-lab.com"
+baseurl: ""
+
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - "*.DS_Store"
+  - "**/.DS_Store"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

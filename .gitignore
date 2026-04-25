@@ -5,6 +5,7 @@
 .LSOverride
 
 # Jekyll build output
+docs/CNAME
 docs/_site/
 docs/.jekyll-cache/
 docs/.jekyll-metadata

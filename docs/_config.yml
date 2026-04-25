@@ -1,7 +1,10 @@
 title: Redes y Sistemas Complejos
 description: Sitio oficial del curso — Universidad del Desarrollo
-url: "https://networks.criss-lab.com"
-baseurl: ""
+# Dominio custom pendiente de configurar:
+# url: "https://networks.criss-lab.com"
+# baseurl: ""
+url: "https://crcandia.github.io"
+baseurl: "/Curso_Redes_Sistemas_Complejos"
 
 permalink: pretty
 markdown: kramdown

@@ -35,6 +35,9 @@ runs/*/overrides/resources/
 
 # Presentaciones fuente pesadas; se versionan solo las versiones PDF
 *.pptx
+runs/*/overrides/slides/**/Input*/
+runs/*/overrides/slides/**/Inputs/
+runs/*/overrides/slides/**/s41109-021-00418-y.pdf
 
 # Archivos de Office temporales
 ~$*

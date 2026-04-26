@@ -36,8 +36,12 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="footer__left">© {{ site.time | date: "%Y" }} · Redes y Sistemas Complejos · Universidad del Desarrollo</span>
+      <span class="footer__left">
+        © {{ site.time | date: "%Y" }} · Redes y Sistemas Complejos ·
+        <a class="footer__link" href="https://www.criss-lab.com" target="_blank" rel="noopener">CRiSS-LAB</a>
+      </span>
       <div class="footer__right">
+        <span>By <a class="footer__link" href="https://www.crcandia.com" target="_blank" rel="noopener">Cristian Candia, Ph.D.</a></span>
         <a href="{{ '/2026-1-MDS/calendario/' | relative_url }}">Calendario</a>
         <a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank">Monografía</a>
         <a href="https://github.com/crcandia/Curso_Redes_Sistemas_Complejos" target="_blank" rel="noopener">GitHub</a>

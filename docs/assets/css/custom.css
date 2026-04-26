@@ -982,9 +982,22 @@ strong { color: var(--text); }
   display: flex;
   gap: 16px;
   font-size: 13px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--muted);
 }
 .footer__right a { color: var(--muted); font-weight: 500; }
 .footer__right a:hover { color: var(--violet-mid); text-decoration: none; }
+.footer__link {
+  color: var(--text-2);
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+}
+.footer__link:hover {
+  color: var(--teal);
+  border-bottom-color: var(--teal-tag);
+  text-decoration: none;
+}
 
 /* ============================================================
    RESPONSIVE

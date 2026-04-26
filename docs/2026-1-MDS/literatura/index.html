@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Literatura · 2026-1
-description: Lecturas obligatorias y complementarias — Redes y Sistemas Complejos 2026-1
+description: Lecturas del curso Redes y Sistemas Complejos 2026-1
 ---
 
 <nav class="breadcrumb">
@@ -13,34 +13,32 @@ description: Lecturas obligatorias y complementarias — Redes y Sistemas Comple
 </nav>
 
 <div class="hero" style="padding-bottom: 28px;">
-  <p class="hero__eyebrow">2026-1</p>
-  <h1 class="hero__title">Literatura del Curso</h1>
+  <p class="hero__eyebrow">Redes y Sistemas Complejos · 2026-1</p>
+  <h1 class="hero__title">Literatura del curso</h1>
   <p class="hero__subtitle" style="font-size: 15px;">
-    Lecturas organizadas por unidad temática. La <strong>Monografía del curso</strong> es el
-    texto principal; los artículos complementan con perspectivas fundacionales del campo.
+    Bibliografía organizada por unidad. La monografía es el texto conductor; los libros y artículos
+    de la bibliografía oficial se integran donde aportan mejor al tema de la semana.
   </p>
   <div class="badges">
-    <span class="badge badge--violet">Texto principal</span>
-    <span class="badge badge--blue">Artículos seminales</span>
+    <span class="badge badge--violet">Texto base</span>
+    <span class="badge badge--blue">Lecturas obligatorias</span>
+    <span class="badge badge--amber">Complementarias</span>
   </div>
 </div>
 
-<!-- Nota de acceso -->
 <div class="card mb-32" style="background: var(--amber-pale); border-color: var(--amber-tag); box-shadow:none;">
   <div style="display:flex; gap:12px; align-items:flex-start;">
     <span class="card__icon card__icon--amber" style="margin-bottom:0;">Nota</span>
     <div>
-      <div style="font-weight:700; color:var(--amber); margin-bottom:4px;">Acceso responsable a los papers</div>
+      <div style="font-weight:700; color:var(--amber); margin-bottom:4px;">Acceso responsable</div>
       <div style="font-size:13.5px; color:var(--text-2); line-height:1.6;">
-        Los artículos académicos enlazados aquí apuntan a versiones de libre acceso (arXiv, sitios de autores o páginas oficiales de open-access).
-        Para las versiones finales de revista, usa el acceso institucional de la UDD o tu cuenta personal de Semantic Scholar / Google Scholar.
-        <strong>No redistribuyas PDFs de publicaciones bajo copyright</strong>.
+        Los enlaces priorizan DOI, páginas oficiales, arXiv, versiones de autores o libros abiertos.
+        Para versiones editoriales cerradas, usa acceso institucional o buscadores académicos.
       </div>
     </div>
   </div>
 </div>
 
-<!-- Texto principal -->
 <div class="section-header">
   <h2>Texto principal</h2>
 </div>
@@ -48,95 +46,238 @@ description: Lecturas obligatorias y complementarias — Redes y Sistemas Comple
 <div class="card mb-32" style="background: var(--violet-pale); border-color: var(--violet-tag);">
   <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
     <div style="flex:1; min-width:240px;">
-      <div style="font-size:17px; font-weight:800; color:var(--text); margin-bottom:6px; letter-spacing:-0.3px;">
-        Monografía del Curso — Redes y Sistemas Complejos
+      <div style="font-size:17px; font-weight:800; color:var(--text); margin-bottom:6px;">
+        Monografía del curso - Redes y Sistemas Complejos
       </div>
       <div style="font-size:13px; color:var(--text-2); margin-bottom:12px;">
-        Candia, C. (2026). Material de elaboración propia para el curso Redes y Sistemas Complejos, UDD.
-        Cubre fundamentos, bipartitas, centralidades, modelos, mesoestructura, procesos, inferencia y ética.
+        Candia, C. (2026). Apuntes de curso. Cubre fundamentos, bipartitas, centralidades,
+        modelos, mesoestructura, procesos, inferencia, evaluación y ética.
       </div>
-      <div style="display:flex; gap:8px; flex-wrap:wrap;">
-        <a class="btn btn--primary btn--sm" href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank">
-          Ver PDF
-        </a>
-      </div>
+      <a class="btn btn--primary btn--sm" href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener">
+        Ver monografía
+      </a>
     </div>
   </div>
 </div>
 
-<!-- Por unidad -->
 <div class="section-header">
-  <h2>Artículos por unidad</h2>
+  <h2>Lecturas por unidad</h2>
+  <span class="section-count">bibliografía oficial reorganizada por tema</span>
 </div>
 
 <div style="display:flex; flex-direction:column; gap:14px;">
 
-  <!-- U2 -->
   <div class="card">
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+      <span class="tag tag--violet">U1 · Fundamentos</span>
+      <span class="badge badge--blue">Obligatoria</span>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">1</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Network Science</div>
+        <div class="lit-item__authors">Barabási, A.-L. (2016). Cambridge University Press.</div>
+        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
+          <a class="btn btn--outline btn--sm" href="https://networksciencebook.com/" target="_blank" rel="noopener">Leer online</a>
+          <a class="btn btn--ghost btn--sm" href="https://www.cambridge.org/lk/universitypress/subjects/physics/statistical-physics/network-science?format=HB&isbn=9781107076266" target="_blank" rel="noopener">Editorial</a>
+        </div>
+      </div>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">2</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Networks</div>
+        <div class="lit-item__authors">Newman, M. E. J. (2018). Oxford University Press. Texto de consulta general.</div>
+        <div style="margin-top:6px;"><a class="btn btn--ghost btn--sm" href="https://academic.oup.com/book/27884" target="_blank" rel="noopener">Editorial</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
       <span class="tag tag--teal">U2 · Bipartitas</span>
+      <span class="badge badge--blue">Obligatoria</span>
     </div>
     <div class="lit-item">
       <div class="lit-item__num">1</div>
       <div class="lit-item__body">
         <div class="lit-item__title">Basic notions for the analysis of large two-mode networks</div>
-        <div class="lit-item__authors">Latapy, M., Magnien, C., & Del Vecchio, N. (2008). <em>Social Networks</em>, 30(1), 31–48.</div>
+        <div class="lit-item__authors">Latapy, M., Magnien, C., & Del Vecchio, N. (2008). <em>Social Networks</em>, 30(1), 31-48.</div>
         <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
           <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1016/j.socnet.2007.04.006" target="_blank" rel="noopener">DOI</a>
-          <a class="btn btn--outline btn--sm" href="https://arxiv.org/abs/cond-mat/0611631" target="_blank" rel="noopener">arXiv</a>
+          <a class="btn btn--outline btn--sm" href="https://complexnetworks.fr/wp-content/uploads/2011/01/socnet07.pdf" target="_blank" rel="noopener">PDF abierto</a>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- U4 -->
-  <div class="card">
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-      <span class="tag tag--amber">U4 · Modelos Generativos</span>
     </div>
     <div class="lit-item">
       <div class="lit-item__num">2</div>
       <div class="lit-item__body">
-        <div class="lit-item__title">Collective dynamics of 'small-world' networks</div>
-        <div class="lit-item__authors">Watts, D. J., & Strogatz, S. H. (1998). <em>Nature</em>, 393, 440–442.</div>
-        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
-          <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1038/30918" target="_blank" rel="noopener">DOI</a>
-        </div>
+        <div class="lit-item__title">The strength of weak ties</div>
+        <div class="lit-item__authors">Granovetter, M. S. (1973). <em>American Journal of Sociology</em>, 78(6), 1360-1380.</div>
+        <div style="margin-top:6px;"><a class="btn btn--outline btn--sm" href="https://www.cs.cmu.edu/~jure/pub/papers/granovetter73ties.pdf" target="_blank" rel="noopener">PDF abierto</a></div>
       </div>
     </div>
   </div>
 
-  <!-- U5 -->
   <div class="card">
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-      <span class="tag tag--blue">U5 · Mesoestructura</span>
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+      <span class="tag tag--blue">U3 · Métricas y features</span>
+      <span class="badge badge--amber">Complementaria</span>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">1</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">The structure and function of complex networks</div>
+        <div class="lit-item__authors">Newman, M. E. J. (2003). <em>SIAM Review</em>, 45(2), 167-256.</div>
+        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
+          <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1137/S003614450342480" target="_blank" rel="noopener">DOI</a>
+          <a class="btn btn--outline btn--sm" href="https://arxiv.org/abs/cond-mat/0303516" target="_blank" rel="noopener">arXiv</a>
+        </div>
+      </div>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">2</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Scientific collaboration networks. I. Network construction and fundamental results</div>
+        <div class="lit-item__authors">Newman, M. E. J. (2001). <em>Physical Review E</em>, 64(1), 016131.</div>
+        <div style="margin-top:6px;"><a class="btn btn--ghost btn--sm" href="https://doi.org/10.1103/PhysRevE.64.016131" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+      <span class="tag tag--amber">U4 · Modelos y baselines</span>
+      <span class="badge badge--blue">Obligatoria</span>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">1</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Emergence of scaling in random networks</div>
+        <div class="lit-item__authors">Barabási, A.-L., & Albert, R. (1999). <em>Science</em>, 286(5439), 509-512.</div>
+        <div style="margin-top:6px;"><a class="btn btn--ghost btn--sm" href="https://doi.org/10.1126/science.286.5439.509" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">2</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Collective dynamics of small-world networks</div>
+        <div class="lit-item__authors">Watts, D. J., & Strogatz, S. H. (1998). <em>Nature</em>, 393, 440-442.</div>
+        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
+          <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1038/30918" target="_blank" rel="noopener">DOI</a>
+          <a class="btn btn--outline btn--sm" href="https://snap.stanford.edu/class/cs224w-readings/watts98smallworld.pdf" target="_blank" rel="noopener">PDF abierto</a>
+        </div>
+      </div>
     </div>
     <div class="lit-item">
       <div class="lit-item__num">3</div>
       <div class="lit-item__body">
-        <div class="lit-item__title">Modularity and community structure in networks</div>
-        <div class="lit-item__authors">Newman, M. E. J. (2006). <em>PNAS</em>, 103(23), 8577–8582.</div>
-        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
-          <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1073/pnas.0601602103" target="_blank" rel="noopener">DOI</a>
-          <a class="btn btn--outline btn--sm" href="https://arxiv.org/abs/physics/0602124" target="_blank" rel="noopener">arXiv</a>
-        </div>
+        <div class="lit-item__title">Random graphs with arbitrary degree distributions and their applications</div>
+        <div class="lit-item__authors">Newman, M. E. J., Strogatz, S. H., & Watts, D. J. (2001). <em>Physical Review E</em>, 64(2), 026118.</div>
+        <div style="margin-top:6px;"><a class="btn btn--ghost btn--sm" href="https://doi.org/10.1103/PhysRevE.64.026118" target="_blank" rel="noopener">DOI</a></div>
       </div>
     </div>
   </div>
 
-  <!-- U6 -->
   <div class="card">
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-      <span class="tag tag--teal">U6 · Procesos en Redes</span>
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+      <span class="tag tag--blue">U5 · Mesoestructura</span>
+      <span class="badge badge--blue">Obligatoria</span>
     </div>
     <div class="lit-item">
-      <div class="lit-item__num">4</div>
+      <div class="lit-item__num">1</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Modularity and community structure in networks</div>
+        <div class="lit-item__authors">Newman, M. E. J. (2006). <em>PNAS</em>, 103(23), 8577-8582.</div>
+        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
+          <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1073/pnas.0601602103" target="_blank" rel="noopener">DOI</a>
+          <a class="btn btn--outline btn--sm" href="https://www.pnas.org/doi/pdf/10.1073/pnas.0601602103" target="_blank" rel="noopener">PDF abierto</a>
+        </div>
+      </div>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">2</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Models of core/periphery structures</div>
+        <div class="lit-item__authors">Borgatti, S. P., & Everett, M. G. (2000). <em>Social Networks</em>, 21(4), 375-395.</div>
+        <div style="margin-top:6px;"><a class="btn btn--ghost btn--sm" href="https://doi.org/10.1016/S0378-8733(99)00019-2" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+      <span class="tag tag--teal">U6 · Procesos en redes</span>
+      <span class="badge badge--blue">Obligatoria</span>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">1</div>
       <div class="lit-item__body">
         <div class="lit-item__title">Spread of epidemic disease on networks</div>
         <div class="lit-item__authors">Newman, M. E. J. (2002). <em>Physical Review E</em>, 66(1), 016128.</div>
         <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
           <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1103/PhysRevE.66.016128" target="_blank" rel="noopener">DOI</a>
-          <a class="btn btn--outline btn--sm" href="https://arxiv.org/abs/cond-mat/0205009" target="_blank" rel="noopener">arXiv</a>
+          <a class="btn btn--outline btn--sm" href="https://arxiv.org/pdf/cond-mat/0205009.pdf" target="_blank" rel="noopener">PDF abierto</a>
+        </div>
+      </div>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">2</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Identification of influential spreaders in complex networks</div>
+        <div class="lit-item__authors">Kitsak, M., et al. (2010). <em>Nature Physics</em>, 6, 888-893.</div>
+        <div style="margin-top:6px;"><a class="btn btn--ghost btn--sm" href="https://doi.org/10.1038/nphys1746" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+      <span class="tag tag--amber">U7 · Inferencia y evaluación</span>
+      <span class="badge badge--amber">Complementaria</span>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">1</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">The link-prediction problem for social networks</div>
+        <div class="lit-item__authors">Liben-Nowell, D., & Kleinberg, J. (2007). <em>JASIST</em>, 58(7), 1019-1031.</div>
+        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
+          <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1002/asi.20591" target="_blank" rel="noopener">DOI</a>
+          <a class="btn btn--outline btn--sm" href="https://www.cs.cornell.edu/home/kleinber/link-pred.pdf" target="_blank" rel="noopener">PDF abierto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+      <span class="tag tag--violet">U8 · Graph ML</span>
+      <span class="badge badge--amber">Complementaria</span>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">1</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">DeepWalk: Online learning of social representations</div>
+        <div class="lit-item__authors">Perozzi, B., Al-Rfou, R., & Skiena, S. (2014). KDD '14.</div>
+        <div style="margin-top:6px;"><a class="btn btn--outline btn--sm" href="https://arxiv.org/pdf/1403.6652.pdf" target="_blank" rel="noopener">PDF abierto</a></div>
+      </div>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">2</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">node2vec: Scalable feature learning for networks</div>
+        <div class="lit-item__authors">Grover, A., & Leskovec, J. (2016). KDD '16.</div>
+        <div style="margin-top:6px;"><a class="btn btn--outline btn--sm" href="https://cs.stanford.edu/~jure/pubs/node2vec-kdd16.pdf" target="_blank" rel="noopener">PDF abierto</a></div>
+      </div>
+    </div>
+    <div class="lit-item">
+      <div class="lit-item__num">3</div>
+      <div class="lit-item__body">
+        <div class="lit-item__title">Semi-supervised classification with graph convolutional networks</div>
+        <div class="lit-item__authors">Kipf, T. N., & Welling, M. (2017). ICLR 2017.</div>
+        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
+          <a class="btn btn--outline btn--sm" href="https://openreview.net/pdf?id=SJU4ayYgl" target="_blank" rel="noopener">OpenReview</a>
+          <a class="btn btn--ghost btn--sm" href="https://arxiv.org/pdf/1609.02907.pdf" target="_blank" rel="noopener">arXiv</a>
         </div>
       </div>
     </div>
@@ -146,53 +287,17 @@ description: Lecturas obligatorias y complementarias — Redes y Sistemas Comple
 
 <div class="section-divider"></div>
 
-<!-- Lectura general recomendada -->
 <div class="section-header">
-  <h2>Lectura general recomendada</h2>
+  <h2>Referencia transversal</h2>
 </div>
 
-<div style="display:flex; flex-direction:column; gap:10px;">
-  <div class="card" style="padding: 16px 20px;">
-    <div class="lit-item" style="padding:0; border:none;">
-      <div class="lit-item__num">—</div>
-      <div class="lit-item__body">
-        <div class="lit-item__title">Networks: An Introduction</div>
-        <div class="lit-item__authors">Newman, M. E. J. (2010). Oxford University Press. Texto de referencia clásico del campo.</div>
-        <div style="margin-top:6px;"><a class="btn btn--ghost btn--sm" href="https://global.oup.com/academic/product/networks-9780198805090" target="_blank" rel="noopener">Editorial</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="card" style="padding: 16px 20px;">
-    <div class="lit-item" style="padding:0; border:none;">
-      <div class="lit-item__num">—</div>
-      <div class="lit-item__body">
-        <div class="lit-item__title">The structure and function of complex networks</div>
-        <div class="lit-item__authors">Newman, M. E. J. (2003). <em>SIAM Review</em>, 45(2), 167–256. Revisión exhaustiva del campo.</div>
-        <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap;">
-          <a class="btn btn--ghost btn--sm" href="https://doi.org/10.1137/S003614450342480" target="_blank" rel="noopener">DOI</a>
-          <a class="btn btn--outline btn--sm" href="https://arxiv.org/abs/cond-mat/0303516" target="_blank" rel="noopener">arXiv</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card" style="padding: 16px 20px;">
-    <div class="lit-item" style="padding:0; border:none;">
-      <div class="lit-item__num">—</div>
-      <div class="lit-item__body">
-        <div class="lit-item__title">Network Science</div>
-        <div class="lit-item__authors">Barabási, A.-L. (2016). Cambridge University Press. Disponible online de forma gratuita.</div>
-        <div style="margin-top:6px;"><a class="btn btn--outline btn--sm" href="http://networksciencebook.com/" target="_blank" rel="noopener">Leer online (gratis)</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="card" style="padding: 16px 20px;">
-    <div class="lit-item" style="padding:0; border:none;">
-      <div class="lit-item__num">—</div>
-      <div class="lit-item__body">
-        <div class="lit-item__title">Networks, Crowds, and Markets</div>
-        <div class="lit-item__authors">Easley, D., & Kleinberg, J. (2010). Cambridge University Press. Perspectiva económica y social.</div>
-        <div style="margin-top:6px;"><a class="btn btn--outline btn--sm" href="https://www.cs.cornell.edu/home/kleinber/networks-book/" target="_blank" rel="noopener">Leer online (gratis)</a></div>
-      </div>
+<div class="card">
+  <div class="lit-item" style="padding-top:0;">
+    <div class="lit-item__num">—</div>
+    <div class="lit-item__body">
+      <div class="lit-item__title">Networks, Crowds, and Markets</div>
+      <div class="lit-item__authors">Easley, D., & Kleinberg, J. (2010). Cambridge University Press. Perspectiva social, económica y computacional.</div>
+      <div style="margin-top:6px;"><a class="btn btn--outline btn--sm" href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book.pdf" target="_blank" rel="noopener">PDF abierto</a></div>
     </div>
   </div>
 </div>

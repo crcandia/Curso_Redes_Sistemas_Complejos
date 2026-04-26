@@ -320,6 +320,43 @@ strong { color: var(--text); }
   color: #fff;
 }
 
+.unit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-bottom: 42px;
+}
+.unit-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--violet-mid);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+}
+.unit-card--teal { border-left-color: var(--teal); }
+.unit-card--blue { border-left-color: var(--blue); }
+.unit-card--amber { border-left-color: var(--amber); }
+.unit-card--rose { border-left-color: var(--rose); }
+.unit-card--muted { border-left-color: var(--muted); background: var(--surface-2); }
+.unit-card__title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.unit-card__meta {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.5;
+  min-height: 58px;
+}
+.unit-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+
 /* ============================================================
    GRID & CARDS
    ============================================================ */
@@ -832,6 +869,44 @@ strong { color: var(--text); }
   line-height: 1.65;
 }
 .recurso-card__links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ============================================================
+   EMBEDDED TOOLS
+   ============================================================ */
+.tool-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tool-bar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tool-bar__title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+}
+.tool-frame {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  height: calc(100vh - 178px);
+  min-height: 560px;
+}
+.tool-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
 
 /* ============================================================
    LITERATURE LIST

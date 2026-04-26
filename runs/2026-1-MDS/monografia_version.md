@@ -1,4 +1,4 @@
-# Monografía usada — 2026-1 (MDS)
+# Monografía usada — 2026-1
 
 **Fuente:** Overleaf (proyecto “Monografía Redes y Sistemas Complejos”).  
 **Versión congelada para esta cohorte:** mono-v0.1.

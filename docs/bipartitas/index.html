@@ -4,35 +4,20 @@ title: Redes Bipartitas — Herramienta interactiva
 description: Visualización interactiva de redes bipartitas y proyecciones — Redes y Sistemas Complejos
 ---
 
-<nav class="breadcrumb">
-  <a href="{{ '/' | relative_url }}">Inicio</a>
-  <span>›</span>
-  <a href="{{ '/2026-1-MDS/recursos/' | relative_url }}">Recursos</a>
-  <span>›</span>
-  <span>Redes Bipartitas</span>
-</nav>
-
-<div class="hero">
-  <p class="hero__eyebrow">U2 · Recurso interactivo</p>
-  <h1 class="hero__title">Redes Bipartitas</h1>
-  <p class="hero__subtitle">
-    La herramienta interactiva queda preparada para activarse cuando el dominio esté configurado.
-  </p>
-  <div class="badges">
-    <span class="badge badge--muted">Pendiente de publicación</span>
-    <span class="badge badge--teal">Lab 2 asociado</span>
+<div class="tool-bar">
+  <div class="tool-bar__left">
+    <span class="tag tag--teal">U2 · Bipartitas</span>
+    <span class="tool-bar__title">Redes Bipartitas — Proyecciones interactivas</span>
+  </div>
+  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+    <a class="btn btn--ghost btn--sm" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab2">Lab 2</a>
+    <a class="btn btn--teal btn--sm" href="https://bipartitas.criss-lab.com/" target="_blank" rel="noopener">Abrir externo</a>
   </div>
 </div>
 
-<div class="card card--featured">
-  <div class="card__number">Dominio pendiente</div>
-  <div class="card__title">Herramienta no publicada</div>
-  <div class="card__desc">
-    El iframe externo está desactivado temporalmente para evitar enlaces a dominios sin configurar.
-  </div>
-  <div class="card__links">
-    <a class="btn btn--ghost" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab2">Ir al Lab 2</a>
-  </div>
+<div class="tool-frame">
+  <iframe src="https://bipartitas.criss-lab.com/"
+          title="Redes Bipartitas — Herramienta interactiva"
+          loading="lazy"
+          allow="fullscreen"></iframe>
 </div>
-
-<!-- Dominio pendiente para reactivar iframe: https://bipartitas.criss-lab.com/ -->

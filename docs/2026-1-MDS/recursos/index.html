@@ -1,107 +1,88 @@
 ---
 layout: default
-title: Recursos Interactivos · 2026-1 MDS
-description: Visualizaciones y herramientas interactivas — Redes y Sistemas Complejos 2026-1
+title: Recursos Interactivos · 2026-1
+description: Herramientas interactivas del curso Redes y Sistemas Complejos 2026-1
 ---
 
 <nav class="breadcrumb">
   <a href="{{ '/' | relative_url }}">Inicio</a>
   <span>›</span>
-  <a href="{{ '/2026-1-MDS/' | relative_url }}">2026-1 · MDS</a>
+  <a href="{{ '/2026-1-MDS/' | relative_url }}">2026-1</a>
   <span>›</span>
   <span>Recursos Interactivos</span>
 </nav>
 
 <div class="hero" style="padding-bottom: 28px;">
-  <p class="hero__eyebrow">2026-1 · MDS</p>
-  <h1 class="hero__title">Recursos Interactivos</h1>
+  <p class="hero__eyebrow">Redes y Sistemas Complejos · 2026-1</p>
+  <h1 class="hero__title">Recursos interactivos</h1>
   <p class="hero__subtitle" style="font-size: 15px;">
-    Tres herramientas web diseñadas para explorar los conceptos centrales del curso de forma visual.
-    Esta sección queda preparada para activarlas cuando los dominios estén configurados.
+    Herramientas web para explorar visualmente conceptos centrales del curso y acompañar las prácticas.
   </p>
   <div class="badges">
     <span class="badge badge--blue">3 herramientas</span>
-    <span class="badge badge--violet">En preparación</span>
-    <span class="badge badge--muted">Dominios pendientes</span>
+    <span class="badge badge--teal">Disponibles online</span>
   </div>
 </div>
 
 <div style="display:flex; flex-direction:column; gap:20px;">
-
-  <!-- Bipartitas — U2 -->
   <div class="recurso-card" style="border-left: 4px solid var(--teal);">
     <div style="display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap;">
       <div class="recurso-card__icon" style="background:var(--teal-pale); flex-shrink:0;">U2</div>
       <div style="flex:1; min-width:200px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px;">
           <div class="recurso-card__title" style="margin:0;">Redes Bipartitas</div>
-          <span class="tag tag--teal">U2 · Bipartitas</span>
+          <span class="tag tag--teal">Bipartitas</span>
         </div>
         <div class="recurso-card__desc">
-          Visualización interactiva de grafos bipartitos y sus proyecciones 1-mode.
-          Explora cómo cambia la estructura al proyectar, cómo se inflan los enlaces
-          y qué información se pierde en el proceso. Ideal para la sesión de la Unidad 2.
+          Visualización de grafos bipartitos y sus proyecciones 1-mode para observar inflación de enlaces,
+          pérdida de información y sensibilidad a nodos de alta actividad.
         </div>
         <div class="recurso-card__links mt-16">
-          <!-- Dominio pendiente: https://bipartitas.criss-lab.com/ -->
-          <span class="btn btn--disabled">Próximamente</span>
-          <a class="btn btn--ghost" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab2">
-            Lab 2 asociado
-          </a>
+          <a class="btn btn--teal" href="{{ '/bipartitas/' | relative_url }}">Abrir en el sitio</a>
+          <a class="btn btn--ghost" href="https://bipartitas.criss-lab.com/" target="_blank" rel="noopener">Abrir externo</a>
+          <a class="btn btn--ghost" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab2">Lab 2</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Comunidades — U5 -->
   <div class="recurso-card" style="border-left: 4px solid var(--blue);">
     <div style="display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap;">
       <div class="recurso-card__icon" style="background:var(--blue-pale); flex-shrink:0;">U5</div>
       <div style="flex:1; min-width:200px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px;">
           <div class="recurso-card__title" style="margin:0;">Detección de Comunidades</div>
-          <span class="tag tag--blue">U5 · Mesoestructura</span>
+          <span class="tag tag--blue">Mesoestructura</span>
         </div>
         <div class="recurso-card__desc">
-          Herramienta interactiva para visualizar y comparar algoritmos de detección de comunidades:
-          Louvain, Girvan-Newman y Label Propagation. Ajusta parámetros en tiempo real y observa
-          cómo cambian las particiones. Perfecta para entender los límites de la resolución de modularidad.
+          Comparación interactiva de algoritmos de detección de comunidades, estabilidad de particiones y lectura de modularidad.
         </div>
         <div class="recurso-card__links mt-16">
-          <!-- Dominio pendiente: https://communities.criss-lab.com/ -->
-          <span class="btn btn--disabled">Próximamente</span>
-          <a class="btn btn--ghost" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab5">
-            Lab 5 asociado
-          </a>
+          <a class="btn btn--primary" href="{{ '/comunidades/' | relative_url }}">Abrir en el sitio</a>
+          <a class="btn btn--ghost" href="https://communities.criss-lab.com/" target="_blank" rel="noopener">Abrir externo</a>
+          <a class="btn btn--ghost" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab5">Lab 5</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Spreading — U6 -->
   <div class="recurso-card" style="border-left: 4px solid var(--violet-mid);">
     <div style="display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap;">
       <div class="recurso-card__icon" style="flex-shrink:0;">U6</div>
       <div style="flex:1; min-width:200px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px;">
           <div class="recurso-card__title" style="margin:0;">Procesos en Redes</div>
-          <span class="tag tag--violet">U6 · Procesos</span>
+          <span class="tag tag--violet">Difusión</span>
         </div>
         <div class="recurso-card__desc">
-          Simulador de procesos dinámicos sobre redes: modelos SIR/SIS de contagio,
-          difusión de información y comparación de estrategias de intervención
-          (random, por grado, por k-core). Visualiza en tiempo real cómo se propaga un proceso
-          y por qué la estructura de la red importa tanto como el umbral de transmisión.
+          Simulación de procesos dinámicos sobre redes: contagio SIR/SIS, difusión de información y estrategias de intervención.
         </div>
         <div class="recurso-card__links mt-16">
-          <!-- Dominio pendiente: https://spreading.criss-lab.com/ -->
-          <span class="btn btn--disabled">Próximamente</span>
-          <a class="btn btn--ghost" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab6">
-            Lab 6 asociado
-          </a>
+          <a class="btn btn--primary" href="{{ '/procesos/' | relative_url }}">Abrir en el sitio</a>
+          <a class="btn btn--ghost" href="https://spreading.criss-lab.com/" target="_blank" rel="noopener">Abrir externo</a>
+          <a class="btn btn--ghost" href="{{ '/2026-1-MDS/labs/' | relative_url }}#lab6">Lab 6</a>
         </div>
       </div>
     </div>
   </div>
-
 </div>

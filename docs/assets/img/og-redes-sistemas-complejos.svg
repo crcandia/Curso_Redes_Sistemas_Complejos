@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Curso Redes y Sistemas Complejos">
+  <rect width="1200" height="630" fill="#F8FAFC"/>
+  <rect x="72" y="72" width="1056" height="486" rx="36" fill="#FFFFFF" stroke="#D7DFEA" stroke-width="2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M779 174L913 122L1018 236L956 382L817 352L733 261Z" stroke="#4F46E5" stroke-width="8"/>
+    <path d="M817 352L913 122M733 261L1018 236M779 174L956 382" stroke="#CBD5E1" stroke-width="5"/>
+  </g>
+  <g>
+    <circle cx="779" cy="174" r="20" fill="#4F46E5"/>
+    <circle cx="913" cy="122" r="20" fill="#0F766E"/>
+    <circle cx="1018" cy="236" r="20" fill="#2563EB"/>
+    <circle cx="956" cy="382" r="20" fill="#92400E"/>
+    <circle cx="817" cy="352" r="20" fill="#4F46E5"/>
+    <circle cx="733" cy="261" r="20" fill="#0F766E"/>
+  </g>
+  <text x="120" y="160" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">CRiSS-LAB · Curso abierto</text>
+  <text x="120" y="260" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800">Redes y Sistemas</text>
+  <text x="120" y="346" fill="#4F46E5" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800">Complejos</text>
+  <text x="120" y="422" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="500">Ciencia de redes, teoría de grafos, NetworkX,</text>
+  <text x="120" y="466" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="500">comunidades, difusión e inferencia en grafos.</text>
+  <text x="120" y="522" fill="#0F766E" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">networks.criss-lab.com</text>
+</svg>

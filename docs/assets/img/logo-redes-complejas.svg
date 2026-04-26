@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Redes y Sistemas Complejos">
+  <rect width="512" height="512" rx="96" fill="#F8FAFC"/>
+  <path d="M138 292L244 152L376 232L306 378L138 292Z" fill="none" stroke="#4F46E5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M244 152L306 378M138 292L376 232" fill="none" stroke="#CBD5E1" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="138" cy="292" r="50" fill="#0F766E"/>
+  <circle cx="244" cy="152" r="50" fill="#4F46E5"/>
+  <circle cx="376" cy="232" r="50" fill="#2563EB"/>
+  <circle cx="306" cy="378" r="50" fill="#92400E"/>
+</svg>

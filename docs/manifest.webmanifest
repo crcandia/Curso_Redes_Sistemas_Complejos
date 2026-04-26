@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /manifest.webmanifest
+sitemap: false
+---
+{
+  "name": "Redes y Sistemas Complejos",
+  "short_name": "Redes Complejas",
+  "description": "Curso de redes complejas, ciencia de redes y sistemas complejos.",
+  "lang": "es-CL",
+  "start_url": "{{ '/' | relative_url }}",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#F8FAFC",
+  "icons": [
+    {
+      "src": "{{ '/assets/img/favicon.svg' | relative_url }}",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,5 +1,55 @@
 title: Redes y Sistemas Complejos
-description: Sitio del curso — CRiSS-LAB
+tagline: Curso abierto de redes complejas, ciencia de redes y sistemas complejos
+description: Curso de Redes y Sistemas Complejos sobre teoría de grafos, ciencia de redes, NetworkX, modelos generativos, comunidades, difusión, inferencia y Graph ML.
+lang: es
+locale: es_CL
+
+author:
+  name: Cristian Candia, Ph.D.
+  url: "https://www.crcandia.com"
+
+organization:
+  name: CRiSS-LAB
+  url: "https://www.criss-lab.com"
+  logo: "/assets/img/logo-redes-complejas.svg"
+  description: Laboratorio de investigación en ciencia de redes, sistemas complejos y ciencia social computacional.
+
+repository_url: "https://github.com/crcandia/Curso_Redes_Sistemas_Complejos"
+
+seo:
+  image: "/assets/img/og-redes-sistemas-complejos.png"
+  favicon: "/assets/img/favicon.svg"
+  theme_color: "#F8FAFC"
+  keywords:
+    - redes complejas
+    - sistemas complejos
+    - ciencia de redes
+    - teoría de grafos
+    - NetworkX
+    - grafos
+    - comunidades en redes
+    - difusión en redes
+    - graph machine learning
+    - análisis de redes sociales
+
+course:
+  name: Redes y Sistemas Complejos
+  short_name: Curso de redes complejas
+  url_path: "/curso-redes-complejas/"
+  description: "Curso aplicado de redes complejas y sistemas complejos: teoría de grafos, modelamiento de datos relacionales, métricas de red, redes bipartitas, modelos nulos, comunidades, difusión, inferencia responsable y Graph ML."
+  start_date: "2026-03-02"
+  end_date: "2026-04-26"
+  educational_level: "advanced"
+  teaches:
+    - modelamiento de datos relacionales como redes
+    - análisis de redes complejas con Python
+    - métricas y centralidades en grafos
+    - redes bipartitas y proyecciones
+    - modelos generativos y modelos nulos
+    - detección de comunidades
+    - procesos de difusión y contagio en redes
+    - inferencia, evaluación y ética en redes
+    - machine learning sobre grafos
 # Dominio custom sin activar:
 # url: "https://networks.criss-lab.com"
 # baseurl: ""
@@ -9,6 +59,10 @@ baseurl: "/Curso_Redes_Sistemas_Complejos"
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
+
+include:
+  - _headers
+  - _redirects
 
 exclude:
   - "*.DS_Store"

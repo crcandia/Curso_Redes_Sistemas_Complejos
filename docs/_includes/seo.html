@@ -1,0 +1,243 @@
+{%- assign site_base = '/' | absolute_url -%}
+{%- assign page_title = page.seo_title | default: page.title | default: site.title -%}
+{%- if page.url == '/' -%}
+  {%- assign full_title = page_title -%}
+{%- else -%}
+  {%- assign full_title = page_title | append: ' · ' | append: site.title -%}
+{%- endif -%}
+{%- assign seo_description = page.description | default: site.description | strip_html | strip_newlines -%}
+{%- if page.canonical_url -%}
+  {%- assign canonical_url = page.canonical_url -%}
+{%- else -%}
+  {%- assign canonical_url = page.url | absolute_url -%}
+{%- endif -%}
+{%- assign image_path = page.og_image | default: site.seo.image -%}
+{%- assign image_url = image_path | absolute_url -%}
+{%- assign keywords = page.keywords | default: site.seo.keywords -%}
+{%- assign robots = page.robots | default: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' -%}
+
+<title>{{ full_title | escape }}</title>
+<meta name="description" content="{{ seo_description | escape }}" />
+<meta name="author" content="{{ site.author.name | escape }}" />
+<meta name="robots" content="{{ robots | escape }}" />
+<meta name="theme-color" content="{{ site.seo.theme_color | default: '#F8FAFC' }}" />
+<link rel="canonical" href="{{ canonical_url }}" />
+<link rel="alternate" hreflang="{{ site.lang | default: 'es' }}" href="{{ canonical_url }}" />
+<link rel="icon" href="{{ site.seo.favicon | default: '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml" />
+<link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}" />
+
+<meta property="og:locale" content="{{ site.locale | default: 'es_CL' }}" />
+<meta property="og:site_name" content="{{ site.title | escape }}" />
+<meta property="og:type" content="{{ page.og_type | default: 'website' | escape }}" />
+<meta property="og:title" content="{{ full_title | escape }}" />
+<meta property="og:description" content="{{ seo_description | escape }}" />
+<meta property="og:url" content="{{ canonical_url }}" />
+<meta property="og:image" content="{{ image_url }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="{{ page.og_image_alt | default: 'Curso de Redes y Sistemas Complejos de CRiSS-LAB' | escape }}" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ full_title | escape }}" />
+<meta name="twitter:description" content="{{ seo_description | escape }}" />
+<meta name="twitter:image" content="{{ image_url }}" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": {{ site_base | append: '#organization' | jsonify }},
+      "name": {{ site.organization.name | jsonify }},
+      "url": {{ site.organization.url | jsonify }},
+      "logo": {{ site.organization.logo | absolute_url | jsonify }},
+      "description": {{ site.organization.description | jsonify }},
+      "sameAs": [
+        {{ site.author.url | jsonify }},
+        {{ site.repository_url | jsonify }}
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": {{ site_base | append: '#author' | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "url": {{ site.author.url | jsonify }},
+      "affiliation": {
+        "@id": {{ site_base | append: '#organization' | jsonify }}
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ site_base | append: '#website' | jsonify }},
+      "url": {{ site_base | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "alternateName": {{ site.tagline | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ site.lang | default: 'es' | jsonify }},
+      "publisher": {
+        "@id": {{ site_base | append: '#organization' | jsonify }}
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ page.schema_webpage_type | default: 'WebPage' | jsonify }},
+  "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "name": {{ full_title | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "inLanguage": {{ site.lang | default: 'es' | jsonify }},
+  "isPartOf": {
+    "@id": {{ site_base | append: '#website' | jsonify }}
+  },
+  "publisher": {
+    "@id": {{ site_base | append: '#organization' | jsonify }}
+  },
+  "author": {
+    "@id": {{ site_base | append: '#author' | jsonify }}
+  },
+  "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+  "keywords": {{ keywords | join: ', ' | jsonify }}
+}
+</script>
+
+{%- if page.schema_type == 'Course' %}
+{%- assign course_url = site.course.url_path | absolute_url -%}
+{%- assign unit_names = 'Fundamentos y Modelamiento desde Datos|Redes Bipartitas y Métricas Básicas|Features y Segmentación Operativa|Modelos Generativos y Nulos|Mesoestructura y Comunidades|Procesos en Redes|Inferencia, Evaluación y Ética|Industria y Graph ML' | split: '|' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "@id": {{ course_url | append: '#course' | jsonify }},
+  "url": {{ course_url | jsonify }},
+  "name": {{ site.course.name | jsonify }},
+  "alternateName": {{ site.course.short_name | jsonify }},
+  "description": {{ site.course.description | jsonify }},
+  "inLanguage": {{ site.lang | default: 'es' | jsonify }},
+  "educationalLevel": {{ site.course.educational_level | jsonify }},
+  "isAccessibleForFree": true,
+  "keywords": {{ site.seo.keywords | join: ', ' | jsonify }},
+  "teaches": {{ site.course.teaches | jsonify }},
+  "provider": {
+    "@id": {{ site_base | append: '#organization' | jsonify }}
+  },
+  "creator": {
+    "@id": {{ site_base | append: '#author' | jsonify }}
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "name": {{ site.course.name | append: ' 2026-1' | jsonify }},
+    "courseMode": "online",
+    "startDate": {{ site.course.start_date | jsonify }},
+    "endDate": {{ site.course.end_date | jsonify }},
+    "instructor": {
+      "@id": {{ site_base | append: '#author' | jsonify }}
+    }
+  },
+  "hasPart": [
+    {%- for unit in unit_names %}
+    {
+      "@type": "LearningResource",
+      "name": {{ unit | jsonify }},
+      "learningResourceType": "CourseUnit",
+      "url": {{ '/curso-redes-complejas/calendario/#unidad' | append: forloop.index | absolute_url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endif %}
+
+{%- if page.schema_type == 'WebApplication' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": {{ canonical_url | append: '#application' | jsonify }},
+  "name": {{ page.app_name | default: page.title | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@id": {{ site_base | append: '#organization' | jsonify }}
+  },
+  "creator": {
+    "@id": {{ site_base | append: '#author' | jsonify }}
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+{%- endif %}
+
+{%- if page.schema_type == 'LearningResource' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": {{ canonical_url | append: '#learning-resource' | jsonify }},
+  "name": {{ page_title | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "inLanguage": {{ site.lang | default: 'es' | jsonify }},
+  "learningResourceType": {{ page.learning_resource_type | default: 'Course material' | jsonify }},
+  "isPartOf": {
+    "@id": {{ site.course.url_path | absolute_url | append: '#course' | jsonify }}
+  },
+  "provider": {
+    "@id": {{ site_base | append: '#organization' | jsonify }}
+  },
+  "creator": {
+    "@id": {{ site_base | append: '#author' | jsonify }}
+  },
+  "isAccessibleForFree": true
+}
+</script>
+{%- endif %}
+
+{%- if page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": {{ site_base | append: '#course-sections' | jsonify }},
+  "name": "Secciones del curso Redes y Sistemas Complejos",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": {{ '/curso-redes-complejas/' | absolute_url | jsonify }}, "name": "Curso 2026-1" },
+    { "@type": "ListItem", "position": 2, "url": {{ '/curso-redes-complejas/clases/' | absolute_url | jsonify }}, "name": "Clases teóricas" },
+    { "@type": "ListItem", "position": 3, "url": {{ '/curso-redes-complejas/laboratorios/' | absolute_url | jsonify }}, "name": "Laboratorios de redes complejas" },
+    { "@type": "ListItem", "position": 4, "url": {{ '/curso-redes-complejas/recursos-interactivos/' | absolute_url | jsonify }}, "name": "Recursos interactivos" },
+    { "@type": "ListItem", "position": 5, "url": {{ '/curso-redes-complejas/literatura/' | absolute_url | jsonify }}, "name": "Literatura de redes complejas" }
+  ]
+}
+</script>
+{%- endif %}
+
+{%- if page.breadcrumbs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {%- for crumb in page.breadcrumbs %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": {{ crumb.name | jsonify }},
+      "item": {{ crumb.url | default: page.url | absolute_url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endif %}

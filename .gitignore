@@ -12,6 +12,7 @@ docs/.jekyll-metadata
 
 # Ruby / Bundler
 Gemfile.lock
+docs/.bundle/
 vendor/
 
 # Python

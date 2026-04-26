@@ -38,10 +38,6 @@
   --amber-pale:  #FFFBEB;
   --amber-tag:   #FDE68A;
 
-  /* Accent — Rose */
-  --rose:        #BE123C;
-  --rose-pale:   #FFF1F2;
-
   /* Shadows */
   --shadow-sm:   0 1px 2px rgba(15,23,42,0.04);
   --shadow-md:   0 10px 24px rgba(15,23,42,0.08);
@@ -240,6 +236,7 @@ strong { color: var(--text); }
 .tag--teal    { background: var(--teal-pale); color: var(--teal); }
 .tag--blue    { background: var(--blue-pale); color: var(--blue); }
 .tag--amber   { background: var(--amber-pale); color: var(--amber); }
+.tag--muted   { background: var(--surface-2); color: var(--muted); }
 
 .dot {
   width: 7px; height: 7px; border-radius: 50%;
@@ -247,7 +244,8 @@ strong { color: var(--text); }
 }
 .dot--violet { background: var(--violet-mid); }
 .dot--teal   { background: var(--teal); }
-.dot--green  { background: #16a34a; }
+.dot--blue   { background: var(--blue); }
+.dot--muted  { background: var(--muted); }
 
 /* ============================================================
    STATS ROW
@@ -329,15 +327,10 @@ strong { color: var(--text); }
 .unit-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--violet-mid);
+  border-left: 4px solid var(--border-2);
   border-radius: var(--radius);
   padding: 18px 18px 16px;
 }
-.unit-card--teal { border-left-color: var(--teal); }
-.unit-card--blue { border-left-color: var(--blue); }
-.unit-card--amber { border-left-color: var(--amber); }
-.unit-card--rose { border-left-color: var(--rose); }
-.unit-card--muted { border-left-color: var(--muted); background: var(--surface-2); }
 .unit-card__title {
   font-size: 15px;
   font-weight: 800;
@@ -756,6 +749,10 @@ strong { color: var(--text); }
   pointer-events: none;
 }
 .btn--sm { padding: 5px 11px; font-size: 12px; }
+.btn--violet { background: var(--violet-mid); color: #fff; box-shadow: none; }
+.btn--violet:hover { background: var(--violet); color: #fff; }
+.btn--blue { background: var(--blue); color: #fff; box-shadow: none; }
+.btn--blue:hover { background: #1d4ed8; color: #fff; }
 .btn--teal { background: var(--teal); color: #fff; box-shadow: none; }
 .btn--teal:hover { background: #115e59; color: #fff; }
 
@@ -786,13 +783,13 @@ strong { color: var(--text); }
 .lab-card__num {
   width: 40px; height: 40px;
   border-radius: var(--radius-sm);
-  background: var(--teal-pale);
+  background: var(--blue-pale);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 13px;
   font-weight: 800;
-  color: var(--teal);
+  color: var(--blue);
   flex-shrink: 0;
 }
 .lab-card__meta { flex: 1; }
@@ -994,8 +991,8 @@ strong { color: var(--text); }
   border-bottom: 1px solid transparent;
 }
 .footer__link:hover {
-  color: var(--teal);
-  border-bottom-color: var(--teal-tag);
+  color: var(--violet-mid);
+  border-bottom-color: var(--violet-tag);
   text-decoration: none;
 }
 

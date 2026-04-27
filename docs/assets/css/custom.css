@@ -301,7 +301,17 @@ strong { color: var(--text); }
 }
 .course-strip + .course-strip { margin-top: 0; }
 .course-strip--last { margin-bottom: 36px; }
-.course-strip .card__number { color: var(--blue); margin-bottom: 4px; }
+.course-strip .card__number { color: var(--muted); margin-bottom: 4px; }
+.course-strip--theory {
+  background: var(--violet-pale);
+  border-color: var(--violet-tag);
+}
+.course-strip--theory .card__number { color: var(--violet-mid); }
+.course-strip--lab {
+  background: var(--blue-pale);
+  border-color: var(--blue-tag);
+}
+.course-strip--lab .card__number { color: var(--blue); }
 .course-strip__title {
   font-size: 18px;
   font-weight: 800;
@@ -1234,7 +1244,8 @@ strong { color: var(--text); }
   .course-strip { align-items: flex-start; flex-direction: column; margin-top: -12px; }
   .stats { flex-wrap: wrap; }
   .stat { min-width: 50%; border-right: none; border-bottom: 1px solid var(--border); }
-  .stat:last-child, .stat:nth-last-child(2) { border-bottom: none; }
+  .stat:last-child { border-bottom: none; }
+  .stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
 }
 @media (max-width: 600px) {
   .grid--4 { grid-template-columns: 1fr; }

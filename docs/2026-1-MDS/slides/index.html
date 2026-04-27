@@ -310,23 +310,9 @@ breadcrumbs:
     }
   };
 
-  let mobileObserver;
   const activateMobilePdfFrames = () => {
     if (!mobilePdfQuery.matches) return;
-    const viewers = document.querySelectorAll('.pdf-mobile-viewer[data-pdf]');
-    if (!('IntersectionObserver' in window)) {
-      viewers.forEach(setupMobilePdfViewer);
-      return;
-    }
-    if (mobileObserver) return;
-    mobileObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        setupMobilePdfViewer(entry.target);
-        mobileObserver.unobserve(entry.target);
-      });
-    }, { rootMargin: '360px 0px' });
-    viewers.forEach((viewer) => mobileObserver.observe(viewer));
+    document.querySelectorAll('.pdf-mobile-viewer[data-pdf]').forEach(setupMobilePdfViewer);
   };
   activateDesktopPdfFrames();
   activateMobilePdfFrames();

@@ -3,7 +3,7 @@ layout: default
 title: Glosario de Redes Complejas
 permalink: /glosario-redes-complejas/
 seo_title: Glosario de Redes Complejas y Ciencia de Redes
-description: "Glosario experto de redes complejas y ciencia de redes: teoría de grafos, centralidad, clustering, redes bipartitas, modelos nulos, comunidades, difusión, link prediction y Graph Neural Networks."
+description: "Glosario experto de redes complejas y ciencia de redes: teoría de grafos, centralidad, clustering, proyecciones bipartitas, modelos nulos, Jaccard centrado, comunidades, difusión, link prediction y Graph Neural Networks."
 schema_webpage_type: CollectionPage
 sitemap_priority: "0.88"
 changefreq: monthly
@@ -13,8 +13,11 @@ keywords:
   - teoría de grafos
   - centralidad en redes
   - clustering en redes
+  - proyecciones bipartitas
   - modelos nulos en grafos
+  - Jaccard centrado
   - comunidades en redes
+  - Louvain Leiden
   - difusión en redes
   - graph neural networks
 breadcrumbs:
@@ -202,6 +205,21 @@ breadcrumbs:
     </div>
   </article>
 
+  <article class="term-card" id="proyeccion-bipartita">
+    <div class="term-card__meta"><span class="tag tag--blue">Notebook complementario</span></div>
+    <h2>Proyección bipartita</h2>
+    <p>
+      Una proyección bipartita transforma una red de dos modos en una red de un solo tipo de nodo, conectando
+      entidades que comparten vecinos del otro modo. Es útil para visualizar e inferir relaciones indirectas,
+      pero debe ponderarse y validarse porque puede crear enlaces espurios por actividad alta.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase2">Clase 2</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab2-proyecciones">Notebook U2</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u2">Lecturas U2</a>
+    </div>
+  </article>
+
   <article class="term-card" id="modelos-nulos">
     <div class="term-card__meta"><span class="tag tag--violet">Inferencia</span></div>
     <h2>Modelos nulos</h2>
@@ -217,6 +235,20 @@ breadcrumbs:
     </div>
   </article>
 
+  <article class="term-card" id="jaccard-centrado">
+    <div class="term-card__meta"><span class="tag tag--blue">Notebook complementario</span></div>
+    <h2>Jaccard centrado</h2>
+    <p>
+      El Jaccard centrado compara la similitud observada entre dos vectores binarios contra la similitud
+      esperada bajo independencia o bajo un modelo nulo. En redes de co-ocurrencia ayuda a distinguir
+      asociaciones sustantivas de coincidencias inducidas por nodos muy activos.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab4-replicacion-modelo-nulo">Notebook U4</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u4">Chung · Lyra</a>
+    </div>
+  </article>
+
   <article class="term-card" id="comunidades">
     <div class="term-card__meta"><span class="tag tag--teal">Recurso interactivo</span></div>
     <h2>Comunidades y modularidad</h2>
@@ -229,6 +261,21 @@ breadcrumbs:
       <a href="{{ '/comunidades/' | relative_url }}">Herramienta comunidades</a>
       <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase5">Clase 5</a>
       <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab5">Lab 5</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="louvain-leiden">
+    <div class="term-card__meta"><span class="tag tag--blue">Notebook complementario</span></div>
+    <h2>Louvain, Leiden y resolución</h2>
+    <p>
+      Louvain y Leiden son heurísticos para optimizar particiones comunitarias. Leiden mejora garantías de
+      conectividad interna, pero ambos requieren revisar semillas, pesos y el parámetro de resolución, que
+      controla la escala de comunidades detectadas.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/comunidades/' | relative_url }}">Herramienta comunidades</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab5-redes-tradicionales">Notebook U5</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u5">Blondel · Traag</a>
     </div>
   </article>
 
@@ -412,11 +459,47 @@ breadcrumbs:
   </section>
 
   <section class="faq-item">
+    <h2>¿Cuándo usar un notebook complementario?</h2>
+    <p>
+      Conviene usarlo cuando el laboratorio principal deja una pregunta metodológica abierta: proyecciones
+      bipartitas, modelos nulos o estabilidad de comunidades. No reemplaza la clase teórica ni el lab; agrega
+      práctica focalizada para entender mejor supuestos, sensibilidad y límites del método.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Por qué las proyecciones bipartitas necesitan controles?</h2>
+    <p>
+      Porque dos nodos pueden quedar conectados solo por compartir vecinos muy activos, no porque exista una
+      relación sustantiva fuerte entre ellos. Por eso se revisan ponderaciones, distribuciones de actividad,
+      modelos nulos y, cuando corresponde, medidas de similitud centradas.
+    </p>
+  </section>
+
+  <section class="faq-item">
     <h2>¿Por qué modularidad no es sinónimo de comunidades verdaderas?</h2>
     <p>
       Modularidad compara una partición contra un modelo nulo específico. Puede tener límites de resolución,
       múltiples óptimos parecidos y sensibilidad a pesos o semillas. Por eso una partición debe evaluarse por
       estabilidad, interpretación sustantiva y consistencia con la pregunta de investigación.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Qué agrega Leiden respecto de Louvain?</h2>
+    <p>
+      Leiden mantiene la lógica práctica de optimizar modularidad o funciones relacionadas, pero corrige
+      problemas de conectividad interna que pueden aparecer en Louvain. Aun así, la interpretación requiere
+      revisar estabilidad entre semillas, pesos y resolución.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Qué mide el Jaccard centrado?</h2>
+    <p>
+      Mide exceso o déficit de similitud respecto de una expectativa basal. En lugar de tomar la coincidencia
+      observada como evidencia directa, descuenta la similitud que se esperaría por actividad marginal o por
+      las restricciones del modelo nulo elegido.
     </p>
   </section>
 
@@ -447,6 +530,97 @@ breadcrumbs:
     </p>
   </section>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": {{ '/glosario-redes-complejas/' | absolute_url | append: '#faq' | jsonify }},
+  "inLanguage": "es",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre teoría de grafos y ciencia de redes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La teoría de grafos provee el lenguaje matemático para describir nodos, aristas, caminos y conectividad. La ciencia de redes usa ese lenguaje para estudiar sistemas empíricos, sus mecanismos, patrones estadísticos y procesos dinámicos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué no basta con calcular centralidades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada centralidad responde una pregunta distinta y puede estar dominada por sesgos de medición, actividad o tamaño. En un análisis riguroso se interpreta junto con el objetivo, la calidad del dato, modelos nulos y sensibilidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre una red bipartita y una proyección?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La red bipartita conserva dos tipos de nodos y sus relaciones originales. La proyección transforma esa información en una red de un solo tipo de nodo, lo que facilita análisis pero puede inflar enlaces, clustering y centralidades."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo usar un notebook complementario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conviene usarlo cuando el laboratorio principal deja una pregunta metodológica abierta: proyecciones bipartitas, modelos nulos o estabilidad de comunidades. Agrega práctica focalizada sin reemplazar clase ni laboratorio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué las proyecciones bipartitas necesitan controles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque dos nodos pueden quedar conectados solo por compartir vecinos muy activos. Por eso se revisan ponderaciones, distribuciones de actividad, modelos nulos y medidas de similitud centradas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es un modelo nulo en redes y por qué importa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un baseline estadístico que define qué estructura esperaríamos bajo restricciones explícitas. Permite separar patrones reales de artefactos producidos por tamaño, densidad, grados, actividad o muestreo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué modularidad no es sinónimo de comunidades verdaderas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modularidad compara una partición contra un modelo nulo específico. Puede tener límites de resolución, múltiples óptimos y sensibilidad a pesos o semillas; requiere estabilidad e interpretación sustantiva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué agrega Leiden respecto de Louvain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leiden corrige problemas de conectividad interna que pueden aparecer en Louvain, pero la interpretación sigue dependiendo de revisar estabilidad entre semillas, pesos y parámetro de resolución."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué mide el Jaccard centrado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mide exceso o déficit de similitud respecto de una expectativa basal. Descuenta la similitud esperada por actividad marginal o por las restricciones del modelo nulo elegido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo conviene usar Graph Neural Networks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conviene considerarlas cuando la dependencia entre nodos es predictiva, hay suficiente señal relacional y la evaluación evita leakage. En muchos casos, features de red y modelos tabulares son un baseline transparente."
+      }
+    }
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {
@@ -507,15 +681,33 @@ breadcrumbs:
     },
     {
       "@type": "DefinedTerm",
+      "name": "Proyección bipartita",
+      "url": {{ '/glosario-redes-complejas/#proyeccion-bipartita' | absolute_url | jsonify }},
+      "description": "Transformación de una red de dos modos en una red de un solo tipo de nodo mediante vecinos compartidos."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Modelo nulo",
       "url": {{ '/glosario-redes-complejas/#modelos-nulos' | absolute_url | jsonify }},
       "description": "Baseline estadístico que define qué estructura esperar bajo restricciones explícitas."
     },
     {
       "@type": "DefinedTerm",
+      "name": "Jaccard centrado",
+      "url": {{ '/glosario-redes-complejas/#jaccard-centrado' | absolute_url | jsonify }},
+      "description": "Similitud observada descontando la similitud esperada bajo independencia o bajo un modelo nulo."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Comunidad",
       "url": {{ '/glosario-redes-complejas/#comunidades' | absolute_url | jsonify }},
       "description": "Conjunto de nodos más densamente conectado internamente que con el resto de la red."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Louvain, Leiden y resolución",
+      "url": {{ '/glosario-redes-complejas/#louvain-leiden' | absolute_url | jsonify }},
+      "description": "Métodos y parámetro de escala usados para detectar, contrastar y estabilizar comunidades en redes."
     },
     {
       "@type": "DefinedTerm",

@@ -3,7 +3,7 @@ layout: default
 title: Calendario · 2026-1
 permalink: /curso-redes-complejas/calendario/
 seo_title: Calendario del curso Redes y Sistemas Complejos
-description: "Calendario completo del curso Redes y Sistemas Complejos: ocho unidades sobre fundamentos de redes, bipartitas, centralidades, modelos nulos, comunidades, difusión, inferencia y Graph ML."
+description: "Calendario completo del curso Redes y Sistemas Complejos: ocho unidades con clases teóricas, laboratorios, notebooks complementarios, lecturas y recursos interactivos."
 schema_type: LearningResource
 learning_resource_type: Syllabus
 sitemap_priority: "0.85"
@@ -13,6 +13,8 @@ keywords:
   - unidades de ciencia de redes
   - programa redes complejas
   - sistemas complejos
+  - notebooks complementarios redes complejas
+  - laboratorios redes complejas
 breadcrumbs:
   - name: Inicio
     url: /
@@ -35,10 +37,12 @@ breadcrumbs:
   <h1 class="hero__title">Plan del curso</h1>
   <p class="hero__subtitle" style="font-size: 15px;">
     El curso se articula en <strong>8 unidades temáticas</strong>, cada una con una sesión sincrónica
-    guiada y trabajo autónomo. Cada unidad integra contenidos, clase teórica, práctica y lecturas curadas.
+    guiada y trabajo autónomo. Cada unidad integra contenidos, clase teórica, práctica, lecturas curadas
+    y notebooks complementarios cuando el método requiere profundización.
   </p>
   <div class="badges">
     <span class="badge badge--violet">8 unidades</span>
+    <span class="badge badge--blue">3 notebooks complementarios</span>
     <span class="badge badge--muted">Mar – Abr 2026</span>
     <span class="badge badge--muted">Sesión semanal</span>
   </div>
@@ -49,6 +53,7 @@ breadcrumbs:
   <span style="font-size:12px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.06em;">Leyenda:</span>
   <span class="badge badge--violet" style="font-size:11px;">Clase teórica</span>
   <span class="badge badge--blue" style="font-size:11px;">Laboratorio</span>
+  <span class="badge badge--blue" style="font-size:11px;">Notebook complementario</span>
   <span class="badge badge--teal" style="font-size:11px;">Recurso interactivo</span>
   <span class="badge badge--amber" style="font-size:11px;">Lectura complementaria</span>
 </div>
@@ -109,6 +114,7 @@ breadcrumbs:
         <div class="cal-unit__badges">
           <span class="tag tag--blue">Lab 2</span>
           <span class="tag tag--violet">Clase 2</span>
+          <a class="cal-notebook-badge" href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab2-proyecciones">Notebook complementario</a>
           <a class="cal-resource-badge" href="https://bipartitas.criss-lab.com/" target="_blank" rel="noopener">Bipartitas interactivo</a>
         </div>
       </div>
@@ -124,6 +130,7 @@ breadcrumbs:
             <li>Pérdida de información, inflación de enlaces y clustering inducido</li>
             <li>Métricas en bipartitas y proyecciones (grado, fuerza, clustering, centralidades)</li>
             <li>Diagnóstico de sesgos por nodos de alta actividad</li>
+            <li>Notebook complementario: proyecciones bipartitas desde datos tabulares</li>
           </ul>
         </div>
         <div class="cal-content-col">
@@ -194,6 +201,7 @@ breadcrumbs:
         <div class="cal-unit__badges">
           <span class="tag tag--blue">Lab 4</span>
           <span class="tag tag--violet">Clase 4</span>
+          <a class="cal-notebook-badge" href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab4-replicacion-modelo-nulo">Notebook complementario</a>
         </div>
       </div>
       <div class="cal-unit__objective">
@@ -208,6 +216,7 @@ breadcrumbs:
             <li>Barabási-Albert (BA): preferential attachment y distribuciones de cola pesada</li>
             <li>Model checking como práctica habitual en industria</li>
             <li>Simular y calibrar baselines; comparar clustering, distancias y tails</li>
+            <li>Notebook complementario: Jaccard centrado y modelo nulo bipartito</li>
           </ul>
         </div>
         <div class="cal-content-col">
@@ -219,6 +228,7 @@ breadcrumbs:
             <li>Newman, Strogatz & Watts (2001) — Random graphs with arbitrary degree distributions</li>
             <li>Gotelli (2000) — Null model analysis of co-occurrence patterns</li>
             <li>Lyra et al. (2021) — Public procurement co-bidding networks</li>
+            <li>Chung et al. (2019) — Jaccard/Tanimoto similarity test</li>
             <li><a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u4">DOI, papers y versiones abiertas de U4</a></li>
           </ul>
         </div>
@@ -238,6 +248,7 @@ breadcrumbs:
         <div class="cal-unit__badges">
           <span class="tag tag--blue">Lab 5</span>
           <span class="tag tag--violet">Clase 5</span>
+          <a class="cal-notebook-badge" href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab5-redes-tradicionales">Notebook complementario</a>
           <a class="cal-resource-badge" href="https://communities.criss-lab.com/" target="_blank" rel="noopener">Comunidades interactivo</a>
         </div>
       </div>
@@ -253,6 +264,7 @@ breadcrumbs:
             <li>Roles estructurales e interpretabilidad</li>
             <li>Algoritmos: Leiden, Louvain con análisis de estabilidad (múltiples seeds)</li>
             <li>k-core y dependencias institucionales en compras públicas</li>
+            <li>Notebook complementario: comunidades en Karate Club y Les Misérables</li>
           </ul>
         </div>
         <div class="cal-content-col">
@@ -564,6 +576,21 @@ breadcrumbs:
   transition: background 0.15s;
 }
 .cal-resource-badge:hover { background: var(--teal-tag); text-decoration: none; }
+.cal-notebook-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--blue-pale);
+  color: var(--blue);
+  border: 1px solid var(--blue-tag);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.cal-notebook-badge:hover { background: var(--blue-tag); text-decoration: none; }
 @media (max-width: 780px) {
   .cal-unit { grid-template-columns: 1fr; }
   .cal-timeline::before { display: none; }

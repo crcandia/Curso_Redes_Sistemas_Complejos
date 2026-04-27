@@ -1,6 +1,6 @@
 title: Redes y Sistemas Complejos
 tagline: Curso abierto de redes complejas, ciencia de redes y sistemas complejos
-description: Curso de Redes y Sistemas Complejos sobre teoría de grafos, ciencia de redes, NetworkX, modelos generativos, comunidades, difusión, inferencia y Graph ML.
+description: Curso de Redes y Sistemas Complejos sobre teoría de grafos, ciencia de redes, NetworkX, laboratorios en Python, modelos generativos, comunidades, difusión, inferencia y Graph ML.
 lang: es
 locale: es_CL
 
@@ -25,12 +25,18 @@ seo:
     - sistemas complejos
     - ciencia de redes
     - teoría de grafos
+    - curso de redes complejas
     - NetworkX
+    - notebooks redes complejas en Python
     - grafos
     - análisis de grafos
     - redes bipartitas
+    - redes bipartitas en Python
+    - proyecciones bipartitas
     - modelos nulos en redes
+    - Jaccard centrado
     - comunidades en redes
+    - Louvain Leiden
     - difusión en redes
     - centralidad en redes
     - epidemiología en redes
@@ -51,8 +57,11 @@ course:
     - análisis de redes complejas con Python
     - métricas y centralidades en grafos
     - redes bipartitas y proyecciones
+    - proyecciones bipartitas y sesgos por actividad
     - modelos generativos y modelos nulos
+    - Jaccard centrado y modelos nulos bipartitos
     - detección de comunidades
+    - Louvain, Leiden y estabilidad de comunidades
     - procesos de difusión y contagio en redes
     - inferencia, evaluación y ética en redes
     - machine learning sobre grafos

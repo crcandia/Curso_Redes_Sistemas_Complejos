@@ -209,6 +209,12 @@
   "description": {{ seo_description | jsonify }},
   "inLanguage": {{ site.lang | default: 'es' | jsonify }},
   "learningResourceType": {{ page.learning_resource_type | default: 'Course material' | jsonify }},
+  "educationalLevel": {{ site.course.educational_level | jsonify }},
+  "keywords": {{ keywords | join: ', ' | jsonify }},
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
   "about": [
     {%- for keyword in keywords %}
     { "@type": "Thing", "name": {{ keyword | jsonify }} }{% unless forloop.last %},{% endunless %}

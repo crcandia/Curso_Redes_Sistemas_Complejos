@@ -953,6 +953,38 @@ strong { color: var(--text); }
   padding-top: 12px;
   border-top: 1px solid var(--border);
 }
+.lab-card__extra {
+  background: var(--blue-pale);
+  border: 1px solid var(--blue-tag);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin: 0 0 12px;
+}
+.lab-card__extra-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.lab-card__extra-title {
+  font-size: 13.5px;
+  color: var(--text);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.lab-card__extra-desc {
+  font-size: 12.5px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+.lab-card__extra-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
 
 /* ============================================================
    RECURSO CARDS

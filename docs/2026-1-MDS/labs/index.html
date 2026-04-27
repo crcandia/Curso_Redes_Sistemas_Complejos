@@ -3,7 +3,7 @@ layout: default
 title: Laboratorios · 2026-1
 permalink: /curso-redes-complejas/laboratorios/
 seo_title: Laboratorios en Python para Redes Complejas
-description: "Laboratorios prácticos de Redes y Sistemas Complejos en Python: NetworkX, igraph, redes bipartitas, centralidades, modelos nulos, comunidades, difusión, inferencia y Graph ML."
+description: "Laboratorios prácticos de Redes y Sistemas Complejos en Python: NetworkX, igraph, redes bipartitas, centralidades, modelos nulos, comunidades, difusión, inferencia, Graph ML y notebooks complementarios."
 schema_type: LearningResource
 learning_resource_type: Lab exercises
 sitemap_priority: "0.90"
@@ -35,11 +35,12 @@ breadcrumbs:
   <p class="hero__eyebrow">2026-1</p>
   <h1 class="hero__title">Laboratorios</h1>
   <p class="hero__subtitle" style="font-size: 15px;">
-    8 laboratorios prácticos en Python. Cada uno combina teoría aplicada con ejercicios sobre datos reales.
-    Diseñados para ejecutarse en Google Colab sin instalación local.
+    8 laboratorios prácticos en Python, con notebooks complementarios en unidades que requieren más práctica.
+    Cada notebook combina teoría aplicada con ejercicios sobre datos reales y puede ejecutarse en Google Colab.
   </p>
   <div class="badges">
     <span class="badge badge--blue">8 labs</span>
+    <span class="badge badge--blue">3 complementarios</span>
     <span class="badge badge--blue">Python · NetworkX</span>
     <span class="badge badge--blue">Google Colab</span>
   </div>
@@ -53,7 +54,7 @@ breadcrumbs:
       <div style="font-weight: 700; color: var(--blue); margin-bottom: 4px;">Cómo usar los notebooks</div>
       <div style="font-size: 13.5px; color: var(--text-2); line-height: 1.6;">
         Haz clic en <strong>Colab</strong> para ejecutar el notebook en tu navegador, o en <strong>GitHub</strong> para leerlo sin ejecutar.
-        Los labs marcados con recurso web tienen una herramienta interactiva complementaria.
+        Algunas unidades incluyen notebooks complementarios para profundizar proyecciones, modelos nulos o comunidades.
       </div>
     </div>
   </div>
@@ -105,6 +106,23 @@ breadcrumbs:
     <div class="card__tags mb-16">
       <span class="tag tag--blue">Bipartitas</span>
       <span class="tag tag--blue">Proyecciones</span>
+    </div>
+    <div class="lab-card__extra">
+      <div>
+        <div class="lab-card__extra-label">Notebook complementario</div>
+        <div class="lab-card__extra-title">Proyecciones bipartitas</div>
+        <div class="lab-card__extra-desc">
+          Ejercicios adicionales para construir redes bipartitas desde datos tabulares y comparar sus dos proyecciones.
+        </div>
+      </div>
+      <div class="lab-card__extra-actions">
+        <a class="btn btn--outline btn--sm"
+           href="https://github.com/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%202%20-%20Redes%20Bipartitas/TallerRedes1_Proyecciones.ipynb"
+           target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--blue btn--sm"
+           href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%202%20-%20Redes%20Bipartitas/TallerRedes1_Proyecciones.ipynb"
+           target="_blank" rel="noopener">Colab</a>
+      </div>
     </div>
     <!-- Recurso asociado -->
     <div style="margin-bottom:12px; padding: 8px 12px; background: var(--teal-pale); border-radius: var(--radius-sm); border: 1px solid var(--teal-tag); display:flex; align-items:center; justify-content:space-between; gap:8px;">
@@ -165,6 +183,23 @@ breadcrumbs:
       <span class="tag tag--blue">Modelos Nulos</span>
       <span class="tag tag--blue">Inferencia</span>
     </div>
+    <div class="lab-card__extra">
+      <div>
+        <div class="lab-card__extra-label">Notebook complementario</div>
+        <div class="lab-card__extra-title">Replicación de modelo nulo bipartito</div>
+        <div class="lab-card__extra-desc">
+          Replica la lógica inferencial de Lyra et al. para co-bidding firma-firma usando Jaccard centrado y randomizaciones.
+        </div>
+      </div>
+      <div class="lab-card__extra-actions">
+        <a class="btn btn--outline btn--sm"
+           href="https://github.com/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%204%20-%20Modelos%20nulos%20y%20baselines/replicacion_modelo_nulo_PinheiroEtAt_class4.ipynb"
+           target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--blue btn--sm"
+           href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%204%20-%20Modelos%20nulos%20y%20baselines/replicacion_modelo_nulo_PinheiroEtAt_class4.ipynb"
+           target="_blank" rel="noopener">Colab</a>
+      </div>
+    </div>
     <div class="lab-card__footer">
       <a class="btn btn--outline btn--sm"
          href="https://github.com/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%204%20-%20Modelos%20nulos%20y%20baselines/Lab%204%20-%20Modelos%20nulos%20y%20baselines.ipynb"
@@ -191,6 +226,23 @@ breadcrumbs:
     <div class="card__tags mb-16">
       <span class="tag tag--blue">Comunidades</span>
       <span class="tag tag--blue">Louvain · Leiden</span>
+    </div>
+    <div class="lab-card__extra">
+      <div>
+        <div class="lab-card__extra-label">Notebook complementario</div>
+        <div class="lab-card__extra-title">Comunidades en redes tradicionales</div>
+        <div class="lab-card__extra-desc">
+          Workflow con Karate Club y Les Misérables para estabilidad, sensibilidad a resolution y contraste Louvain/Leiden.
+        </div>
+      </div>
+      <div class="lab-card__extra-actions">
+        <a class="btn btn--outline btn--sm"
+           href="https://github.com/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%205%20-%20Mesoestructura/Lab_5_Practica_Redes_Tradicionales.ipynb"
+           target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--blue btn--sm"
+           href="https://colab.research.google.com/github/crcandia/Curso_Redes_Sistemas_Complejos/blob/main/runs/2026-1-MDS/overrides/labs/Lab%205%20-%20Mesoestructura/Lab_5_Practica_Redes_Tradicionales.ipynb"
+           target="_blank" rel="noopener">Colab</a>
+      </div>
     </div>
     <!-- Recurso asociado -->
     <div style="margin-bottom:12px; padding: 8px 12px; background: var(--teal-pale); border-radius: var(--radius-sm); border: 1px solid var(--teal-tag); display:flex; align-items:center; justify-content:space-between; gap:8px;">

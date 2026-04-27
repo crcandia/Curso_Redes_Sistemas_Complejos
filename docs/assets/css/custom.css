@@ -604,6 +604,66 @@ strong { color: var(--text); }
 }
 .run-card:hover .run-card__arrow { transform: translateX(4px); }
 
+.runs-list {
+  display: grid;
+  grid-template-columns: minmax(0, 620px);
+  gap: 18px;
+}
+
+.course-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.75fr);
+  gap: 28px;
+  align-items: start;
+}
+.course-intro__main h2 {
+  font-size: 24px;
+  line-height: 1.18;
+  letter-spacing: 0;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.course-intro__main p {
+  color: var(--text-2);
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 76ch;
+  margin-bottom: 12px;
+}
+.course-intro__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.course-intro__aside {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.course-intro__fact {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.course-intro__fact:first-child { padding-top: 0; }
+.course-intro__fact:last-child { padding-bottom: 0; border-bottom: none; }
+.course-intro__fact span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.course-intro__fact strong {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
 /* ============================================================
    SECTION HEADERS
    ============================================================ */
@@ -1233,6 +1293,7 @@ strong { color: var(--text); }
   .grid--2  { grid-template-columns: 1fr; }
   .grid--4  { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; }
+  .course-intro { grid-template-columns: 1fr; }
   .slide-row { grid-template-columns: 48px 1fr; }
   .slide-row__actions { flex-direction: row; align-items: center; grid-column: 1 / -1; }
   .pdf-grid { grid-template-columns: 1fr; }
@@ -1250,6 +1311,8 @@ strong { color: var(--text); }
 @media (max-width: 600px) {
   .grid--4 { grid-template-columns: 1fr; }
   .hero__title { font-size: 30px; }
+  .runs-list { grid-template-columns: 1fr; }
+  .course-intro__main h2 { font-size: 21px; }
   .topbar__inner { flex-wrap: wrap; }
   .nav { gap: 2px; }
   .nav a { padding: 5px 8px; font-size: 13px; }

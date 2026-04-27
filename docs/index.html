@@ -2,7 +2,7 @@
 layout: default
 title: Curso de Redes Complejas y Sistemas Complejos
 seo_title: Curso de Redes Complejas y Sistemas Complejos | CRiSS-LAB
-description: "Curso abierto de Redes y Sistemas Complejos: teoría de grafos, ciencia de redes, NetworkX, laboratorios en Python, comunidades, difusión, inferencia y machine learning sobre grafos."
+description: "Curso abierto de Redes y Sistemas Complejos: ciencia de redes, teoría de grafos, análisis de redes complejas en Python, NetworkX, modelos nulos, comunidades, difusión, inferencia y Graph ML."
 sitemap_priority: "1.00"
 changefreq: weekly
 keywords:
@@ -10,9 +10,12 @@ keywords:
   - redes y sistemas complejos
   - ciencia de redes
   - teoría de grafos
+  - redes complejas en Python
   - NetworkX
   - laboratorios redes complejas
   - notebooks redes complejas en Python
+  - modelos nulos en redes
+  - comunidades en redes
   - graph machine learning
 ---
 
@@ -43,7 +46,7 @@ keywords:
   <span class="section-count">1 activa</span>
 </div>
 
-<div class="grid grid--3">
+<div class="runs-list">
   <a class="run-card" href="{{ '/curso-redes-complejas/' | relative_url }}">
     <div class="run-card__meta">
       <div class="badges">
@@ -65,29 +68,47 @@ keywords:
       <span>8 labs · 3 complementarios · 4 PDF · 4 notebooks</span>
     </div>
   </a>
-
-  <a href="{{ '/glosario-redes-complejas/' | relative_url }}" style="text-decoration:none; color:inherit;">
-    <div class="card card--link" style="cursor:pointer; min-height: 160px;">
-      <div class="card__icon">ABC</div>
-      <div class="card__title">Glosario de redes complejas</div>
-      <div class="card__desc">
-        Definiciones expertas de centralidad, clustering, modelos nulos, comunidades, difusión y Graph ML.
-      </div>
-      <div class="card__footer"><span class="text-muted text-sm">Ver conceptos</span></div>
-    </div>
-  </a>
-
-  <a href="{{ '/curso-redes-complejas/laboratorios/#notebooks-complementarios' | relative_url }}" style="text-decoration:none; color:inherit;">
-    <div class="card card--link" style="cursor:pointer; min-height: 160px;">
-      <div class="card__icon card__icon--blue">NB</div>
-      <div class="card__title">Notebooks complementarios</div>
-      <div class="card__desc">
-        Tres prácticas de profundización sobre proyecciones bipartitas, modelos nulos y comunidades.
-      </div>
-      <div class="card__footer"><span class="text-muted text-sm">Ver notebooks</span></div>
-    </div>
-  </a>
 </div>
+
+<div class="section-divider"></div>
+
+<!-- Descripción del curso -->
+<section class="course-intro">
+  <div class="course-intro__main">
+    <div class="card__number">Curso de redes complejas</div>
+    <h2>Aprender ciencia de redes con teoría, datos y Python</h2>
+    <p>
+      Redes y Sistemas Complejos es un curso aplicado para estudiar sistemas relacionales: personas,
+      organizaciones, documentos, productos, eventos, contagios e infraestructuras conectadas. La ruta combina
+      teoría de grafos, ciencia de redes, modelamiento de datos, análisis estadístico e implementación en Python.
+    </p>
+    <p>
+      El curso está diseñado para ir desde decisiones básicas de representación hasta problemas avanzados:
+      redes bipartitas y proyecciones, centralidades, modelos generativos, modelos nulos, comunidades,
+      difusión en redes, inferencia responsable y machine learning sobre grafos. Cada unidad conecta la
+      intuición conceptual con notebooks ejecutables, lecturas y recursos interactivos.
+    </p>
+    <div class="course-intro__links">
+      <a class="btn btn--violet" href="{{ '/curso-redes-complejas/' | relative_url }}">Ver corrida 2026-1</a>
+      <a class="btn btn--outline" href="{{ '/glosario-redes-complejas/' | relative_url }}">Ver glosario</a>
+      <a class="btn btn--blue" href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}">Ver laboratorios</a>
+    </div>
+  </div>
+  <aside class="course-intro__aside">
+    <div class="course-intro__fact">
+      <span>Enfoque</span>
+      <strong>Network science aplicada</strong>
+    </div>
+    <div class="course-intro__fact">
+      <span>Herramientas</span>
+      <strong>Python · NetworkX · igraph · Colab</strong>
+    </div>
+    <div class="course-intro__fact">
+      <span>Material</span>
+      <strong>Clases, labs, notebooks, literatura y recursos web</strong>
+    </div>
+  </aside>
+</section>
 
 <div class="section-divider"></div>
 

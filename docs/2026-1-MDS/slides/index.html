@@ -74,12 +74,17 @@ breadcrumbs:
           title="Clase teórica 1 — Fundamentos y Representación de Redes"
           loading="lazy"></iframe>
       </div>
-      <div class="pdf-frame pdf-frame--mobile">
-        <iframe
-          src="about:blank"
-          data-pdf="{{ '/assets/pdfs/2026-1/clase-01-fundamentos.pdf' | relative_url }}"
-          title="Vista mobile de la clase teórica 1 — Fundamentos y Representación de Redes"
-          loading="lazy"></iframe>
+      <div class="pdf-frame pdf-frame--mobile pdf-mobile-viewer"
+           data-pdf="{{ '/assets/pdfs/2026-1/clase-01-fundamentos.pdf' | relative_url }}">
+        <div class="pdf-mobile-viewer__stage">
+          <canvas aria-label="Vista mobile de la clase teórica 1 — Fundamentos y Representación de Redes"></canvas>
+        </div>
+        <div class="pdf-mobile-viewer__controls" hidden>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="prev">Anterior</button>
+          <span class="pdf-mobile-viewer__page">Página 1</span>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="next">Siguiente</button>
+        </div>
+        <div class="pdf-mobile-viewer__status">Cargando PDF...</div>
       </div>
       <div class="pdf-card__actions">
         <a class="btn btn--violet btn--sm"
@@ -107,12 +112,17 @@ breadcrumbs:
           title="Clase teórica 2 — Redes Bipartitas y Proyecciones"
           loading="lazy"></iframe>
       </div>
-      <div class="pdf-frame pdf-frame--mobile">
-        <iframe
-          src="about:blank"
-          data-pdf="{{ '/assets/pdfs/2026-1/clase-02-bipartitas.pdf' | relative_url }}"
-          title="Vista mobile de la clase teórica 2 — Redes Bipartitas y Proyecciones"
-          loading="lazy"></iframe>
+      <div class="pdf-frame pdf-frame--mobile pdf-mobile-viewer"
+           data-pdf="{{ '/assets/pdfs/2026-1/clase-02-bipartitas.pdf' | relative_url }}">
+        <div class="pdf-mobile-viewer__stage">
+          <canvas aria-label="Vista mobile de la clase teórica 2 — Redes Bipartitas y Proyecciones"></canvas>
+        </div>
+        <div class="pdf-mobile-viewer__controls" hidden>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="prev">Anterior</button>
+          <span class="pdf-mobile-viewer__page">Página 1</span>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="next">Siguiente</button>
+        </div>
+        <div class="pdf-mobile-viewer__status">Cargando PDF...</div>
       </div>
       <div class="pdf-card__actions">
         <a class="btn btn--violet btn--sm"
@@ -140,12 +150,17 @@ breadcrumbs:
           title="Clase teórica 3 — Topología y Centralidades"
           loading="lazy"></iframe>
       </div>
-      <div class="pdf-frame pdf-frame--mobile">
-        <iframe
-          src="about:blank"
-          data-pdf="{{ '/assets/pdfs/2026-1/clase-03-topologia-centralidades.pdf' | relative_url }}"
-          title="Vista mobile de la clase teórica 3 — Topología y Centralidades"
-          loading="lazy"></iframe>
+      <div class="pdf-frame pdf-frame--mobile pdf-mobile-viewer"
+           data-pdf="{{ '/assets/pdfs/2026-1/clase-03-topologia-centralidades.pdf' | relative_url }}">
+        <div class="pdf-mobile-viewer__stage">
+          <canvas aria-label="Vista mobile de la clase teórica 3 — Topología y Centralidades"></canvas>
+        </div>
+        <div class="pdf-mobile-viewer__controls" hidden>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="prev">Anterior</button>
+          <span class="pdf-mobile-viewer__page">Página 1</span>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="next">Siguiente</button>
+        </div>
+        <div class="pdf-mobile-viewer__status">Cargando PDF...</div>
       </div>
       <div class="pdf-card__actions">
         <a class="btn btn--violet btn--sm"
@@ -173,12 +188,17 @@ breadcrumbs:
           title="Clase teórica 4 — Modelos Generativos, Nulos y Baselines"
           loading="lazy"></iframe>
       </div>
-      <div class="pdf-frame pdf-frame--mobile">
-        <iframe
-          src="about:blank"
-          data-pdf="{{ '/assets/pdfs/2026-1/clase-04-modelos-baselines.pdf' | relative_url }}"
-          title="Vista mobile de la clase teórica 4 — Modelos Generativos, Nulos y Baselines"
-          loading="lazy"></iframe>
+      <div class="pdf-frame pdf-frame--mobile pdf-mobile-viewer"
+           data-pdf="{{ '/assets/pdfs/2026-1/clase-04-modelos-baselines.pdf' | relative_url }}">
+        <div class="pdf-mobile-viewer__stage">
+          <canvas aria-label="Vista mobile de la clase teórica 4 — Modelos Generativos, Nulos y Baselines"></canvas>
+        </div>
+        <div class="pdf-mobile-viewer__controls" hidden>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="prev">Anterior</button>
+          <span class="pdf-mobile-viewer__page">Página 1</span>
+          <button class="btn btn--ghost btn--sm" type="button" data-pdf-action="next">Siguiente</button>
+        </div>
+        <div class="pdf-mobile-viewer__status">Cargando PDF...</div>
       </div>
       <div class="pdf-card__actions">
         <a class="btn btn--violet btn--sm"
@@ -192,8 +212,21 @@ breadcrumbs:
   </div>
 </section>
 
-<script>
+<script type="module">
   const mobilePdfQuery = window.matchMedia('(max-width: 900px)');
+  const pdfjsVersion = '4.10.38';
+  let pdfjsPromise;
+
+  const loadPdfJs = () => {
+    if (!pdfjsPromise) {
+      pdfjsPromise = import(`https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjsVersion}/build/pdf.mjs`).then((pdfjs) => {
+        pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.mjs`;
+        return pdfjs;
+      });
+    }
+    return pdfjsPromise;
+  };
+
   const activateDesktopPdfFrames = () => {
     if (mobilePdfQuery.matches) return;
     document.querySelectorAll('.pdf-frame--desktop iframe[data-pdf-native]').forEach((frame) => {
@@ -202,14 +235,98 @@ breadcrumbs:
       frame.dataset.loaded = 'true';
     });
   };
+
+  const setupMobilePdfViewer = async (viewer) => {
+    if (viewer.dataset.ready === 'true') return;
+    viewer.dataset.ready = 'true';
+
+    const status = viewer.querySelector('.pdf-mobile-viewer__status');
+    const stage = viewer.querySelector('.pdf-mobile-viewer__stage');
+    const canvas = viewer.querySelector('canvas');
+    const pageLabel = viewer.querySelector('.pdf-mobile-viewer__page');
+    const controls = viewer.querySelector('.pdf-mobile-viewer__controls');
+    const prev = viewer.querySelector('[data-pdf-action="prev"]');
+    const next = viewer.querySelector('[data-pdf-action="next"]');
+    const context = canvas.getContext('2d');
+    let pdf;
+    let pageNumber = 1;
+    let rendering = false;
+    let pendingPage = null;
+
+    const renderPage = async (number) => {
+      rendering = true;
+      status.hidden = false;
+      status.textContent = 'Cargando página...';
+
+      const page = await pdf.getPage(number);
+      const baseViewport = page.getViewport({ scale: 1 });
+      const width = Math.max(stage.clientWidth || viewer.clientWidth || 320, 280);
+      const scale = width / baseViewport.width;
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+      const viewport = page.getViewport({ scale: scale * pixelRatio });
+
+      canvas.width = Math.floor(viewport.width);
+      canvas.height = Math.floor(viewport.height);
+      canvas.style.width = `${Math.floor(viewport.width / pixelRatio)}px`;
+      canvas.style.height = `${Math.floor(viewport.height / pixelRatio)}px`;
+
+      await page.render({ canvasContext: context, viewport }).promise;
+
+      pageLabel.textContent = `Página ${number} / ${pdf.numPages}`;
+      prev.disabled = number <= 1;
+      next.disabled = number >= pdf.numPages;
+      controls.hidden = false;
+      status.hidden = true;
+      rendering = false;
+
+      if (pendingPage !== null) {
+        const nextPage = pendingPage;
+        pendingPage = null;
+        renderPage(nextPage);
+      }
+    };
+
+    const queuePage = (number) => {
+      pageNumber = Math.min(Math.max(number, 1), pdf.numPages);
+      if (rendering) {
+        pendingPage = pageNumber;
+        return;
+      }
+      renderPage(pageNumber);
+    };
+
+    try {
+      const pdfjs = await loadPdfJs();
+      const pdfUrl = new URL(viewer.dataset.pdf, window.location.href).href;
+      pdf = await pdfjs.getDocument(pdfUrl).promise;
+      prev.addEventListener('click', () => queuePage(pageNumber - 1));
+      next.addEventListener('click', () => queuePage(pageNumber + 1));
+      viewer.renderCurrentPage = () => queuePage(pageNumber);
+      await renderPage(pageNumber);
+    } catch (error) {
+      status.hidden = false;
+      status.textContent = 'No se pudo renderizar el PDF embebido en este navegador. Usa Abrir PDF.';
+      viewer.dataset.ready = 'error';
+    }
+  };
+
+  let mobileObserver;
   const activateMobilePdfFrames = () => {
     if (!mobilePdfQuery.matches) return;
-    document.querySelectorAll('.pdf-frame--mobile iframe[data-pdf]').forEach((frame) => {
-      if (frame.dataset.loaded === 'true') return;
-      const pdfUrl = new URL(frame.dataset.pdf, window.location.href).href;
-      frame.src = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(pdfUrl)}`;
-      frame.dataset.loaded = 'true';
-    });
+    const viewers = document.querySelectorAll('.pdf-mobile-viewer[data-pdf]');
+    if (!('IntersectionObserver' in window)) {
+      viewers.forEach(setupMobilePdfViewer);
+      return;
+    }
+    if (mobileObserver) return;
+    mobileObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        setupMobilePdfViewer(entry.target);
+        mobileObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: '360px 0px' });
+    viewers.forEach((viewer) => mobileObserver.observe(viewer));
   };
   activateDesktopPdfFrames();
   activateMobilePdfFrames();
@@ -222,6 +339,17 @@ breadcrumbs:
   } else {
     mobilePdfQuery.addListener(syncPdfFrames);
   }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    if (!mobilePdfQuery.matches) return;
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      document.querySelectorAll('.pdf-mobile-viewer[data-ready="true"]').forEach((viewer) => {
+        viewer.renderCurrentPage?.();
+      });
+    }, 180);
+  });
 </script>
 
 <section class="resource-section">

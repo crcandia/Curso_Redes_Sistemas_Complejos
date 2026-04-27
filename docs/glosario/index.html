@@ -1,0 +1,321 @@
+---
+layout: default
+title: Glosario de Redes Complejas
+permalink: /glosario-redes-complejas/
+seo_title: Glosario de Redes Complejas y Ciencia de Redes
+description: "Glosario experto de redes complejas y ciencia de redes: nodos, aristas, centralidad, redes bipartitas, comunidades, modelos nulos, difusión, link prediction y Graph Neural Networks."
+schema_webpage_type: CollectionPage
+sitemap_priority: "0.88"
+changefreq: monthly
+keywords:
+  - glosario redes complejas
+  - conceptos de ciencia de redes
+  - teoría de grafos
+  - centralidad en redes
+  - comunidades en redes
+  - difusión en redes
+breadcrumbs:
+  - name: Inicio
+    url: /
+  - name: Glosario
+    url: /glosario-redes-complejas/
+---
+
+<nav class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Inicio</a>
+  <span>›</span>
+  <span>Glosario</span>
+</nav>
+
+<div class="hero" style="padding-bottom: 28px;">
+  <p class="hero__eyebrow">Ciencia de redes · Guía conceptual</p>
+  <h1 class="hero__title">Glosario de redes complejas</h1>
+  <p class="hero__subtitle" style="font-size: 15px;">
+    Definiciones operativas para estudiar sistemas relacionales: desde teoría de grafos y métricas
+    estructurales hasta comunidades, procesos dinámicos, inferencia y machine learning sobre grafos.
+  </p>
+  <div class="badges">
+    <span class="badge badge--violet">Teoría de grafos</span>
+    <span class="badge badge--blue">Python · NetworkX</span>
+    <span class="badge badge--teal">Recursos interactivos</span>
+    <span class="badge badge--amber">Lecturas</span>
+  </div>
+</div>
+
+<div class="card mb-32" style="box-shadow:none;">
+  <div class="card__number">Cómo usar esta guía</div>
+  <div class="card__title">Conceptos, no solo keywords</div>
+  <div class="card__desc">
+    Cada término está escrito para conectar intuición, uso analítico y material del curso. La idea es
+    que una persona pueda pasar desde la definición a la clase, laboratorio o recurso interactivo que
+    permite trabajar el concepto con datos.
+  </div>
+</div>
+
+<div class="section-header">
+  <h2>Conceptos fundamentales</h2>
+</div>
+
+<div class="glossary-grid">
+  <article class="term-card" id="red-compleja">
+    <div class="term-card__meta"><span class="tag tag--violet">Fundamentos</span></div>
+    <h2>Red compleja</h2>
+    <p>
+      Una red compleja representa un sistema mediante entidades y relaciones. Su valor analítico aparece
+      cuando la estructura de conexión no es trivial: heterogeneidad de grados, clustering, comunidades,
+      caminos cortos, dependencia entre observaciones y dinámica sobre la topología.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase1">Clase 1</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab1">Lab 1</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u1">Literatura U1</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="nodos-aristas">
+    <div class="term-card__meta"><span class="tag tag--violet">Representación</span></div>
+    <h2>Nodos y aristas</h2>
+    <p>
+      Los nodos son las unidades del sistema; las aristas son las relaciones observadas o inferidas entre
+      ellas. La decisión crítica no es técnica sino conceptual: qué cuenta como entidad, qué cuenta como
+      relación, con qué dirección, peso, ventana temporal y nivel de agregación.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}#unidad1">Unidad 1</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab1">NetworkX</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="grado-fuerza">
+    <div class="term-card__meta"><span class="tag tag--violet">Métricas</span></div>
+    <h2>Grado y fuerza</h2>
+    <p>
+      El grado cuenta cuántas conexiones tiene un nodo. En redes ponderadas, la fuerza suma los pesos de
+      esas conexiones. Ambas métricas son simples, interpretables y útiles como primera señal, pero pueden
+      ocultar redundancia, sesgo por actividad o diferencias de posición estructural.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase2">Clase 2</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab2">Lab 2</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="centralidad">
+    <div class="term-card__meta"><span class="tag tag--violet">Topología</span></div>
+    <h2>Centralidad</h2>
+    <p>
+      Centralidad no significa una sola cosa. Degree centrality mide actividad local; betweenness mide
+      intermediación en caminos; closeness captura cercanía global; eigenvector y PageRank ponderan la
+      importancia de los vecinos. La métrica correcta depende de la pregunta y del proceso que se modela.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase3">Clase 3</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab3">Lab 3</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="red-bipartita">
+    <div class="term-card__meta"><span class="tag tag--teal">Recurso interactivo</span></div>
+    <h2>Red bipartita</h2>
+    <p>
+      Una red bipartita conecta dos tipos de nodos, como empresas y organismos, autores y papers, o usuarios
+      y productos. Es una representación natural para sistemas de afiliación. Proyectarla a una sola capa
+      puede ser útil, pero también infla enlaces y clustering si no se controla la actividad.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/bipartitas/' | relative_url }}">Herramienta bipartitas</a>
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase2">Clase 2</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab2">Lab 2</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="modelos-nulos">
+    <div class="term-card__meta"><span class="tag tag--violet">Inferencia</span></div>
+    <h2>Modelos nulos</h2>
+    <p>
+      Un modelo nulo define qué estructura esperaríamos por azar bajo restricciones específicas, por ejemplo
+      preservando tamaño, densidad o secuencia de grados. Sin modelos nulos, muchas conclusiones sobre
+      clustering, centralidad o comunidades pueden ser solo artefactos de la distribución de actividad.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase4">Clase 4</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab4">Lab 4</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u4">Lecturas U4</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="comunidades">
+    <div class="term-card__meta"><span class="tag tag--teal">Recurso interactivo</span></div>
+    <h2>Comunidades y modularidad</h2>
+    <p>
+      Una comunidad es un conjunto de nodos más densamente conectado internamente que con el resto de la red.
+      La modularidad formaliza esa comparación contra un baseline. Algoritmos como Louvain y Leiden son
+      útiles, pero requieren revisar resolución, estabilidad y significado sustantivo de los grupos.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/comunidades/' | relative_url }}">Herramienta comunidades</a>
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase5">Clase 5</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab5">Lab 5</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="core-periphery">
+    <div class="term-card__meta"><span class="tag tag--violet">Mesoestructura</span></div>
+    <h2>Core-periphery y k-core</h2>
+    <p>
+      Core-periphery describe redes con un núcleo densamente conectado y una periferia menos integrada.
+      k-core identifica subgrafos donde cada nodo mantiene al menos k conexiones internas. Ambos enfoques
+      ayudan a distinguir nodos estructuralmente robustos de nodos simplemente activos.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}#unidad5">Unidad 5</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u5">Literatura U5</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="difusion-contagio">
+    <div class="term-card__meta"><span class="tag tag--teal">Recurso interactivo</span></div>
+    <h2>Difusión y contagio en redes</h2>
+    <p>
+      Los procesos de difusión conectan estructura y dinámica. En modelos SIR/SIS, la probabilidad de
+      propagación depende de contactos, recuperación, posición en la red y heterogeneidad de grados. El nodo
+      más central para informar no siempre es el más importante para contener un contagio.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/procesos/' | relative_url }}">Herramienta procesos</a>
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase6">Clase 6</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab6">Lab 6</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="inferencia-redes">
+    <div class="term-card__meta"><span class="tag tag--violet">Evaluación</span></div>
+    <h2>Inferencia en redes</h2>
+    <p>
+      Los datos de red no son independientes: las observaciones comparten vecinos, comunidades, historia y
+      mecanismos de formación. Por eso la evaluación debe cuidar leakage, splits temporales o estructurales,
+      modelos nulos y reportes explícitos de límites, sesgos y supuestos.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase7">Clase 7</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab7">Lab 7</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="link-prediction">
+    <div class="term-card__meta"><span class="tag tag--blue">Graph ML</span></div>
+    <h2>Link prediction</h2>
+    <p>
+      Link prediction estima qué enlaces podrían aparecer, faltar o ser relevantes. Puede usar heurísticas
+      estructurales, embeddings o modelos supervisados. Su principal riesgo metodológico es el leakage:
+      entrenar con información futura o con particiones que destruyen la dependencia temporal de la red.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}#unidad7">Unidad 7</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u7">Lecturas U7</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="graph-ml">
+    <div class="term-card__meta"><span class="tag tag--blue">Graph ML</span></div>
+    <h2>Graph Machine Learning</h2>
+    <p>
+      Graph ML usa la estructura relacional como señal predictiva. Incluye embeddings de nodos, clasificación
+      de nodos, predicción de enlaces y Graph Neural Networks. No siempre mejora sobre features de red bien
+      construidas; conviene usarlo cuando la dependencia estructural es parte real del fenómeno.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase8">Clase 8</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab8">Lab 8</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u8">Lecturas U8</a>
+    </div>
+  </article>
+</div>
+
+<div class="section-header mt-40">
+  <h2>Preguntas frecuentes</h2>
+</div>
+
+<div class="faq-list">
+  <section class="faq-item">
+    <h2>¿Qué diferencia hay entre teoría de grafos y ciencia de redes?</h2>
+    <p>
+      La teoría de grafos provee el lenguaje matemático para describir nodos, aristas, caminos, conectividad
+      y estructuras. La ciencia de redes usa ese lenguaje para estudiar sistemas empíricos, sus mecanismos de
+      formación, sus patrones estadísticos y los procesos que ocurren sobre la red.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Por qué no basta con calcular centralidades?</h2>
+    <p>
+      Porque cada centralidad responde una pregunta distinta y puede estar dominada por sesgos de medición,
+      actividad o tamaño. En un análisis serio, las centralidades se interpretan junto con el objetivo del
+      problema, la calidad del dato, modelos nulos y análisis de sensibilidad.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Cuándo conviene usar Graph Neural Networks?</h2>
+    <p>
+      Conviene considerarlas cuando la dependencia entre nodos es predictiva, hay suficiente señal relacional
+      y la evaluación evita leakage. Para muchos problemas aplicados, un feature store con métricas de red,
+      buenos splits y modelos tabulares puede ser un baseline más transparente y competitivo.
+    </p>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": {{ '/glosario-redes-complejas/' | absolute_url | append: '#defined-term-set' | jsonify }},
+  "name": "Glosario de Redes Complejas y Ciencia de Redes",
+  "url": {{ '/glosario-redes-complejas/' | absolute_url | jsonify }},
+  "inLanguage": "es",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Red compleja",
+      "url": {{ '/glosario-redes-complejas/#red-compleja' | absolute_url | jsonify }},
+      "description": "Representación de un sistema mediante entidades y relaciones cuya estructura de conexión presenta patrones no triviales."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Centralidad",
+      "url": {{ '/glosario-redes-complejas/#centralidad' | absolute_url | jsonify }},
+      "description": "Familia de métricas que cuantifica la posición o influencia estructural de un nodo según una pregunta específica."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Red bipartita",
+      "url": {{ '/glosario-redes-complejas/#red-bipartita' | absolute_url | jsonify }},
+      "description": "Red con dos tipos de nodos y enlaces definidos entre tipos, útil para sistemas de afiliación."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Modelo nulo",
+      "url": {{ '/glosario-redes-complejas/#modelos-nulos' | absolute_url | jsonify }},
+      "description": "Baseline estadístico que define qué estructura esperar bajo restricciones explícitas."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Comunidad",
+      "url": {{ '/glosario-redes-complejas/#comunidades' | absolute_url | jsonify }},
+      "description": "Conjunto de nodos más densamente conectado internamente que con el resto de la red."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Difusión en redes",
+      "url": {{ '/glosario-redes-complejas/#difusion-contagio' | absolute_url | jsonify }},
+      "description": "Proceso dinámico en el que información, contagio o comportamiento se propaga siguiendo la estructura de contactos."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Graph Machine Learning",
+      "url": {{ '/glosario-redes-complejas/#graph-ml' | absolute_url | jsonify }},
+      "description": "Familia de métodos predictivos que usan explícitamente la estructura relacional de grafos."
+    }
+  ]
+}
+</script>

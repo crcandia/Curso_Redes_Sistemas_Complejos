@@ -272,7 +272,7 @@ strong { color: var(--text); }
 .stat__num {
   font-size: 28px;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   color: var(--text);
   line-height: 1;
   margin-bottom: 4px;
@@ -407,7 +407,7 @@ strong { color: var(--text); }
   font-size: 16px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.3px;
+  letter-spacing: 0;
   margin-bottom: 6px;
 }
 .card__desc {
@@ -431,7 +431,7 @@ strong { color: var(--text); }
   font-size: 15px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.2px;
+  letter-spacing: 0;
   margin-bottom: 12px;
 }
 .card ul { list-style: none; padding: 0; margin: 0; }
@@ -446,6 +446,90 @@ strong { color: var(--text); }
   gap: 8px;
 }
 .card li a:hover { color: var(--violet-mid); text-decoration: none; }
+
+/* ============================================================
+   GLOSSARY
+   ============================================================ */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+.term-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 260px;
+}
+.term-card:hover {
+  border-color: var(--border-2);
+  box-shadow: var(--shadow-sm);
+}
+.term-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.term-card h2 {
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: var(--text);
+}
+.term-card p {
+  color: var(--text-2);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+.term-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+.term-card__links a {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--violet-mid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  padding: 4px 8px;
+  background: var(--surface);
+}
+.term-card__links a:hover {
+  color: var(--violet);
+  border-color: var(--violet-tag);
+  background: var(--violet-pale);
+  text-decoration: none;
+}
+.faq-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+.faq-item h2 {
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--text);
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+.faq-item p {
+  color: var(--text-2);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
 
 /* Featured card (large) */
 .card--featured {
@@ -482,7 +566,7 @@ strong { color: var(--text); }
   font-size: 20px;
   font-weight: 800;
   color: var(--text);
-  letter-spacing: -0.4px;
+  letter-spacing: 0;
   margin-bottom: 6px;
 }
 .run-card__desc {
@@ -518,7 +602,7 @@ strong { color: var(--text); }
 .section-header h2 {
   font-size: 20px;
   font-weight: 800;
-  letter-spacing: -0.4px;
+  letter-spacing: 0;
   color: var(--text);
 }
 .section-header .section-count {
@@ -574,7 +658,7 @@ strong { color: var(--text); }
   font-size: 16px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.2px;
+  letter-spacing: 0;
   margin-bottom: 4px;
 }
 .slide-row__desc {
@@ -797,7 +881,7 @@ strong { color: var(--text); }
   font-size: 15px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.2px;
+  letter-spacing: 0;
   margin-bottom: 3px;
 }
 .lab-card__subtitle {
@@ -857,7 +941,7 @@ strong { color: var(--text); }
   font-size: 18px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.3px;
+  letter-spacing: 0;
   margin-bottom: 6px;
 }
 .recurso-card__desc {

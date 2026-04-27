@@ -53,6 +53,7 @@
       "url": {{ site.organization.url | jsonify }},
       "logo": {{ site.organization.logo | absolute_url | jsonify }},
       "description": {{ site.organization.description | jsonify }},
+      "knowsAbout": {{ site.seo.keywords | jsonify }},
       "sameAs": [
         {{ site.author.url | jsonify }},
         {{ site.repository_url | jsonify }}
@@ -63,6 +64,8 @@
       "@id": {{ site_base | append: '#author' | jsonify }},
       "name": {{ site.author.name | jsonify }},
       "url": {{ site.author.url | jsonify }},
+      "jobTitle": "Researcher",
+      "knowsAbout": {{ site.seo.keywords | jsonify }},
       "affiliation": {
         "@id": {{ site_base | append: '#organization' | jsonify }}
       }
@@ -217,7 +220,8 @@
     { "@type": "ListItem", "position": 2, "url": {{ '/curso-redes-complejas/clases/' | absolute_url | jsonify }}, "name": "Clases teóricas" },
     { "@type": "ListItem", "position": 3, "url": {{ '/curso-redes-complejas/laboratorios/' | absolute_url | jsonify }}, "name": "Laboratorios de redes complejas" },
     { "@type": "ListItem", "position": 4, "url": {{ '/curso-redes-complejas/recursos-interactivos/' | absolute_url | jsonify }}, "name": "Recursos interactivos" },
-    { "@type": "ListItem", "position": 5, "url": {{ '/curso-redes-complejas/literatura/' | absolute_url | jsonify }}, "name": "Literatura de redes complejas" }
+    { "@type": "ListItem", "position": 5, "url": {{ '/curso-redes-complejas/literatura/' | absolute_url | jsonify }}, "name": "Literatura de redes complejas" },
+    { "@type": "ListItem", "position": 6, "url": {{ '/glosario-redes-complejas/' | absolute_url | jsonify }}, "name": "Glosario de redes complejas" }
   ]
 }
 </script>

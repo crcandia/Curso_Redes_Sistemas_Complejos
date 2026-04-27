@@ -3,7 +3,7 @@ layout: default
 title: Glosario de Redes Complejas
 permalink: /glosario-redes-complejas/
 seo_title: Glosario de Redes Complejas y Ciencia de Redes
-description: "Glosario experto de redes complejas y ciencia de redes: nodos, aristas, centralidad, redes bipartitas, comunidades, modelos nulos, difusión, link prediction y Graph Neural Networks."
+description: "Glosario experto de redes complejas y ciencia de redes: teoría de grafos, centralidad, clustering, redes bipartitas, modelos nulos, comunidades, difusión, link prediction y Graph Neural Networks."
 schema_webpage_type: CollectionPage
 sitemap_priority: "0.88"
 changefreq: monthly
@@ -12,8 +12,11 @@ keywords:
   - conceptos de ciencia de redes
   - teoría de grafos
   - centralidad en redes
+  - clustering en redes
+  - modelos nulos en grafos
   - comunidades en redes
   - difusión en redes
+  - graph neural networks
 breadcrumbs:
   - name: Inicio
     url: /
@@ -114,6 +117,76 @@ breadcrumbs:
     </div>
   </article>
 
+  <article class="term-card" id="clustering-transitividad">
+    <div class="term-card__meta"><span class="tag tag--violet">Topología</span></div>
+    <h2>Clustering y transitividad</h2>
+    <p>
+      El clustering mide hasta qué punto los vecinos de un nodo también están conectados entre sí.
+      La transitividad resume ese patrón a escala global. En redes sociales suele interpretarse como
+      cierre triádico; en datos proyectados puede aparecer artificialmente por nodos de alta actividad.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase3">Clase 3</a>
+      <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}#unidad4">Unidad 4</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="mundo-pequeno">
+    <div class="term-card__meta"><span class="tag tag--violet">Modelos</span></div>
+    <h2>Mundo pequeño</h2>
+    <p>
+      Una red de mundo pequeño combina caminos promedio cortos con alto clustering. El modelo
+      Watts-Strogatz muestra cómo pocos enlaces de largo alcance pueden reducir distancias sin destruir
+      completamente la estructura local, un mecanismo clave para difusión y búsqueda en redes.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase4">Clase 4</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u4">Literatura U4</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="libre-escala">
+    <div class="term-card__meta"><span class="tag tag--violet">Modelos</span></div>
+    <h2>Red libre de escala y preferential attachment</h2>
+    <p>
+      Las redes libres de escala presentan distribuciones de grado con cola pesada: pocos nodos concentran
+      muchas conexiones y muchos nodos tienen baja conectividad. Preferential attachment es un mecanismo
+      generativo donde los nodos con más enlaces tienden a recibir nuevos enlaces con mayor probabilidad.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}#unidad4">Unidad 4</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u4">Barabási-Albert</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="homofilia-asortatividad">
+    <div class="term-card__meta"><span class="tag tag--violet">Estructura</span></div>
+    <h2>Homofilia y assortativity</h2>
+    <p>
+      La homofilia describe la tendencia de nodos similares a conectarse. La assortativity cuantifica mezcla
+      por atributos o por grado. Ambos conceptos ayudan a separar patrones sustantivos de sesgos de observación
+      y son críticos al interpretar comunidades, desigualdad y segmentación.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase5">Clase 5</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab5">Lab 5</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="laplaciano-espectro">
+    <div class="term-card__meta"><span class="tag tag--violet">Topología</span></div>
+    <h2>Laplaciano y análisis espectral</h2>
+    <p>
+      El Laplaciano de un grafo conecta estructura, difusión y particionamiento. Sus eigenvalores entregan
+      información sobre conectividad, cortes, estabilidad y dinámica. Es una herramienta conceptual clave
+      para entender clustering espectral, procesos de difusión y algunos fundamentos de Graph ML.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase3">Clase 3</a>
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase6">Clase 6</a>
+    </div>
+  </article>
+
   <article class="term-card" id="red-bipartita">
     <div class="term-card__meta"><span class="tag tag--teal">Recurso interactivo</span></div>
     <h2>Red bipartita</h2>
@@ -188,6 +261,20 @@ breadcrumbs:
     </div>
   </article>
 
+  <article class="term-card" id="red-temporal">
+    <div class="term-card__meta"><span class="tag tag--violet">Dinámica</span></div>
+    <h2>Red temporal</h2>
+    <p>
+      Una red temporal conserva cuándo ocurren las interacciones. Es distinta de una red agregada, que colapsa
+      todos los contactos en una sola estructura. Para difusión, riesgo, recomendación o fraude, el orden de los
+      enlaces puede cambiar completamente qué caminos son posibles.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase6">Clase 6</a>
+      <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}#unidad6">Unidad 6</a>
+    </div>
+  </article>
+
   <article class="term-card" id="inferencia-redes">
     <div class="term-card__meta"><span class="tag tag--violet">Evaluación</span></div>
     <h2>Inferencia en redes</h2>
@@ -216,6 +303,20 @@ breadcrumbs:
     </div>
   </article>
 
+  <article class="term-card" id="heterofilia">
+    <div class="term-card__meta"><span class="tag tag--blue">Graph ML</span></div>
+    <h2>Heterofilia</h2>
+    <p>
+      La heterofilia aparece cuando nodos conectados tienden a tener etiquetas o atributos distintos. Rompe
+      el supuesto de suavidad local que muchos GNN explotan. En esos casos, agregar vecinos sin criterio puede
+      degradar desempeño y conviene usar arquitecturas, features o splits diseñados para esa estructura.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase8">Clase 8</a>
+      <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u8">Literatura U8</a>
+    </div>
+  </article>
+
   <article class="term-card" id="graph-ml">
     <div class="term-card__meta"><span class="tag tag--blue">Graph ML</span></div>
     <h2>Graph Machine Learning</h2>
@@ -228,6 +329,34 @@ breadcrumbs:
       <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase8">Clase 8</a>
       <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab8">Lab 8</a>
       <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}#u8">Lecturas U8</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="oversmoothing">
+    <div class="term-card__meta"><span class="tag tag--blue">Graph ML</span></div>
+    <h2>Oversmoothing</h2>
+    <p>
+      Oversmoothing es un problema de algunas GNN profundas: al propagar mensajes muchas veces, las
+      representaciones de nodos distintos se vuelven demasiado parecidas. El resultado puede ser menor
+      capacidad discriminativa, especialmente en grafos heterofílicos o con señales locales débiles.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase8">Clase 8</a>
+      <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}#lab8">Lab 8</a>
+    </div>
+  </article>
+
+  <article class="term-card" id="knowledge-graph">
+    <div class="term-card__meta"><span class="tag tag--blue">Graph ML</span></div>
+    <h2>Knowledge graph</h2>
+    <p>
+      Un knowledge graph organiza entidades y relaciones semánticas, a menudo con múltiples tipos de nodos y
+      enlaces. Se usa en búsqueda, recomendación, integración de datos y razonamiento. Su análisis combina
+      modelamiento relacional, embeddings, reglas de negocio y evaluación cuidadosa de enlaces faltantes.
+    </p>
+    <div class="term-card__links">
+      <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}#clase8">Clase 8</a>
+      <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}#unidad8">Unidad 8</a>
     </div>
   </article>
 </div>
@@ -263,6 +392,60 @@ breadcrumbs:
       buenos splits y modelos tabulares puede ser un baseline más transparente y competitivo.
     </p>
   </section>
+
+  <section class="faq-item">
+    <h2>¿Qué es un modelo nulo en redes y por qué importa?</h2>
+    <p>
+      Es un baseline estadístico que define qué estructura esperaríamos bajo ciertas restricciones. Importa
+      porque permite distinguir patrones reales de artefactos producidos por tamaño, densidad, secuencia de
+      grados, actividad de usuarios o mecanismos de muestreo.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Qué diferencia hay entre una red bipartita y una proyección?</h2>
+    <p>
+      La red bipartita conserva dos tipos de nodos y sus relaciones originales. La proyección transforma esa
+      información en una red de un solo tipo de nodo. La proyección puede facilitar análisis, pero también
+      puede inflar enlaces, clustering y centralidades si no se pondera o valida correctamente.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Por qué modularidad no es sinónimo de comunidades verdaderas?</h2>
+    <p>
+      Modularidad compara una partición contra un modelo nulo específico. Puede tener límites de resolución,
+      múltiples óptimos parecidos y sensibilidad a pesos o semillas. Por eso una partición debe evaluarse por
+      estabilidad, interpretación sustantiva y consistencia con la pregunta de investigación.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Por qué los splits aleatorios pueden ser malos en redes?</h2>
+    <p>
+      Porque los nodos y enlaces no son observaciones independientes. Un split aleatorio puede filtrar
+      información del futuro o de vecinos cercanos hacia el entrenamiento. En redes, la validación debe
+      respetar temporalidad, componentes, tareas de predicción y posibles mecanismos de leakage.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Cuál es la diferencia entre embeddings de nodos y GNN?</h2>
+    <p>
+      Los embeddings aprenden representaciones vectoriales de nodos a partir de patrones estructurales, como
+      caminatas aleatorias o co-ocurrencias. Las GNN aprenden representaciones mediante propagación de mensajes
+      y pueden incorporar atributos, etiquetas y objetivos supervisados de forma más directa.
+    </p>
+  </section>
+
+  <section class="faq-item">
+    <h2>¿Cómo aprender redes complejas con Python de forma rigurosa?</h2>
+    <p>
+      La ruta práctica es modelar bien nodos y enlaces, auditar datos, usar NetworkX o igraph para métricas,
+      comparar contra modelos nulos, documentar supuestos y validar conclusiones con sensibilidad. El código
+      debe acompañarse siempre de una pregunta sustantiva y no solo de métricas descriptivas.
+    </p>
+  </section>
 </div>
 
 <script type="application/ld+json">
@@ -285,6 +468,36 @@ breadcrumbs:
       "name": "Centralidad",
       "url": {{ '/glosario-redes-complejas/#centralidad' | absolute_url | jsonify }},
       "description": "Familia de métricas que cuantifica la posición o influencia estructural de un nodo según una pregunta específica."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Clustering",
+      "url": {{ '/glosario-redes-complejas/#clustering-transitividad' | absolute_url | jsonify }},
+      "description": "Medida de cierre local que cuantifica si los vecinos de un nodo también están conectados entre sí."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Mundo pequeño",
+      "url": {{ '/glosario-redes-complejas/#mundo-pequeno' | absolute_url | jsonify }},
+      "description": "Propiedad de redes que combinan alto clustering con caminos promedio cortos."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Red libre de escala",
+      "url": {{ '/glosario-redes-complejas/#libre-escala' | absolute_url | jsonify }},
+      "description": "Red cuya distribución de grado presenta cola pesada, con pocos nodos altamente conectados."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Homofilia",
+      "url": {{ '/glosario-redes-complejas/#homofilia-asortatividad' | absolute_url | jsonify }},
+      "description": "Tendencia de nodos similares a conectarse entre sí, medida mediante mezcla por atributos o grado."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Laplaciano de grafo",
+      "url": {{ '/glosario-redes-complejas/#laplaciano-espectro' | absolute_url | jsonify }},
+      "description": "Matriz que relaciona conectividad, difusión, particionamiento y propiedades espectrales de una red."
     },
     {
       "@type": "DefinedTerm",
@@ -312,9 +525,39 @@ breadcrumbs:
     },
     {
       "@type": "DefinedTerm",
+      "name": "Red temporal",
+      "url": {{ '/glosario-redes-complejas/#red-temporal' | absolute_url | jsonify }},
+      "description": "Red que conserva el orden temporal de las interacciones y permite analizar caminos dependientes del tiempo."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Link prediction",
+      "url": {{ '/glosario-redes-complejas/#link-prediction' | absolute_url | jsonify }},
+      "description": "Tarea de estimar enlaces faltantes, futuros o relevantes a partir de estructura, atributos o modelos supervisados."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Heterofilia",
+      "url": {{ '/glosario-redes-complejas/#heterofilia' | absolute_url | jsonify }},
+      "description": "Patrón donde nodos conectados tienden a tener atributos o etiquetas distintas."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Graph Machine Learning",
       "url": {{ '/glosario-redes-complejas/#graph-ml' | absolute_url | jsonify }},
       "description": "Familia de métodos predictivos que usan explícitamente la estructura relacional de grafos."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Oversmoothing",
+      "url": {{ '/glosario-redes-complejas/#oversmoothing' | absolute_url | jsonify }},
+      "description": "Fenómeno en GNN profundas donde las representaciones de nodos distintos se vuelven demasiado similares."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Knowledge graph",
+      "url": {{ '/glosario-redes-complejas/#knowledge-graph' | absolute_url | jsonify }},
+      "description": "Grafo semántico de entidades y relaciones usado en búsqueda, recomendación, integración de datos y razonamiento."
     }
   ]
 }

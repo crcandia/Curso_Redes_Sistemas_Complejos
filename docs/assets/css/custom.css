@@ -744,6 +744,9 @@ strong { color: var(--text); }
   border: 0;
   display: block;
 }
+.pdf-frame--mobile {
+  display: none;
+}
 .pdf-card__actions {
   padding: 12px 14px;
   display: flex;
@@ -1092,6 +1095,8 @@ strong { color: var(--text); }
   .slide-row { grid-template-columns: 48px 1fr; }
   .slide-row__actions { flex-direction: row; align-items: center; grid-column: 1 / -1; }
   .pdf-grid { grid-template-columns: 1fr; }
+  .pdf-frame--desktop { display: none; }
+  .pdf-frame--mobile { display: block; height: 520px; }
   .material-grid { grid-template-columns: 1fr; }
   .course-strip { align-items: flex-start; flex-direction: column; margin-top: -12px; }
   .stats { flex-wrap: wrap; }
@@ -1105,11 +1110,13 @@ strong { color: var(--text); }
   .nav { gap: 2px; }
   .nav a { padding: 5px 8px; font-size: 13px; }
   .container { width: calc(100% - 28px); }
+  .glossary-grid { grid-template-columns: 1fr; }
   .resource-section__header { align-items: flex-start; flex-direction: column; }
   .slide-row { grid-template-columns: 1fr; }
   .slide-row__num { width: 40px; height: 40px; }
   .pdf-card__header { min-height: 0; flex-direction: column; }
-  .pdf-frame { height: 360px; }
+  .pdf-frame { height: 430px; }
+  .pdf-card__actions { justify-content: flex-start; }
 }
 
 /* ============================================================

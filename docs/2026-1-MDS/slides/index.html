@@ -67,10 +67,18 @@ breadcrumbs:
         </div>
         <span class="tag tag--violet">Fundamentos</span>
       </div>
-      <div class="pdf-frame">
+      <div class="pdf-frame pdf-frame--desktop">
         <iframe
-          src="{{ '/assets/pdfs/2026-1/clase-01-fundamentos.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
+          src="about:blank"
+          data-pdf-native="{{ '/assets/pdfs/2026-1/clase-01-fundamentos.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
           title="Clase teórica 1 — Fundamentos y Representación de Redes"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-frame pdf-frame--mobile">
+        <iframe
+          src="about:blank"
+          data-pdf="{{ '/assets/pdfs/2026-1/clase-01-fundamentos.pdf' | relative_url }}"
+          title="Vista mobile de la clase teórica 1 — Fundamentos y Representación de Redes"
           loading="lazy"></iframe>
       </div>
       <div class="pdf-card__actions">
@@ -92,10 +100,18 @@ breadcrumbs:
         </div>
         <span class="tag tag--violet">Clase teórica</span>
       </div>
-      <div class="pdf-frame">
+      <div class="pdf-frame pdf-frame--desktop">
         <iframe
-          src="{{ '/assets/pdfs/2026-1/clase-02-bipartitas.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
+          src="about:blank"
+          data-pdf-native="{{ '/assets/pdfs/2026-1/clase-02-bipartitas.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
           title="Clase teórica 2 — Redes Bipartitas y Proyecciones"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-frame pdf-frame--mobile">
+        <iframe
+          src="about:blank"
+          data-pdf="{{ '/assets/pdfs/2026-1/clase-02-bipartitas.pdf' | relative_url }}"
+          title="Vista mobile de la clase teórica 2 — Redes Bipartitas y Proyecciones"
           loading="lazy"></iframe>
       </div>
       <div class="pdf-card__actions">
@@ -117,10 +133,18 @@ breadcrumbs:
         </div>
         <span class="tag tag--violet">Clase teórica</span>
       </div>
-      <div class="pdf-frame">
+      <div class="pdf-frame pdf-frame--desktop">
         <iframe
-          src="{{ '/assets/pdfs/2026-1/clase-03-topologia-centralidades.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
+          src="about:blank"
+          data-pdf-native="{{ '/assets/pdfs/2026-1/clase-03-topologia-centralidades.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
           title="Clase teórica 3 — Topología y Centralidades"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-frame pdf-frame--mobile">
+        <iframe
+          src="about:blank"
+          data-pdf="{{ '/assets/pdfs/2026-1/clase-03-topologia-centralidades.pdf' | relative_url }}"
+          title="Vista mobile de la clase teórica 3 — Topología y Centralidades"
           loading="lazy"></iframe>
       </div>
       <div class="pdf-card__actions">
@@ -142,10 +166,18 @@ breadcrumbs:
         </div>
         <span class="tag tag--violet">Clase teórica</span>
       </div>
-      <div class="pdf-frame">
+      <div class="pdf-frame pdf-frame--desktop">
         <iframe
-          src="{{ '/assets/pdfs/2026-1/clase-04-modelos-baselines.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
+          src="about:blank"
+          data-pdf-native="{{ '/assets/pdfs/2026-1/clase-04-modelos-baselines.pdf' | relative_url }}#toolbar=1&amp;navpanes=0"
           title="Clase teórica 4 — Modelos Generativos, Nulos y Baselines"
+          loading="lazy"></iframe>
+      </div>
+      <div class="pdf-frame pdf-frame--mobile">
+        <iframe
+          src="about:blank"
+          data-pdf="{{ '/assets/pdfs/2026-1/clase-04-modelos-baselines.pdf' | relative_url }}"
+          title="Vista mobile de la clase teórica 4 — Modelos Generativos, Nulos y Baselines"
           loading="lazy"></iframe>
       </div>
       <div class="pdf-card__actions">
@@ -159,6 +191,38 @@ breadcrumbs:
     </article>
   </div>
 </section>
+
+<script>
+  const mobilePdfQuery = window.matchMedia('(max-width: 900px)');
+  const activateDesktopPdfFrames = () => {
+    if (mobilePdfQuery.matches) return;
+    document.querySelectorAll('.pdf-frame--desktop iframe[data-pdf-native]').forEach((frame) => {
+      if (frame.dataset.loaded === 'true') return;
+      frame.src = frame.dataset.pdfNative;
+      frame.dataset.loaded = 'true';
+    });
+  };
+  const activateMobilePdfFrames = () => {
+    if (!mobilePdfQuery.matches) return;
+    document.querySelectorAll('.pdf-frame--mobile iframe[data-pdf]').forEach((frame) => {
+      if (frame.dataset.loaded === 'true') return;
+      const pdfUrl = new URL(frame.dataset.pdf, window.location.href).href;
+      frame.src = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(pdfUrl)}`;
+      frame.dataset.loaded = 'true';
+    });
+  };
+  activateDesktopPdfFrames();
+  activateMobilePdfFrames();
+  const syncPdfFrames = () => {
+    activateDesktopPdfFrames();
+    activateMobilePdfFrames();
+  };
+  if (mobilePdfQuery.addEventListener) {
+    mobilePdfQuery.addEventListener('change', syncPdfFrames);
+  } else {
+    mobilePdfQuery.addListener(syncPdfFrames);
+  }
+</script>
 
 <section class="resource-section">
   <div class="resource-section__header">

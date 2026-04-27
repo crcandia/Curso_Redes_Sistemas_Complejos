@@ -27,9 +27,15 @@ seo:
     - teoría de grafos
     - NetworkX
     - grafos
+    - análisis de grafos
+    - redes bipartitas
+    - modelos nulos en redes
     - comunidades en redes
     - difusión en redes
+    - centralidad en redes
+    - epidemiología en redes
     - graph machine learning
+    - graph neural networks
     - análisis de redes sociales
 
 course:
@@ -50,6 +56,7 @@ course:
     - procesos de difusión y contagio en redes
     - inferencia, evaluación y ética en redes
     - machine learning sobre grafos
+    - lectura crítica de papers de network science
 # Dominio custom sin activar:
 # url: "https://networks.criss-lab.com"
 # baseurl: ""

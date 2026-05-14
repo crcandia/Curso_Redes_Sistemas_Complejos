@@ -3,6 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2LHHFP32H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z2LHHFP32H');
+  </script>
   {% include seo.html %}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,13 +22,12 @@
 
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="{{ '/' | relative_url }}">
+      <a class="brand" href="{{ '/curso-redes-complejas/' | relative_url }}">
         <span class="brand-dot"></span>
         Redes y Sistemas Complejos
       </a>
       <nav class="nav" aria-label="Navegación principal">
-        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Inicio</a>
-        <a href="{{ '/curso-redes-complejas/' | relative_url }}"{% if page.url == '/curso-redes-complejas/' %} class="active"{% endif %}>2026-1</a>
+        <a href="{{ '/curso-redes-complejas/' | relative_url }}"{% if page.url == '/curso-redes-complejas/' %} class="active"{% endif %}>Inicio</a>
         <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}"{% if page.url contains '/curso-redes-complejas/calendario/' %} class="active"{% endif %}>Calendario</a>
         <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}"{% if page.url contains '/curso-redes-complejas/clases/' %} class="active"{% endif %}>Clases</a>
         <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}"{% if page.url contains '/curso-redes-complejas/laboratorios/' %} class="active"{% endif %}>Labs</a>

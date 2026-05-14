@@ -551,65 +551,6 @@ strong { color: var(--text); }
   border-color: var(--border-2);
 }
 
-/* Run card (on homepage) */
-.run-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px 28px 22px;
-  box-shadow: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  transition: box-shadow 0.2s, border-color 0.2s;
-  text-decoration: none;
-  color: inherit;
-}
-.run-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-2);
-  text-decoration: none;
-}
-.run-card__meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 14px;
-}
-.run-card__title {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: 0;
-  margin-bottom: 6px;
-}
-.run-card__desc {
-  font-size: 14px;
-  color: var(--text-2);
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-.run-card__footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 13px;
-  color: var(--muted);
-}
-.run-card__arrow {
-  color: var(--violet-mid);
-  font-size: 18px;
-  transition: transform 0.2s;
-}
-.run-card:hover .run-card__arrow { transform: translateX(4px); }
-
-.runs-list {
-  display: grid;
-  grid-template-columns: minmax(0, 620px);
-  gap: 18px;
-}
-
 .course-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.75fr);
@@ -1311,7 +1252,6 @@ strong { color: var(--text); }
 @media (max-width: 600px) {
   .grid--4 { grid-template-columns: 1fr; }
   .hero__title { font-size: 30px; }
-  .runs-list { grid-template-columns: 1fr; }
   .course-intro__main h2 { font-size: 21px; }
   .topbar__inner { flex-wrap: wrap; }
   .nav { gap: 2px; }

@@ -47,7 +47,7 @@ seo:
 course:
   name: Redes y Sistemas Complejos
   short_name: Curso de redes complejas
-  url_path: "/curso-redes-complejas/"
+  url_path: "/"
   description: "Curso aplicado de redes complejas y sistemas complejos: teoría de grafos, modelamiento de datos relacionales, métricas de red, redes bipartitas, modelos nulos, comunidades, difusión, inferencia responsable y Graph ML."
   start_date: "2026-03-02"
   end_date: "2026-04-26"
@@ -66,11 +66,8 @@ course:
     - inferencia, evaluación y ética en redes
     - machine learning sobre grafos
     - lectura crítica de papers de network science
-# Dominio custom sin activar:
-# url: "https://networks.criss-lab.com"
-# baseurl: ""
-url: "https://crcandia.github.io"
-baseurl: "/Curso_Redes_Sistemas_Complejos"
+url: "https://networks.criss-lab.com"
+baseurl: ""
 
 permalink: pretty
 markdown: kramdown

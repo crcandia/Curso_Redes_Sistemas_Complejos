@@ -22,17 +22,17 @@
 
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="{{ '/curso-redes-complejas/' | relative_url }}">
+      <a class="brand" href="{{ '/' | relative_url }}">
         <span class="brand-dot"></span>
         Redes y Sistemas Complejos
       </a>
       <nav class="nav" aria-label="Navegación principal">
-        <a href="{{ '/curso-redes-complejas/' | relative_url }}"{% if page.url == '/curso-redes-complejas/' %} class="active"{% endif %}>Inicio</a>
-        <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}"{% if page.url contains '/curso-redes-complejas/calendario/' %} class="active"{% endif %}>Calendario</a>
-        <a href="{{ '/curso-redes-complejas/clases/' | relative_url }}"{% if page.url contains '/curso-redes-complejas/clases/' %} class="active"{% endif %}>Clases</a>
-        <a href="{{ '/curso-redes-complejas/laboratorios/' | relative_url }}"{% if page.url contains '/curso-redes-complejas/laboratorios/' %} class="active"{% endif %}>Labs</a>
-        <a href="{{ '/curso-redes-complejas/recursos-interactivos/' | relative_url }}"{% if page.url contains '/curso-redes-complejas/recursos-interactivos/' or page.url == '/bipartitas/' or page.url == '/comunidades/' or page.url == '/procesos/' %} class="active"{% endif %}>Recursos</a>
-        <a href="{{ '/curso-redes-complejas/literatura/' | relative_url }}"{% if page.url contains 'literatura' %} class="active"{% endif %}>Literatura</a>
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Inicio</a>
+        <a href="{{ '/calendario/' | relative_url }}"{% if page.url contains '/calendario/' %} class="active"{% endif %}>Calendario</a>
+        <a href="{{ '/clases/' | relative_url }}"{% if page.url contains '/clases/' %} class="active"{% endif %}>Clases</a>
+        <a href="{{ '/laboratorios/' | relative_url }}"{% if page.url contains '/laboratorios/' %} class="active"{% endif %}>Labs</a>
+        <a href="{{ '/recursos-interactivos/' | relative_url }}"{% if page.url contains '/recursos-interactivos/' or page.url == '/bipartitas/' or page.url == '/comunidades/' or page.url == '/procesos/' %} class="active"{% endif %}>Recursos</a>
+        <a href="{{ '/literatura/' | relative_url }}"{% if page.url contains 'literatura' %} class="active"{% endif %}>Literatura</a>
         <a href="{{ '/glosario-redes-complejas/' | relative_url }}"{% if page.url == '/glosario-redes-complejas/' %} class="active"{% endif %}>Glosario</a>
       </nav>
     </div>
@@ -50,7 +50,7 @@
       </span>
       <div class="footer__right">
         <span>By <a class="footer__link" href="https://www.crcandia.com" target="_blank" rel="noopener">Cristian Candia, Ph.D.</a></span>
-        <a href="{{ '/curso-redes-complejas/calendario/' | relative_url }}">Calendario</a>
+        <a href="{{ '/calendario/' | relative_url }}">Calendario</a>
         <a href="{{ '/glosario-redes-complejas/' | relative_url }}">Glosario</a>
         <a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank">Monografía</a>
         <a href="https://github.com/crcandia/Curso_Redes_Sistemas_Complejos" target="_blank" rel="noopener">GitHub</a>

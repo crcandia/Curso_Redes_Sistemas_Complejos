@@ -1,23 +1,297 @@
 ---
-layout: null
-title: Curso de Redes Complejas y Sistemas Complejos
-seo_title: Curso de Redes Complejas y Sistemas Complejos | CRiSS-LAB
-description: "Curso abierto de Redes y Sistemas Complejos: ciencia de redes, teoria de grafos, analisis de redes complejas en Python, NetworkX, modelos nulos, comunidades, difusion, inferencia y Graph ML."
-sitemap: false
+layout: default
+title: Redes y Sistemas Complejos
+permalink: /
+seo_title: Curso Redes y Sistemas Complejos 2026-1
+description: "Curso Redes y Sistemas Complejos 2026-1: ocho unidades con clases teóricas, laboratorios en Python, tres notebooks complementarios, recursos interactivos y literatura curada."
+schema_type: Course
+sitemap_priority: "1.00"
+changefreq: weekly
+keywords:
+  - curso redes complejas 2026
+  - redes complejas en Python
+  - ciencia de redes aplicada
+  - sistemas complejos
+  - análisis de grafos
+  - laboratorios redes complejas
+  - notebooks redes complejas en Python
+  - proyecciones bipartitas
 ---
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.seo_title | default: page.title }}</title>
-  <link rel="canonical" href="{{ '/curso-redes-complejas/' | absolute_url }}" />
-  <meta http-equiv="refresh" content="0; url={{ '/curso-redes-complejas/' | relative_url }}" />
-  <script>
-    window.location.replace("{{ '/curso-redes-complejas/' | relative_url }}");
-  </script>
-</head>
-<body>
-  <p>Redirigiendo al <a href="{{ '/curso-redes-complejas/' | relative_url }}">curso actual</a>.</p>
-</body>
-</html>
+
+<div class="hero hero--run">
+  <div class="badges">
+    <span class="badge badge--violet">Curso actual · 2026-1</span>
+    <span class="badge badge--muted">
+      <span class="dot dot--muted"></span>
+      Activo
+    </span>
+  </div>
+  <h1 class="hero__title">Redes y Sistemas Complejos</h1>
+  <p class="hero__subtitle" style="font-size: 15px;">
+    Sitio del curso con 8 clases teóricas, 8 laboratorios, 3 notebooks complementarios,
+    recursos interactivos, calendario y literatura.
+  </p>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat__num">8</div>
+    <div class="stat__label">Unidades</div>
+  </div>
+  <div class="stat">
+    <div class="stat__num">8</div>
+    <div class="stat__label">Laboratorios</div>
+  </div>
+  <div class="stat">
+    <div class="stat__num">3</div>
+    <div class="stat__label">Complementarios</div>
+  </div>
+  <div class="stat">
+    <div class="stat__num">4</div>
+    <div class="stat__label">Clases PDF</div>
+  </div>
+  <div class="stat">
+    <div class="stat__num">4</div>
+    <div class="stat__label">Clases notebook</div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<section class="course-intro">
+  <div class="course-intro__main">
+    <div class="card__number">Curso de redes complejas</div>
+    <h2>Aprender ciencia de redes con teoría, datos y Python</h2>
+    <p>
+      Redes y Sistemas Complejos es un curso aplicado para estudiar sistemas relacionales: personas,
+      organizaciones, documentos, productos, eventos, contagios e infraestructuras conectadas. La ruta combina
+      teoría de grafos, ciencia de redes, modelamiento de datos, análisis estadístico e implementación en Python.
+    </p>
+    <p>
+      El curso está diseñado para ir desde decisiones básicas de representación hasta problemas avanzados:
+      redes bipartitas y proyecciones, centralidades, modelos generativos, modelos nulos, comunidades,
+      difusión en redes, inferencia responsable y machine learning sobre grafos. Cada unidad conecta la
+      intuición conceptual con notebooks ejecutables, lecturas y recursos interactivos.
+    </p>
+    <div class="course-intro__links">
+      <a class="btn btn--violet" href="{{ '/calendario/' | relative_url }}">Ver calendario</a>
+      <a class="btn btn--outline" href="{{ '/glosario-redes-complejas/' | relative_url }}">Ver glosario</a>
+      <a class="btn btn--blue" href="{{ '/laboratorios/' | relative_url }}">Ver laboratorios</a>
+    </div>
+  </div>
+  <aside class="course-intro__aside">
+    <div class="course-intro__fact">
+      <span>Enfoque</span>
+      <strong>Network science aplicada</strong>
+    </div>
+    <div class="course-intro__fact">
+      <span>Herramientas</span>
+      <strong>Python · NetworkX · igraph · Colab</strong>
+    </div>
+    <div class="course-intro__fact">
+      <span>Material</span>
+      <strong>Clases, labs, notebooks, literatura y recursos web</strong>
+    </div>
+  </aside>
+</section>
+
+<div class="section-divider"></div>
+
+<div class="course-strip course-strip--theory">
+  <div>
+    <div class="card__number">Componente teórica</div>
+    <div class="course-strip__title">8 clases teóricas: 4 en PDF y 4 en notebook</div>
+    <div class="course-strip__desc">
+      Cada unidad referencia explícitamente su clase teórica y su práctica asociada.
+    </div>
+  </div>
+  <a class="btn btn--violet" href="{{ '/clases/' | relative_url }}">Ver clases</a>
+</div>
+
+<div class="course-strip course-strip--lab">
+  <div>
+    <div class="card__number">Laboratorios prácticos</div>
+    <div class="course-strip__title">8 prácticas en Python para trabajar cada unidad</div>
+    <div class="course-strip__desc">
+      NetworkX, igraph, redes bipartitas, centralidades, modelos nulos, comunidades, difusión, inferencia y Graph ML.
+    </div>
+  </div>
+  <a class="btn btn--blue" href="{{ '/laboratorios/' | relative_url }}">Ver laboratorios</a>
+</div>
+
+<div class="course-strip course-strip--lab course-strip--last">
+  <div>
+    <div class="card__number">Prácticas complementarias</div>
+    <div class="course-strip__title">3 notebooks complementarios para profundizar métodos clave</div>
+    <div class="course-strip__desc">
+      Proyecciones bipartitas, replicación de modelo nulo y comunidades en redes tradicionales.
+    </div>
+  </div>
+  <a class="btn btn--blue" href="{{ '/laboratorios/#notebooks-complementarios' | relative_url }}">Ver notebooks</a>
+</div>
+
+<div class="section-header">
+  <h2>Material del curso</h2>
+</div>
+
+<div class="grid grid--3" style="margin-bottom: 40px;">
+  <a href="{{ '/calendario/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon">Plan</div>
+      <div class="card__title">Calendario</div>
+      <div class="card__desc">Secuencia de 8 unidades con objetivos, contenidos y lecturas curadas.</div>
+      <div class="card__tags"><span class="tag tag--violet">8 unidades</span><span class="tag tag--muted">Mar-Abr 2026</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver calendario</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/clases/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon">Teo</div>
+      <div class="card__title">Clases teóricas</div>
+      <div class="card__desc">Ocho clases teóricas: cuatro en PDF y cuatro en notebook.</div>
+      <div class="card__tags"><span class="tag tag--violet">4 PDF</span><span class="tag tag--violet">4 notebooks</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver clases</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/laboratorios/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon card__icon--blue">Lab</div>
+      <div class="card__title">Laboratorios</div>
+      <div class="card__desc">Prácticas en Python con NetworkX, igraph, datos reales y notebooks complementarios.</div>
+      <div class="card__tags"><span class="tag tag--blue">8 labs</span><span class="tag tag--blue">3 complementarios</span><span class="tag tag--blue">Python</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver labs</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/recursos-interactivos/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon card__icon--teal">Web</div>
+      <div class="card__title">Recursos interactivos</div>
+      <div class="card__desc">Herramientas web para bipartitas, comunidades y procesos en redes.</div>
+      <div class="card__tags"><span class="tag tag--teal">3 herramientas</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver recursos</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/literatura/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon card__icon--amber">Lit</div>
+      <div class="card__title">Literatura</div>
+      <div class="card__desc">Lecturas obligatorias y complementarias con DOI y versiones abiertas.</div>
+      <div class="card__tags"><span class="tag tag--amber">Papers</span><span class="tag tag--amber">Libros</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver literatura</span></div>
+    </div>
+  </a>
+
+  <a href="{{ '/glosario-redes-complejas/' | relative_url }}" style="text-decoration:none; color:inherit;">
+    <div class="card card--link" style="cursor:pointer;">
+      <div class="card__icon">ABC</div>
+      <div class="card__title">Glosario</div>
+      <div class="card__desc">Conceptos centrales de ciencia de redes, inferencia y Graph ML con enlaces a clases, labs y lecturas.</div>
+      <div class="card__tags"><span class="tag tag--violet">Conceptos</span><span class="tag tag--blue">Métodos</span></div>
+      <div class="card__footer"><span class="text-muted text-sm">Ver glosario</span></div>
+    </div>
+  </a>
+
+  <div class="card">
+    <div class="card__icon">Doc</div>
+    <div class="card__title">Texto base</div>
+    <ul style="margin-top:4px;">
+      <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank">Monografía del curso</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-header">
+  <h2>Unidades del curso</h2>
+  <span class="section-count">clase teórica + práctica + recurso cuando aplica</span>
+</div>
+
+<div class="unit-grid">
+  <div class="unit-card">
+    <div class="card__number">U1 · 02-08 mar</div>
+    <div class="unit-card__title">Fundamentos y Modelamiento</div>
+    <div class="unit-card__meta">Representación de redes, nodos, aristas, pesos y QA básico.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase1">Clase teórica</a>
+      <a class="btn btn--ghost btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab1">Lab 1</a>
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <div class="card__number">U2 · 09-15 mar</div>
+    <div class="unit-card__title">Redes Bipartitas</div>
+    <div class="unit-card__meta">Bipartitas, proyecciones, sesgos por actividad y métricas básicas.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase2">Clase teórica</a>
+      <a class="btn btn--ghost btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab2">Lab 2</a>
+      <a class="btn btn--blue btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab2-proyecciones">Complementario</a>
+      <a class="btn btn--teal btn--sm" href="https://bipartitas.criss-lab.com/" target="_blank" rel="noopener">Recurso web</a>
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <div class="card__number">U3 · 16-22 mar</div>
+    <div class="unit-card__title">Features y Segmentación</div>
+    <div class="unit-card__meta">Centralidades, feature stores, sensibilidad a pesos y umbrales.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase3">Clase teórica</a>
+      <a class="btn btn--ghost btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab3">Lab 3</a>
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <div class="card__number">U4 · 23-29 mar</div>
+    <div class="unit-card__title">Modelos Generativos y Nulos</div>
+    <div class="unit-card__meta">Erdős-Rényi, Watts-Strogatz, Barabási-Albert y baselines.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase4">Clase teórica</a>
+      <a class="btn btn--ghost btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab4">Lab 4</a>
+      <a class="btn btn--blue btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab4-replicacion-modelo-nulo">Complementario</a>
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <div class="card__number">U5 · 30 mar-05 abr</div>
+    <div class="unit-card__title">Mesoestructura</div>
+    <div class="unit-card__meta">Comunidades, modularidad, estabilidad y core-periphery.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase5">Clase teórica</a>
+      <a class="btn btn--ghost btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab5">Lab 5</a>
+      <a class="btn btn--blue btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab5-redes-tradicionales">Complementario</a>
+      <a class="btn btn--teal btn--sm" href="https://communities.criss-lab.com/" target="_blank" rel="noopener">Recurso web</a>
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <div class="card__number">U6 · 06-12 abr</div>
+    <div class="unit-card__title">Procesos en Redes</div>
+    <div class="unit-card__meta">Difusión, contagio, modelos SIR/SIS y estrategias de intervención.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase6">Clase teórica</a>
+      <a class="btn btn--ghost btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab6">Lab 6</a>
+      <a class="btn btn--teal btn--sm" href="https://spreading.criss-lab.com/" target="_blank" rel="noopener">Recurso web</a>
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <div class="card__number">U7 · 13-19 abr</div>
+    <div class="unit-card__title">Inferencia, Evaluación y Ética</div>
+    <div class="unit-card__meta">Significancia, validación, leakage, privacidad y evaluación responsable.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase7">Clase teórica</a>
+      <a class="btn btn--ghost btn--sm" href="{{ '/laboratorios/' | relative_url }}#lab7">Lab 7</a>
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <div class="card__number">U8 · 20-26 abr</div>
+    <div class="unit-card__title">Industria y Graph ML</div>
+    <div class="unit-card__meta">Cierre conceptual con casos industriales, embeddings y Graph Neural Networks.</div>
+    <div class="unit-card__actions">
+      <a class="btn btn--outline btn--sm" href="{{ '/clases/' | relative_url }}#clase8">Clase teórica</a>
+    </div>
+  </div>
+</div>

@@ -194,13 +194,6 @@ strong { color: var(--text); }
   line-height: 1.7;
   margin-bottom: 22px;
 }
-.hero__bg {
-  position: relative;
-}
-.hero__bg::before {
-  content: none;
-}
-
 /* ============================================================
    BADGES / TAGS
    ============================================================ */

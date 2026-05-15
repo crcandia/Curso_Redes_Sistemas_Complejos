@@ -1,6 +1,6 @@
 title: Redes y Sistemas Complejos
 tagline: Curso abierto de redes complejas, ciencia de redes y sistemas complejos
-description: Curso de Redes y Sistemas Complejos sobre teoría de grafos, ciencia de redes, NetworkX, laboratorios en Python, modelos generativos, comunidades, difusión, inferencia y Graph ML.
+description: Curso avanzado de Redes y Sistemas Complejos sobre análisis relacional, ciencia de redes, NetworkX, igraph, modelos nulos, difusión, comunidades, validación sin leakage, feature engineering relacional y Graph ML.
 lang: es
 locale: es_CL
 
@@ -13,6 +13,11 @@ organization:
   url: "https://www.criss-lab.com"
   logo: "/assets/img/logo-redes-complejas.svg"
   description: Laboratorio de investigación en ciencia de redes, sistemas complejos y ciencia social computacional.
+
+institution:
+  name: Universidad del Desarrollo
+  url: "https://www.udd.cl"
+  description: Universidad chilena orientada a formación profesional, investigación aplicada e innovación.
 
 repository_url: "https://github.com/crcandia/Curso_Redes_Sistemas_Complejos"
 
@@ -48,13 +53,14 @@ course:
   name: Redes y Sistemas Complejos
   short_name: Curso de redes complejas
   url_path: "/"
-  description: "Curso aplicado de redes complejas y sistemas complejos: teoría de grafos, modelamiento de datos relacionales, métricas de red, redes bipartitas, modelos nulos, comunidades, difusión, inferencia responsable y Graph ML."
+  description: "Curso aplicado de redes complejas y sistemas complejos: teoría de grafos, modelamiento de datos relacionales, métricas de red, feature engineering para modelos tabulares, redes bipartitas, modelos nulos, comunidades, difusión, inferencia responsable y Graph ML."
   start_date: "2026-03-02"
   end_date: "2026-04-26"
   educational_level: "advanced"
   teaches:
     - modelamiento de datos relacionales como redes
     - análisis de redes complejas con Python
+    - feature engineering relacional para modelos tabulares
     - métricas y centralidades en grafos
     - redes bipartitas y proyecciones
     - proyecciones bipartitas y sesgos por actividad
@@ -63,8 +69,9 @@ course:
     - detección de comunidades
     - Louvain, Leiden y estabilidad de comunidades
     - procesos de difusión y contagio en redes
-    - inferencia, evaluación y ética en redes
-    - machine learning sobre grafos
+    - inferencia, evaluación sin leakage y ética en redes
+    - Graph ML aplicado a datos relacionales
+    - criterios para usar o evitar Graph Neural Networks
     - lectura crítica de papers de network science
 url: "https://networks.criss-lab.com"
 baseurl: ""

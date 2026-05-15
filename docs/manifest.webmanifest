@@ -4,14 +4,17 @@ permalink: /manifest.webmanifest
 sitemap: false
 ---
 {
+  "id": "{{ '/' | relative_url }}",
   "name": "Redes y Sistemas Complejos",
   "short_name": "Redes Complejas",
-  "description": "Curso de redes complejas, ciencia de redes y sistemas complejos.",
+  "description": "Curso avanzado de ciencia de redes, análisis relacional, sistemas complejos y Graph ML.",
   "lang": "es-CL",
   "start_url": "{{ '/' | relative_url }}",
+  "scope": "{{ '/' | relative_url }}",
   "display": "standalone",
   "background_color": "#F8FAFC",
   "theme_color": "#F8FAFC",
+  "categories": ["education", "data-science", "science"],
   "icons": [
     {
       "src": "{{ '/assets/img/favicon.svg' | relative_url }}",

@@ -61,7 +61,7 @@
    RESET & BASE
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; min-height: 100%; }
 body {
   font-family: var(--font);
   font-size: 15px;
@@ -70,6 +70,7 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -364,6 +365,11 @@ strong { color: var(--text); }
   border-color: var(--blue-tag);
 }
 .course-strip--lab .card__number { color: var(--blue); }
+.course-strip--resource {
+  background: var(--teal-pale);
+  border-color: var(--teal-tag);
+}
+.course-strip--resource .card__number { color: var(--teal); }
 .course-strip__title {
   font-size: 18px;
   font-weight: 800;
@@ -1272,6 +1278,9 @@ strong { color: var(--text); }
   border-top: 1px solid var(--border);
   background: var(--surface);
   margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 80;
 }
 .footer__inner {
   padding: 18px 0;

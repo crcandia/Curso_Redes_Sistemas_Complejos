@@ -34,8 +34,9 @@ breadcrumbs:
   <p class="hero__eyebrow">Redes y Sistemas Complejos · 2026-1</p>
   <h1 class="hero__title">Clases teóricas</h1>
   <p class="hero__subtitle">
-    Ocho clases teóricas del curso. Las primeras cuatro están en formato PDF y las
-    siguientes cuatro en formato notebook, manteniendo una secuencia teórica continua.
+    Ocho clases para conectar representación, métricas, modelos, inferencia y dinámica en redes.
+    Las primeras cuatro están en PDF y las siguientes cuatro en notebook para mantener continuidad
+    entre teoría, simulación y decisión metodológica.
   </p>
   <div class="badges">
     <span class="badge badge--violet">4 clases en PDF</span>
@@ -48,7 +49,7 @@ breadcrumbs:
   <div class="resource-section__header">
     <div>
       <div class="resource-section__title">Clases en PDF</div>
-      <div class="resource-section__meta">Vista embebida dentro del sitio, con opción de abrir o descargar.</div>
+      <div class="resource-section__meta">Vista embebida para consulta rápida, con opción de abrir o descargar el documento completo.</div>
     </div>
     <span class="badge badge--muted">Clases 1-4</span>
   </div>
@@ -59,7 +60,7 @@ breadcrumbs:
         <div>
           <div class="card__number">Clase teórica 1 · PDF</div>
           <h2 class="pdf-card__title">Fundamentos y Representación de Redes</h2>
-          <p class="pdf-card__desc">Modelamiento relacional, tipos de grafos, matrices, listas de aristas y NetworkX.</p>
+          <p class="pdf-card__desc">Decisiones de representación, tipos de grafos, matrices, listas de aristas y trazabilidad en NetworkX.</p>
         </div>
         <span class="tag tag--violet">Fundamentos</span>
       </div>
@@ -97,7 +98,7 @@ breadcrumbs:
         <div>
           <div class="card__number">Clase teórica 2 · PDF</div>
           <h2 class="pdf-card__title">Redes Bipartitas y Proyecciones</h2>
-          <p class="pdf-card__desc">Estructuras bipartitas, proyecciones, ponderación de aristas y sesgos de alta actividad.</p>
+          <p class="pdf-card__desc">Estructuras bipartitas, proyecciones 1-mode, ponderación de aristas y sesgos inducidos por actividad.</p>
         </div>
         <span class="tag tag--violet">Clase teórica</span>
       </div>
@@ -135,7 +136,7 @@ breadcrumbs:
         <div>
           <div class="card__number">Clase teórica 3 · PDF</div>
           <h2 class="pdf-card__title">Topología y Centralidades</h2>
-          <p class="pdf-card__desc">Centralidades, caminos mínimos, conectividad y construcción de features de red.</p>
+          <p class="pdf-card__desc">Centralidades, caminos mínimos, conectividad y construcción de features estructurales interpretables.</p>
         </div>
         <span class="tag tag--violet">Clase teórica</span>
       </div>
@@ -173,7 +174,7 @@ breadcrumbs:
         <div>
           <div class="card__number">Clase teórica 4 · PDF</div>
           <h2 class="pdf-card__title">Modelos Generativos, Nulos y Baselines</h2>
-          <p class="pdf-card__desc">ER, WS, BA, modelos nulos y comparación de redes reales contra baselines.</p>
+          <p class="pdf-card__desc">ER, WS, BA, modelos nulos y comparación de redes observadas contra baselines explícitos.</p>
         </div>
         <span class="tag tag--violet">Clase teórica</span>
       </div>
@@ -256,17 +257,24 @@ breadcrumbs:
 
       const page = await pdf.getPage(number);
       const baseViewport = page.getViewport({ scale: 1 });
-      const width = Math.max(stage.clientWidth || viewer.clientWidth || 320, 280);
-      const scale = width / baseViewport.width;
+      const targetWidth = Math.max(stage.clientWidth || viewer.clientWidth || 320, 280);
+      const scale = targetWidth / baseViewport.width;
       const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-      const viewport = page.getViewport({ scale: scale * pixelRatio });
+      const viewport = page.getViewport({ scale });
+      const outputWidth = Math.floor(viewport.width * pixelRatio);
+      const outputHeight = Math.floor(viewport.height * pixelRatio);
 
-      canvas.width = Math.floor(viewport.width);
-      canvas.height = Math.floor(viewport.height);
-      canvas.style.width = `${Math.floor(viewport.width / pixelRatio)}px`;
-      canvas.style.height = `${Math.floor(viewport.height / pixelRatio)}px`;
+      canvas.width = outputWidth;
+      canvas.height = outputHeight;
+      canvas.style.width = `${Math.floor(viewport.width)}px`;
+      canvas.style.height = `${Math.floor(viewport.height)}px`;
+      stage.style.height = `${Math.ceil(viewport.height)}px`;
 
-      await page.render({ canvasContext: context, viewport }).promise;
+      await page.render({
+        canvasContext: context,
+        viewport,
+        transform: pixelRatio !== 1 ? [pixelRatio, 0, 0, pixelRatio, 0, 0] : null
+      }).promise;
 
       pageLabel.textContent = `Página ${number} / ${pdf.numPages}`;
       prev.disabled = number <= 1;

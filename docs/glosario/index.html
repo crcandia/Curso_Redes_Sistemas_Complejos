@@ -50,11 +50,11 @@ breadcrumbs:
 
 <div class="card mb-32" style="box-shadow:none;">
   <div class="card__number">Cómo usar esta guía</div>
-  <div class="card__title">Conceptos, no solo keywords</div>
+  <div class="card__title">Conceptos para razonar con redes</div>
   <div class="card__desc">
-    Cada término está escrito para conectar intuición, uso analítico y material del curso. La idea es
-    que una persona pueda pasar desde la definición a la clase, laboratorio o recurso interactivo que
-    permite trabajar el concepto con datos.
+    Cada término conecta definición formal, intuición operativa y consecuencias metodológicas. La guía está
+    pensada para pasar de un concepto a la clase, laboratorio, lectura o recurso donde se trabaja con datos,
+    sin separar la métrica de la pregunta sustantiva que la vuelve interpretable.
   </div>
 </div>
 
@@ -97,8 +97,8 @@ breadcrumbs:
     <h2>Grado y fuerza</h2>
     <p>
       El grado cuenta cuántas conexiones tiene un nodo. En redes ponderadas, la fuerza suma los pesos de
-      esas conexiones. Ambas métricas son simples, interpretables y útiles como primera señal, pero pueden
-      ocultar redundancia, sesgo por actividad o diferencias de posición estructural.
+      esas conexiones. Ambas métricas son interpretables y útiles como diagnóstico inicial, pero pueden
+      ocultar redundancia, sesgo por actividad o diferencias relevantes de posición estructural.
     </p>
     <div class="term-card__links">
       <a href="{{ '/clases/' | relative_url }}#clase2">Clase 2</a>
@@ -413,122 +413,122 @@ breadcrumbs:
 </div>
 
 <div class="faq-list">
-  <section class="faq-item">
-    <h2>¿Qué diferencia hay entre teoría de grafos y ciencia de redes?</h2>
+  <details class="faq-item">
+    <summary>¿Qué diferencia hay entre teoría de grafos y ciencia de redes?</summary>
     <p>
       La teoría de grafos provee el lenguaje matemático para describir nodos, aristas, caminos, conectividad
       y estructuras. La ciencia de redes usa ese lenguaje para estudiar sistemas empíricos, sus mecanismos de
       formación, sus patrones estadísticos y los procesos que ocurren sobre la red.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Por qué no basta con calcular centralidades?</h2>
+  <details class="faq-item">
+    <summary>¿Por qué no basta con calcular centralidades?</summary>
     <p>
       Porque cada centralidad responde una pregunta distinta y puede estar dominada por sesgos de medición,
       actividad o tamaño. En un análisis serio, las centralidades se interpretan junto con el objetivo del
       problema, la calidad del dato, modelos nulos y análisis de sensibilidad.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Cuándo conviene usar Graph Neural Networks?</h2>
+  <details class="faq-item">
+    <summary>¿Cuándo conviene usar Graph Neural Networks?</summary>
     <p>
       Conviene considerarlas cuando la dependencia entre nodos es predictiva, hay suficiente señal relacional
       y la evaluación evita leakage. Para muchos problemas aplicados, un feature store con métricas de red,
       buenos splits y modelos tabulares puede ser un baseline más transparente y competitivo.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Qué es un modelo nulo en redes y por qué importa?</h2>
+  <details class="faq-item">
+    <summary>¿Qué es un modelo nulo en redes y por qué importa?</summary>
     <p>
       Es un baseline estadístico que define qué estructura esperaríamos bajo ciertas restricciones. Importa
       porque permite distinguir patrones reales de artefactos producidos por tamaño, densidad, secuencia de
       grados, actividad de usuarios o mecanismos de muestreo.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Qué diferencia hay entre una red bipartita y una proyección?</h2>
+  <details class="faq-item">
+    <summary>¿Qué diferencia hay entre una red bipartita y una proyección?</summary>
     <p>
       La red bipartita conserva dos tipos de nodos y sus relaciones originales. La proyección transforma esa
       información en una red de un solo tipo de nodo. La proyección puede facilitar análisis, pero también
       puede inflar enlaces, clustering y centralidades si no se pondera o valida correctamente.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Cuándo usar un notebook complementario?</h2>
+  <details class="faq-item">
+    <summary>¿Cuándo usar un notebook complementario?</summary>
     <p>
       Conviene usarlo cuando el laboratorio principal deja una pregunta metodológica abierta: proyecciones
       bipartitas, modelos nulos o estabilidad de comunidades. No reemplaza la clase teórica ni el lab; agrega
       práctica focalizada para entender mejor supuestos, sensibilidad y límites del método.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Por qué las proyecciones bipartitas necesitan controles?</h2>
+  <details class="faq-item">
+    <summary>¿Por qué las proyecciones bipartitas necesitan controles?</summary>
     <p>
       Porque dos nodos pueden quedar conectados solo por compartir vecinos muy activos, no porque exista una
       relación sustantiva fuerte entre ellos. Por eso se revisan ponderaciones, distribuciones de actividad,
       modelos nulos y, cuando corresponde, medidas de similitud centradas.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Por qué modularidad no es sinónimo de comunidades verdaderas?</h2>
+  <details class="faq-item">
+    <summary>¿Por qué modularidad no es sinónimo de comunidades verdaderas?</summary>
     <p>
       Modularidad compara una partición contra un modelo nulo específico. Puede tener límites de resolución,
       múltiples óptimos parecidos y sensibilidad a pesos o semillas. Por eso una partición debe evaluarse por
       estabilidad, interpretación sustantiva y consistencia con la pregunta de investigación.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Qué agrega Leiden respecto de Louvain?</h2>
+  <details class="faq-item">
+    <summary>¿Qué agrega Leiden respecto de Louvain?</summary>
     <p>
       Leiden mantiene la lógica práctica de optimizar modularidad o funciones relacionadas, pero corrige
       problemas de conectividad interna que pueden aparecer en Louvain. Aun así, la interpretación requiere
       revisar estabilidad entre semillas, pesos y resolución.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Qué mide el Jaccard centrado?</h2>
+  <details class="faq-item">
+    <summary>¿Qué mide el Jaccard centrado?</summary>
     <p>
       Mide exceso o déficit de similitud respecto de una expectativa basal. En lugar de tomar la coincidencia
       observada como evidencia directa, descuenta la similitud que se esperaría por actividad marginal o por
       las restricciones del modelo nulo elegido.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Por qué los splits aleatorios pueden ser malos en redes?</h2>
+  <details class="faq-item">
+    <summary>¿Por qué los splits aleatorios pueden ser problemáticos en redes?</summary>
     <p>
       Porque los nodos y enlaces no son observaciones independientes. Un split aleatorio puede filtrar
       información del futuro o de vecinos cercanos hacia el entrenamiento. En redes, la validación debe
       respetar temporalidad, componentes, tareas de predicción y posibles mecanismos de leakage.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Cuál es la diferencia entre embeddings de nodos y GNN?</h2>
+  <details class="faq-item">
+    <summary>¿Cuál es la diferencia entre embeddings de nodos y GNN?</summary>
     <p>
       Los embeddings aprenden representaciones vectoriales de nodos a partir de patrones estructurales, como
       caminatas aleatorias o co-ocurrencias. Las GNN aprenden representaciones mediante propagación de mensajes
       y pueden incorporar atributos, etiquetas y objetivos supervisados de forma más directa.
     </p>
-  </section>
+  </details>
 
-  <section class="faq-item">
-    <h2>¿Cómo aprender redes complejas con Python de forma rigurosa?</h2>
+  <details class="faq-item">
+    <summary>¿Cómo aprender redes complejas con Python de forma rigurosa?</summary>
     <p>
       La ruta práctica es modelar bien nodos y enlaces, auditar datos, usar NetworkX o igraph para métricas,
       comparar contra modelos nulos, documentar supuestos y validar conclusiones con sensibilidad. El código
       debe acompañarse siempre de una pregunta sustantiva y no solo de métricas descriptivas.
     </p>
-  </section>
+  </details>
 </div>
 
 <script type="application/ld+json">
@@ -616,6 +616,30 @@ breadcrumbs:
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Conviene considerarlas cuando la dependencia entre nodos es predictiva, hay suficiente señal relacional y la evaluación evita leakage. En muchos casos, features de red y modelos tabulares son un baseline transparente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué los splits aleatorios pueden ser problemáticos en redes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque nodos y enlaces no son observaciones independientes. Un split aleatorio puede filtrar información del futuro o de vecinos cercanos hacia entrenamiento; la validación debe respetar temporalidad, componentes y tarea predictiva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre embeddings de nodos y GNN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los embeddings aprenden vectores desde patrones estructurales como caminatas aleatorias o co-ocurrencias. Las GNN aprenden representaciones mediante propagación de mensajes y pueden incorporar atributos, etiquetas y objetivos supervisados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo aprender redes complejas con Python de forma rigurosa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La ruta práctica es modelar nodos y enlaces con cuidado, auditar datos, usar NetworkX o igraph, comparar contra modelos nulos, documentar supuestos y validar conclusiones con análisis de sensibilidad."
       }
     }
   ]

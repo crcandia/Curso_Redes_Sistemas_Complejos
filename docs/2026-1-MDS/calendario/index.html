@@ -72,7 +72,7 @@ breadcrumbs:
         </div>
       </div>
       <div class="cal-unit__objective">
-        Modelar un sistema relacional como red (nodos, aristas, pesos, atributos) y hacer QA básico de los datos.
+        Modelar un sistema relacional como red (nodos, aristas, pesos, atributos) y auditar la consistencia estructural de los datos.
       </div>
       <div class="cal-unit__content">
         <div class="cal-content-col">
@@ -82,15 +82,15 @@ breadcrumbs:
             <li>Escalas micro / meso / macro en sistemas complejos</li>
             <li>Tipos de redes y decisiones de modelamiento</li>
             <li>Errores típicos en industria: IDs, granularidad, edges mal definidos</li>
-            <li>Construcción de redes simples + métricas básicas (duplicados, self-loops, conectividad)</li>
+            <li>Construcción de grafos de referencia y auditoría de duplicados, self-loops, conectividad y pesos</li>
           </ul>
         </div>
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 1 (§1.2–1.8)</li>
-            <li>Barabási (2016) — Network Science, caps. introductorios</li>
-            <li>Newman (2018) — Networks, como referencia de consulta</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 1 (§1.2-1.8)</a></li>
+            <li><a href="https://networksciencebook.com/" target="_blank" rel="noopener">Barabási (2016) — Network Science, caps. introductorios</a></li>
+            <li><a href="https://academic.oup.com/book/27884" target="_blank" rel="noopener">Newman (2018) — Networks, como referencia de consulta</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u1">DOI, libros y versiones abiertas de U1</a></li>
           </ul>
         </div>
@@ -115,7 +115,7 @@ breadcrumbs:
         </div>
       </div>
       <div class="cal-unit__objective">
-        Construir y analizar redes bipartitas, cuantificar los sesgos que introduce la proyección y medir métricas básicas.
+        Construir y analizar redes bipartitas, cuantificar los sesgos que introduce la proyección y medir métricas bajo supuestos explícitos.
       </div>
       <div class="cal-unit__content">
         <div class="cal-content-col">
@@ -124,7 +124,7 @@ breadcrumbs:
             <li>Bipartitas como representación natural de sistemas de afiliación</li>
             <li>Proyecciones 1-mode: beneficios y riesgos inferenciales</li>
             <li>Pérdida de información, inflación de enlaces y clustering inducido</li>
-            <li>Métricas en bipartitas y proyecciones (grado, fuerza, clustering, centralidades)</li>
+            <li>Métricas en bipartitas y proyecciones: grado, fuerza, clustering y centralidades bajo supuestos explícitos</li>
             <li>Diagnóstico de sesgos por nodos de alta actividad</li>
             <li>Notebook complementario: proyecciones bipartitas desde datos tabulares</li>
           </ul>
@@ -132,9 +132,9 @@ breadcrumbs:
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 2 (§2.2–2.5, 2.7–2.8)</li>
-            <li>Latapy et al. (2008) — Basic notions for the analysis of large two-mode networks</li>
-            <li>Granovetter (1973) — The strength of weak ties</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 2 (§2.2-2.5, 2.7-2.8)</a></li>
+            <li><a href="https://complexnetworks.fr/wp-content/uploads/2011/01/socnet07.pdf" target="_blank" rel="noopener">Latapy et al. (2008) — Basic notions for the analysis of large two-mode networks</a></li>
+            <li><a href="https://www.cs.cmu.edu/~jure/pub/papers/granovetter73ties.pdf" target="_blank" rel="noopener">Granovetter (1973) — The strength of weak ties</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u2">DOI, papers y versiones abiertas de U2</a></li>
           </ul>
         </div>
@@ -173,11 +173,11 @@ breadcrumbs:
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 2 (§2.6–2.9)</li>
-            <li>Newman (2003) — The structure and function of complex networks</li>
-            <li>Newman (2001) — Scientific collaboration networks</li>
-            <li>Freeman (1978) — Centrality in social networks</li>
-            <li>Page et al. (1999) — The PageRank citation ranking</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 2 (§2.6-2.9)</a></li>
+            <li><a href="https://arxiv.org/abs/cond-mat/0303516" target="_blank" rel="noopener">Newman (2003) — The structure and function of complex networks</a></li>
+            <li><a href="https://doi.org/10.1103/PhysRevE.64.016131" target="_blank" rel="noopener">Newman (2001) — Scientific collaboration networks</a></li>
+            <li><a href="https://doi.org/10.1016/0378-8733(78)90021-7" target="_blank" rel="noopener">Freeman (1978) — Centrality in social networks</a></li>
+            <li><a href="https://research.google/pubs/the-pagerank-citation-ranking-bringing-order-to-the-web/" target="_blank" rel="noopener">Page et al. (1999) — The PageRank citation ranking</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u3">DOI, papers y versiones abiertas de U3</a></li>
           </ul>
         </div>
@@ -201,7 +201,7 @@ breadcrumbs:
         </div>
       </div>
       <div class="cal-unit__objective">
-        Usar modelos generativos y nulos como baseline para evitar interpretaciones espurias, comparando red real vs. baseline con criterios claros.
+        Usar modelos generativos y nulos como baselines para separar estructura informativa de artefactos inducidos por tamaño, densidad o grados.
       </div>
       <div class="cal-unit__content">
         <div class="cal-content-col">
@@ -210,21 +210,21 @@ breadcrumbs:
             <li>Erdős-Rényi (ER): grafos aleatorios como baseline mínimo</li>
             <li>Watts-Strogatz (WS): mundo pequeño y clustering</li>
             <li>Barabási-Albert (BA): preferential attachment y distribuciones de cola pesada</li>
-            <li>Model checking como práctica habitual en industria</li>
-            <li>Simular y calibrar baselines; comparar clustering, distancias y tails</li>
+            <li>Model checking como práctica de validación antes de interpretar patrones estructurales</li>
+            <li>Simular y calibrar baselines; comparar clustering, distancias y colas de distribución</li>
             <li>Notebook complementario: Jaccard centrado y modelo nulo bipartito</li>
           </ul>
         </div>
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 4</li>
-            <li>Barabási & Albert (1999) — Emergence of scaling in random networks</li>
-            <li>Watts & Strogatz (1998) — Collective dynamics of small-world networks</li>
-            <li>Newman, Strogatz & Watts (2001) — Random graphs with arbitrary degree distributions</li>
-            <li>Gotelli (2000) — Null model analysis of co-occurrence patterns</li>
-            <li>Lyra et al. (2021) — Public procurement co-bidding networks</li>
-            <li>Chung et al. (2019) — Jaccard/Tanimoto similarity test</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 4</a></li>
+            <li><a href="https://doi.org/10.1126/science.286.5439.509" target="_blank" rel="noopener">Barabási &amp; Albert (1999) — Emergence of scaling in random networks</a></li>
+            <li><a href="https://snap.stanford.edu/class/cs224w-readings/watts98smallworld.pdf" target="_blank" rel="noopener">Watts &amp; Strogatz (1998) — Collective dynamics of small-world networks</a></li>
+            <li><a href="https://doi.org/10.1103/PhysRevE.64.026118" target="_blank" rel="noopener">Newman, Strogatz &amp; Watts (2001) — Random graphs with arbitrary degree distributions</a></li>
+            <li><a href="https://doi.org/10.2307/177478" target="_blank" rel="noopener">Gotelli (2000) — Null model analysis of co-occurrence patterns</a></li>
+            <li><a href="https://doi.org/10.1007/s41109-021-00418-y" target="_blank" rel="noopener">Lyra et al. (2021) — Public procurement co-bidding networks</a></li>
+            <li><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-3118-5" target="_blank" rel="noopener">Chung et al. (2019) — Jaccard/Tanimoto similarity test</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u4">DOI, papers y versiones abiertas de U4</a></li>
           </ul>
         </div>
@@ -249,14 +249,14 @@ breadcrumbs:
         </div>
       </div>
       <div class="cal-unit__objective">
-        Identificar mesoestructura (comunidades, core-periphery, roles) y traducirla en hipótesis y segmentación útiles.
+        Identificar mesoestructura (comunidades, core-periphery, roles) y traducirla en hipótesis de segmentación con validación de estabilidad.
       </div>
       <div class="cal-unit__content">
         <div class="cal-content-col">
           <div class="cal-section-label">Contenidos</div>
           <ul class="cal-list">
             <li>Comunidades y modularidad: definición, límites y resolución</li>
-            <li>Core-periphery: identificación y lectura operativa</li>
+            <li>Core-periphery: identificación, límites e interpretación operativa</li>
             <li>Roles estructurales e interpretabilidad</li>
             <li>Algoritmos: Leiden, Louvain con análisis de estabilidad (múltiples seeds)</li>
             <li>k-core y dependencias institucionales en compras públicas</li>
@@ -266,11 +266,11 @@ breadcrumbs:
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 5</li>
-            <li>Newman (2006) — Modularity and community structure in networks</li>
-            <li>Borgatti & Everett (2000) — Models of core/periphery structures</li>
-            <li>Blondel et al. (2008) — Louvain community detection</li>
-            <li>Traag et al. (2019) — Leiden communities</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 5</a></li>
+            <li><a href="https://www.pnas.org/doi/pdf/10.1073/pnas.0601602103" target="_blank" rel="noopener">Newman (2006) — Modularity and community structure in networks</a></li>
+            <li><a href="https://doi.org/10.1016/S0378-8733(99)00019-2" target="_blank" rel="noopener">Borgatti &amp; Everett (2000) — Models of core/periphery structures</a></li>
+            <li><a href="https://doi.org/10.1088/1742-5468/2008/10/P10008" target="_blank" rel="noopener">Blondel et al. (2008) — Louvain community detection</a></li>
+            <li><a href="https://www.nature.com/articles/s41598-019-41695-z.pdf" target="_blank" rel="noopener">Traag et al. (2019) — Leiden communities</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u5">DOI, papers y versiones abiertas de U5</a></li>
           </ul>
         </div>
@@ -294,7 +294,7 @@ breadcrumbs:
         </div>
       </div>
       <div class="cal-unit__objective">
-        Conectar estructura con dinámica: simular difusión e intervención, ver cómo la importancia de un nodo depende del proceso.
+        Conectar estructura con dinámica: simular difusión e intervención y mostrar por qué la importancia de un nodo depende del proceso modelado.
       </div>
       <div class="cal-unit__content">
         <div class="cal-content-col">
@@ -304,17 +304,17 @@ breadcrumbs:
             <li>Intuición espectral y Heterogeneous Mean Field (HMF)</li>
             <li>Redes temporales vs. agregadas</li>
             <li>Simulación SIR y comparación de intervenciones: random, por grado, por k-core</li>
-            <li>Presentaciones grupales: paper o tema relevante con Q&A</li>
+            <li>Presentaciones grupales: paper o tema relevante con Q&amp;A</li>
           </ul>
         </div>
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 7</li>
-            <li>Newman (2002) — Spread of epidemic disease on networks</li>
-            <li>Kitsak et al. (2010) — Identification of influential spreaders in complex networks</li>
-            <li>Pastor-Satorras & Vespignani (2001) — Epidemic spreading in scale-free networks</li>
-            <li>Pastor-Satorras et al. (2015) — Epidemic processes in complex networks</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 7</a></li>
+            <li><a href="https://arxiv.org/pdf/cond-mat/0205009.pdf" target="_blank" rel="noopener">Newman (2002) — Spread of epidemic disease on networks</a></li>
+            <li><a href="https://doi.org/10.1038/nphys1746" target="_blank" rel="noopener">Kitsak et al. (2010) — Identification of influential spreaders in complex networks</a></li>
+            <li><a href="https://doi.org/10.1103/PhysRevLett.86.3200" target="_blank" rel="noopener">Pastor-Satorras &amp; Vespignani (2001) — Epidemic spreading in scale-free networks</a></li>
+            <li><a href="https://doi.org/10.1103/RevModPhys.87.925" target="_blank" rel="noopener">Pastor-Satorras et al. (2015) — Epidemic processes in complex networks</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u6">DOI, papers y versiones abiertas de U6</a></li>
           </ul>
         </div>
@@ -353,12 +353,12 @@ breadcrumbs:
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 6 (§6.1–6.5)</li>
-            <li><span class="cal-mono">Monografía</span> Cap. 11 (§11.1–11.7)</li>
-            <li><span class="cal-mono">Monografía</span> Cap. 13 (§13.1–13.4)</li>
-            <li>Liben-Nowell & Kleinberg (2007) — The link-prediction problem for social networks</li>
-            <li>Narayanan & Shmatikov (2009) — De-anonymizing social networks</li>
-            <li>Shchur et al. (2018) — Pitfalls of graph neural network evaluation</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 6 (§6.1-6.5)</a></li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 11 (§11.1-11.7)</a></li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 13 (§13.1-13.4)</a></li>
+            <li><a href="https://www.cs.cornell.edu/home/kleinber/link-pred.pdf" target="_blank" rel="noopener">Liben-Nowell &amp; Kleinberg (2007) — The link-prediction problem for social networks</a></li>
+            <li><a href="https://arxiv.org/abs/0903.3276" target="_blank" rel="noopener">Narayanan &amp; Shmatikov (2009) — De-anonymizing social networks</a></li>
+            <li><a href="https://arxiv.org/abs/1811.05868" target="_blank" rel="noopener">Shchur et al. (2018) — Pitfalls of graph neural network evaluation</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u7">DOI, papers y versiones abiertas de U7</a></li>
           </ul>
         </div>
@@ -381,7 +381,7 @@ breadcrumbs:
         </div>
       </div>
       <div class="cal-unit__objective">
-        Mirar casos reales de redes en industria, distinguir embeddings de GNN, y discutir cuándo conviene (o no) usar Graph ML y cómo evaluarlo.
+        Revisar casos industriales, distinguir embeddings de GNN y discutir cuándo conviene usar Graph ML, cuándo no, y cómo evaluarlo sin leakage.
       </div>
       <div class="cal-unit__content">
         <div class="cal-content-col">
@@ -389,7 +389,7 @@ breadcrumbs:
           <ul class="cal-list">
             <li>Casos reales: detección de fraude, recomendación, bioinformática</li>
             <li>Node embeddings vs. Graph Neural Networks (GNN)</li>
-            <li>Cuándo NO conviene usar GNN</li>
+            <li>Criterios para decidir cuándo una GNN no es el modelo adecuado</li>
             <li>Leakage en GNN y cómo evitarlo</li>
             <li>Roadmap de aprendizaje continuo</li>
             <li>Sesión con invitado de industria</li>
@@ -398,14 +398,14 @@ breadcrumbs:
         <div class="cal-content-col">
           <div class="cal-section-label">Lecturas (opcionales)</div>
           <ul class="cal-list cal-list--reading">
-            <li><span class="cal-mono">Monografía</span> Cap. 10 (§10.1–10.4)</li>
-            <li><span class="cal-mono">Monografía</span> Cap. 11 — repaso splits y métricas</li>
-            <li>Perozzi et al. (2014) — DeepWalk</li>
-            <li>Grover & Leskovec (2016) — node2vec</li>
-            <li>Kipf & Welling (2017) — Graph Convolutional Networks</li>
-            <li>Hamilton et al. (2017) — GraphSAGE</li>
-            <li>Veličković et al. (2018) — Graph Attention Networks</li>
-            <li>Errica et al. (2020) — Evaluación comparada de GNN</li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 10 (§10.1-10.4)</a></li>
+            <li><a href="{{ '/monografia/Monografia_Curso_Redes_2026.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="cal-mono">Monografía</span> Cap. 11 — repaso splits y métricas</a></li>
+            <li><a href="https://arxiv.org/pdf/1403.6652.pdf" target="_blank" rel="noopener">Perozzi et al. (2014) — DeepWalk</a></li>
+            <li><a href="https://cs.stanford.edu/~jure/pubs/node2vec-kdd16.pdf" target="_blank" rel="noopener">Grover &amp; Leskovec (2016) — node2vec</a></li>
+            <li><a href="https://openreview.net/pdf?id=SJU4ayYgl" target="_blank" rel="noopener">Kipf &amp; Welling (2017) — Graph Convolutional Networks</a></li>
+            <li><a href="https://arxiv.org/abs/1706.02216" target="_blank" rel="noopener">Hamilton et al. (2017) — GraphSAGE</a></li>
+            <li><a href="https://arxiv.org/abs/1710.10903" target="_blank" rel="noopener">Veličković et al. (2018) — Graph Attention Networks</a></li>
+            <li><a href="https://openreview.net/forum?id=HygDF6NFPB" target="_blank" rel="noopener">Errica et al. (2020) — Evaluación comparada de GNN</a></li>
             <li><a href="{{ '/literatura/' | relative_url }}#u8">DOI, papers y versiones abiertas de U8</a></li>
           </ul>
         </div>

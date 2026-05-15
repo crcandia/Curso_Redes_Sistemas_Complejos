@@ -31,8 +31,9 @@ breadcrumbs:
   <p class="hero__eyebrow">2026-1</p>
   <h1 class="hero__title">Laboratorios</h1>
   <p class="hero__subtitle" style="font-size: 15px;">
-    8 laboratorios prácticos en Python, con notebooks complementarios en unidades que requieren más práctica.
-    Cada notebook combina teoría aplicada con ejercicios sobre datos reales y puede ejecutarse en Google Colab.
+    8 laboratorios reproducibles en Python para convertir preguntas relacionales en grafos auditables,
+    métricas interpretables, modelos nulos y evidencia comunicable. Los notebooks complementarios profundizan
+    decisiones metodológicas que suelen cambiar la interpretación de una red.
   </p>
   <div class="badges">
     <span class="badge badge--blue">8 labs</span>
@@ -49,8 +50,8 @@ breadcrumbs:
     <div>
       <div style="font-weight: 700; color: var(--blue); margin-bottom: 4px;">Cómo usar los notebooks</div>
       <div style="font-size: 13.5px; color: var(--text-2); line-height: 1.6;">
-        Haz clic en <strong>Colab</strong> para ejecutar el notebook en tu navegador, o en <strong>GitHub</strong> para leerlo sin ejecutar.
-        Algunas unidades incluyen notebooks complementarios para profundizar proyecciones, modelos nulos o comunidades.
+        Usa <strong>Colab</strong> para ejecutar el notebook en navegador, o <strong>GitHub</strong> para revisarlo como artefacto reproducible.
+        Los complementarios separan el procedimiento técnico de sus supuestos: proyecciones, modelos nulos y estabilidad de comunidades.
       </div>
     </div>
   </div>
@@ -64,13 +65,13 @@ breadcrumbs:
     <div class="lab-card__header">
       <div class="lab-card__num">01</div>
       <div class="lab-card__meta">
-        <div class="lab-card__title">Redes Básicas</div>
+        <div class="lab-card__title">Representación y Auditoría de Redes</div>
         <div class="lab-card__subtitle">U1 · Fundamentos</div>
       </div>
     </div>
     <div class="lab-card__desc">
-      Creación y manipulación de grafos con NetworkX. Visualización básica,
-      carga desde archivos de texto y primeras métricas de red (grado, conectividad, self-loops).
+      Construcción de grafos con NetworkX, carga desde archivos de texto y auditoría inicial de grado,
+      conectividad, duplicados, self-loops y consistencia de la representación.
     </div>
     <div class="card__tags mb-16">
       <span class="tag tag--blue">NetworkX</span>
@@ -129,8 +130,8 @@ breadcrumbs:
       </div>
     </div>
     <div class="lab-card__desc">
-      Grado, betweenness, closeness, eigenvector. Construcción de un feature store
-      de nodos para modelos downstream. Análisis de sensibilidad frente a pesos y umbrales.
+      Grado, betweenness, closeness y eigenvector como familias de features. Construcción de un feature
+      store por nodo y análisis de sensibilidad frente a pesos, umbrales y ventanas de observación.
     </div>
     <div class="card__tags mb-16">
       <span class="tag tag--blue">Centralidades</span>
@@ -156,8 +157,8 @@ breadcrumbs:
       </div>
     </div>
     <div class="lab-card__desc">
-      Erdős-Rényi, Watts-Strogatz y Barabási-Albert como baselines estadísticos.
-      Comparación de clustering, distancias y distribuciones de grado contra la red real.
+      Erdős-Rényi, Watts-Strogatz y Barabási-Albert como baselines explícitos.
+      Comparación de clustering, distancias y distribuciones de grado para separar señal estructural de artefactos.
     </div>
     <div class="card__tags mb-16">
       <span class="tag tag--blue">Modelos Nulos</span>
@@ -184,8 +185,8 @@ breadcrumbs:
       </div>
     </div>
     <div class="lab-card__desc">
-      Leiden, Louvain con análisis de estabilidad, k-core y core-periphery.
-      Aplicación en redes de compras públicas (segmentos de proveedores y dependencias).
+      Leiden y Louvain con análisis de estabilidad, k-core y core-periphery.
+      Aplicación en compras públicas para distinguir segmentos, dependencias y límites de interpretación.
     </div>
     <div class="card__tags mb-16">
       <span class="tag tag--blue">Comunidades</span>
@@ -217,8 +218,8 @@ breadcrumbs:
       </div>
     </div>
     <div class="lab-card__desc">
-      SIR/SIS: simulación y comparación de intervenciones (random, por grado, por k-core).
-      Umbrales de percolación y rol de la estructura en la velocidad de propagación.
+      Simulación SIR/SIS y comparación de intervenciones aleatorias, por grado y por k-core.
+      Umbrales, heterogeneidad y rol de la estructura en velocidad y alcance de la propagación.
     </div>
     <div class="card__tags mb-16">
       <span class="tag tag--blue">Difusión</span>
@@ -249,8 +250,8 @@ breadcrumbs:
       </div>
     </div>
     <div class="lab-card__desc">
-      Rewiring y permutation tests sobre modularidad. Evaluación sin leakage en grafos.
-      Checklist ético para análisis de redes sociales y privacidad.
+      Rewiring y permutation tests sobre modularidad. Evaluación sin leakage en grafos y checklist ético
+      para inferencia, privacidad y comunicación responsable.
     </div>
     <div class="card__tags mb-16">
       <span class="tag tag--blue">Inferencia</span>
@@ -276,8 +277,8 @@ breadcrumbs:
       </div>
     </div>
     <div class="lab-card__desc">
-      Node embeddings vs. GNN. Casos industriales: fraude, recomendación y bioinformática.
-      Cuándo NO usar GNN y cómo evitar leakage en modelos de grafos.
+      Node embeddings vs. GNN. Casos industriales en fraude, recomendación y bioinformática.
+      Criterios para no usar GNN y pautas de evaluación para evitar leakage relacional.
     </div>
     <div class="card__tags mb-16">
       <span class="tag tag--blue">GNN</span>

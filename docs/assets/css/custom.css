@@ -523,19 +523,45 @@ strong { color: var(--text); }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 18px 20px;
+  padding: 0;
+  overflow: hidden;
 }
-.faq-item h2 {
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 46px 18px 20px;
+  position: relative;
   font-size: 16px;
   line-height: 1.3;
   color: var(--text);
+  font-weight: 800;
   letter-spacing: 0;
-  margin-bottom: 8px;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--violet-mid);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+.faq-item[open] summary {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item[open] summary::after {
+  content: "−";
 }
 .faq-item p {
   color: var(--text-2);
   font-size: 13.5px;
   line-height: 1.65;
+  padding: 14px 20px 18px;
 }
 
 /* Featured card (large) */
@@ -761,17 +787,16 @@ strong { color: var(--text); }
 }
 .pdf-mobile-viewer__stage {
   width: 100%;
-  min-height: 320px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow: auto;
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
 }
 .pdf-mobile-viewer canvas {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -1234,7 +1259,7 @@ strong { color: var(--text); }
   .notebook-grid { grid-template-columns: 1fr; }
   .pdf-frame--desktop { display: none; }
   .pdf-frame--mobile { display: block; }
-  .pdf-frame.pdf-mobile-viewer { height: auto; min-height: 390px; }
+  .pdf-frame.pdf-mobile-viewer { height: auto; min-height: 0; }
   .material-grid { grid-template-columns: 1fr; }
   .course-strip { align-items: flex-start; flex-direction: column; margin-top: -12px; }
   .stats { flex-wrap: wrap; }
@@ -1256,7 +1281,7 @@ strong { color: var(--text); }
   .slide-row__num { width: 40px; height: 40px; }
   .pdf-card__header { min-height: 0; flex-direction: column; }
   .pdf-frame { height: 430px; }
-  .pdf-frame.pdf-mobile-viewer { height: auto; min-height: 360px; }
+  .pdf-frame.pdf-mobile-viewer { height: auto; min-height: 0; }
   .pdf-card__actions { justify-content: flex-start; }
 }
 

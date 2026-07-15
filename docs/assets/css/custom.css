@@ -1276,6 +1276,87 @@ strong { color: var(--text); }
 }
 
 /* ============================================================
+   MONOGRAPH
+   ============================================================ */
+.monograph-page { max-width: 1040px; margin: 0 auto; }
+.monograph-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
+  gap: 44px;
+  align-items: start;
+  padding: 42px 0 36px;
+  border-bottom: 1px solid var(--border);
+}
+.monograph-hero .hero__title { max-width: 17ch; }
+.monograph-hero .hero__title span {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-2);
+  font-size: 0.48em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.monograph-author {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.monograph-affiliations {
+  max-width: 68ch;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.monograph-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.monograph-facts {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+}
+.monograph-facts div { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.monograph-facts div:first-child { padding-top: 0; }
+.monograph-facts div:last-child { padding-bottom: 0; border-bottom: 0; }
+.monograph-facts dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.monograph-facts dd { margin-top: 2px; color: var(--text); font-size: 13px; font-weight: 600; }
+.monograph-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(250px, 0.7fr);
+  gap: 40px;
+  padding-top: 38px;
+}
+.monograph-main { min-width: 0; }
+.monograph-section { margin-bottom: 36px; }
+.monograph-section h2, .monograph-aside h2 {
+  color: var(--text);
+  font-size: 21px;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+.monograph-section p { color: var(--text-2); margin-bottom: 14px; max-width: 76ch; }
+.monograph-topics { padding-left: 20px; color: var(--text-2); }
+.monograph-topics li { margin-bottom: 7px; padding-left: 4px; }
+.monograph-aside { display: flex; flex-direction: column; gap: 18px; }
+.monograph-aside .card h2 { font-size: 17px; margin: 4px 0 8px; }
+.citation-box {
+  background: var(--surface);
+  border-left: 4px solid var(--violet-mid);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  color: var(--text-2);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
@@ -1327,6 +1408,8 @@ strong { color: var(--text); }
   .grid--2  { grid-template-columns: 1fr; }
   .grid--4  { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; }
+  .monograph-hero, .monograph-grid { grid-template-columns: 1fr; gap: 28px; }
+  .monograph-facts { max-width: 560px; }
   .hero--home { grid-template-columns: 1fr; gap: 24px; }
   .hero-info-card { max-width: 520px; }
   .course-intro { grid-template-columns: 1fr; }

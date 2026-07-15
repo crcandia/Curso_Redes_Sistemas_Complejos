@@ -46,6 +46,7 @@ runs/*/overrides/slides/**/s41109-021-00418-y.pdf
 # Editores
 .vscode/
 .idea/
+**/.claude/settings.local.json
 *.swp
 *.swo
 

@@ -1308,6 +1308,20 @@ strong { color: var(--text); }
   font-size: 13px;
   line-height: 1.6;
 }
+.monograph-abstract { margin-top: 26px; }
+.monograph-abstract h2 {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.monograph-abstract p {
+  max-width: 72ch;
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
 .monograph-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .monograph-facts {
   background: var(--surface);

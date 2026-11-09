@@ -32,3 +32,12 @@
 /2026-1-MDS/recursos/ /recursos-interactivos/ 301!
 /2026-1-MDS/literatura /literatura/ 301!
 /2026-1-MDS/literatura/ /literatura/ 301!
+
+# Equivalent sections for historical course URLs
+/hands_on.html /laboratorios/ 301!
+/programa.html /calendario/ 301!
+/slides.html /clases/ 301!
+/hands-on/HandsOn_Basics/Taller_redes_1_y_Tarea_1.html /laboratorios/#lab1 301!
+/hands-on/HandsOn_Basics/TallerRedes1_Proyecciones.html /laboratorios/#lab2-proyecciones 301!
+/hands-on/HandsOn_Centrality/Clase7_Centralidad_Tarea2.html /laboratorios/#lab3 301!
+/hands-on/HandsOn_Comunidades/Clase8_Comunidades_Tarea3.html /laboratorios/#lab5-redes-tradicionales 301!
